@@ -23,8 +23,11 @@ namespace UI.Controllers
             if (ModelState.IsValid)
             {
                 User currentUser = db.Users.Where(x => x.UserName == data.UserName && x.Password == data.Password).FirstOrDefault();
+                Student currentUsers = db.Students.Where(x => x.FirstName == data.UserName && x.Password == data.Password).FirstOrDefault();
                 if (currentUser != null)
                 {
+                    Session["currentUser"] = currentUser;
+                    Session["currentUsers"] = currentUsers;
                     if (currentUser.Role == Role.Admin)
                     {
                         return RedirectToAction("Index", "Home", new { area = "Admin" });
@@ -59,26 +62,29 @@ namespace UI.Controllers
         {
             newUser.Role = Role.Member;
             db.Users.Add(newUser);
+            db.SaveChanges();
             return RedirectToAction("Login", "Account");
 
         }
-        //[HttpGet]
-        //public ActionResult RegisterTeacher()
-        //{
-        //    return View();
-        //}
-        //[HttpPost]
-        //public ActionResult RegisterTeacher(User newUser)
-        //{
-        //    newUser.Role = Role.Teacher;
-        //    db.Users.Add(newUser);
-        //    return RedirectToAction("Login", "Account");
-        //}
-
         [HttpGet]
+        public ActionResult RegisterTeacher()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult RegisterTeacher(User newUser)
+        {
+            newUser.Role = Role.Teacher;
+            db.Users.Add(newUser);
+            db.SaveChanges();
+            return RedirectToAction("Login", "Account");
+        }
+
+        //[HttpGet]
         public ActionResult Logout()
         {
-            FormsAuthentication.SignOut();
+            Session["currentUser"] = null;
+            //FormsAuthentication.SignOut();
             return RedirectToAction("Index", "Home", new { area = "Member" });
         }
 

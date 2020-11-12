@@ -78,11 +78,11 @@ C:\Users\aysetoktas\Desktop\EduTech\UI\Entity\obj\Debug\Entity.Migrations.mig05.
 C:\Users\aysetoktas\Desktop\EduTech\UI\Entity\obj\Debug\Entity.Migrations.mig06.resources
 C:\Users\aysetoktas\Desktop\EduTech\UI\Entity\obj\Debug\Entity.Migrations.mig07.resources
 C:\Users\aysetoktas\Desktop\EduTech\UI\Entity\obj\Debug\Entity.Migrations.mig08.resources
+C:\Users\aysetoktas\Desktop\EduTech\UI\Entity\obj\Debug\Entity.Migrations.mig09.resources
+C:\Users\aysetoktas\Desktop\EduTech\UI\Entity\obj\Debug\Entity.Migrations.mig10.resources
+C:\Users\aysetoktas\Desktop\EduTech\UI\Entity\obj\Debug\Entity.Migrations.mig11.resources
 C:\Users\aysetoktas\Desktop\EduTech\UI\Entity\obj\Debug\Entity.csproj.GenerateResource.cache
 C:\Users\aysetoktas\Desktop\EduTech\UI\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
 C:\Users\aysetoktas\Desktop\EduTech\UI\Entity\obj\Debug\Entity.csproj.CopyComplete
 C:\Users\aysetoktas\Desktop\EduTech\UI\Entity\obj\Debug\Entity.dll
 C:\Users\aysetoktas\Desktop\EduTech\UI\Entity\obj\Debug\Entity.pdb
-C:\Users\aysetoktas\Desktop\EduTech\UI\Entity\obj\Debug\Entity.Migrations.mig09.resources
-C:\Users\aysetoktas\Desktop\EduTech\UI\Entity\obj\Debug\Entity.Migrations.mig10.resources
-C:\Users\aysetoktas\Desktop\EduTech\UI\Entity\obj\Debug\Entity.Migrations.mig11.resources
