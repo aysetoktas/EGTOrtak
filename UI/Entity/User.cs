@@ -13,7 +13,7 @@ namespace Entity
         Admin = 3,
         Teacher = 5
     }
-    public class User:BaseEntity
+    public class User : BaseEntity
     {
         public string UserName { get; set; }
         public string Password { get; set; }
@@ -26,6 +26,13 @@ namespace Entity
         public int BirthDate { get; set; }
         public string Email { get; set; }
 
-    
+        public int TeacherID { get; set; }
+        public virtual Teacher Teacher { get; set; }
+
+        public int StudentID { get; set; }
+        public virtual Student Student { get; set; }
+
+        public int AdminID { get; set; }
+        public virtual Admin Admin { get; set; }
     }
 }

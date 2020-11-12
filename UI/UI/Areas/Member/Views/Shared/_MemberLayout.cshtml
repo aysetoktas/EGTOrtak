@@ -3,7 +3,7 @@
     List<Education> educations = Query.EducationList();
     List<Lesson> lessons = Query.LessonList();
     List<Category> categories = Query.CategoryList();
-    User currentUser = Session["currentUser"] as User;
+    Student currentUsers = Session["currentUsers"] as Student;
 }
 <!DOCTYPE HTML>
 <html>
@@ -84,13 +84,13 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 text-right">
-                            @if (currentUser == null)
+                            @if (currentUsers == null)
                             {
 
                             }
                             else
                             {
-                                <p class="site"><b>Hoşgeldin @currentUser.Name @currentUser.LastName</b></p>
+                                <p class="site"><b>Hoşgeldin @currentUsers.FirstName @currentUsers.LastName</b></p>
                             }
 
                             <p class="num">Call: +01 123 456 7890</p>
@@ -141,7 +141,7 @@
                                 <li><a href="@Url.Action("Index", "Teacher", new { area = "Member" })">Öğretmenler</a></li>
                                 <li><a href="@Url.Action("About", "Home", new { area = "Member" })">Hakkımızda</a></li>
                                 <li><a href="@Url.Action("Contact", "Home", new { area = "Member" })">İletişim</a></li>
-                                @if (currentUser == null)
+                                @if (currentUsers == null)
                                 {
                                     <li class="btn-cta"><a href="@Url.Action("RegisterTeacher", "Account", new { area = "" })"><span>ÖĞRETMEN ÜYE OL</span></a></li>
                                     <li class="btn-cta"><a href="@Url.Action("Register", "Account", new { area = "" })"><span>ÖĞRENCİ ÜYE OL</span></a></li>
@@ -149,7 +149,7 @@
                                 }
                                 else
                                 {
-                                    currentUser = null;
+                                    currentUsers = null;
                                     <li class="btn-cta"><a href="@Url.Action("Index", "Home", new { area = "Student" })"><span>EĞİTİM PANELİM</span></a></li>
 
                                     <li class="btn-cta"><a href="@Url.Action("Logout", "Account", new { area = "" })"><span>Çıkış Yap</span></a></li>

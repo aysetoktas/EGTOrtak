@@ -20,5 +20,7 @@ namespace Entity
 
         public virtual ICollection<Branch> Branches { get; set; }
         public virtual ICollection<Education> Educations { get; set; }
+        public virtual ICollection<User> Users { get; set; }
+
     }
 }

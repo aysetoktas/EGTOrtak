@@ -86,3 +86,17 @@ C:\Users\aysetoktas\Desktop\EduTech\UI\Entity\obj\Debug\Entity.csproj.CoreCompil
 C:\Users\aysetoktas\Desktop\EduTech\UI\Entity\obj\Debug\Entity.csproj.CopyComplete
 C:\Users\aysetoktas\Desktop\EduTech\UI\Entity\obj\Debug\Entity.dll
 C:\Users\aysetoktas\Desktop\EduTech\UI\Entity\obj\Debug\Entity.pdb
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Entity\bin\Debug\Entity.dll.config
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Entity\bin\Debug\Entity.dll
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Entity\bin\Debug\Entity.pdb
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Entity\bin\Debug\EntityFramework.dll
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Entity\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Entity\bin\Debug\EntityFramework.xml
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Entity\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Entity\obj\Debug\Entity.csprojAssemblyReference.cache
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Entity\obj\Debug\Entity.csproj.CopyComplete
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Entity\obj\Debug\Entity.dll
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Entity\obj\Debug\Entity.pdb
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig1.resources
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Entity\obj\Debug\Entity.csproj.GenerateResource.cache

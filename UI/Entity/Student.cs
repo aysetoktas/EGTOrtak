@@ -21,5 +21,7 @@ namespace Entity
         public virtual ICollection<Lesson> Lessons { get; set; }
         public virtual ICollection<Education> Educations { get; set; }
         public virtual ICollection<Customer> Customers { get; set; }
+        public virtual ICollection<User> Users { get; set; }
+
     }
 }

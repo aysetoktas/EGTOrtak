@@ -22,28 +22,28 @@ namespace UI.Controllers
         {
             if (ModelState.IsValid)
             {
-                User currentUser = db.Users.Where(x => x.UserName == data.UserName && x.Password == data.Password).FirstOrDefault();
+                //User currentUser = db.Users.Where(x => x.UserName == data.UserName && x.Password == data.Password).FirstOrDefault();
                 Student currentUsers = db.Students.Where(x => x.FirstName == data.UserName && x.Password == data.Password).FirstOrDefault();
-                if (currentUser != null)
+                Teacher currentTeacher = db.Teachers.Where(x => x.FirstName == data.UserName && x.Password == data.Password).FirstOrDefault();
+
+                if (currentUsers != null || currentTeacher != null)
                 {
-                    Session["currentUser"] = currentUser;
-                    Session["currentUsers"] = currentUsers;
-                    if (currentUser.Role == Role.Admin)
+
+                    if (currentUsers != null)
                     {
-                        return RedirectToAction("Index", "Home", new { area = "Admin" });
-                    }
-                    else if (currentUser.Role == Role.Member)
-                    {
+                        Session["currentUsers"] = currentUsers;
                         return RedirectToAction("Index", "Home", new { area = "Member" });
                     }
-                    else if (currentUser.Role == Role.Teacher)
+                    else if (currentTeacher != null)
                     {
+                        Session["currentTeacher"] = currentTeacher;
                         return RedirectToAction("Index", "Home", new { area = "Admin" });
                     }
                     else
                     {
-                        return RedirectToAction("Register");
+                        return RedirectToAction("Index", "Home", new { area = "Admin" });
                     }
+
                 }
                 else
                 {
@@ -62,7 +62,7 @@ namespace UI.Controllers
         {
             newUser.Role = Role.Member;
             db.Users.Add(newUser);
-            db.SaveChanges();
+            //db.SaveChanges();
             return RedirectToAction("Login", "Account");
 
         }
@@ -76,14 +76,14 @@ namespace UI.Controllers
         {
             newUser.Role = Role.Teacher;
             db.Users.Add(newUser);
-            db.SaveChanges();
+            //db.SaveChanges();
             return RedirectToAction("Login", "Account");
         }
 
         //[HttpGet]
         public ActionResult Logout()
         {
-            Session["currentUser"] = null;
+            Session["currentUsers"] = null;
             //FormsAuthentication.SignOut();
             return RedirectToAction("Index", "Home", new { area = "Member" });
         }

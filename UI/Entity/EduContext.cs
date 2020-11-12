@@ -9,9 +9,9 @@ namespace Entity
 {
     public class EduContext:DbContext
     {
-        public EduContext():base("Two")  
+        public EduContext():base("dbEGT")  
         {
-            Database.Connection.ConnectionString = @"server=.; database=Two;Integrated Security=true";
+            //Database.Connection.ConnectionString = @"server=.; database=Two;Integrated Security=true";
         }
         public DbSet<Achievement> Achievements { get; set; }
         public DbSet<Admin> Admins { get; set; }
