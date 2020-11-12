@@ -100,3 +100,4 @@ C:\Users\Mustafa\Desktop\EGTOrtak\UI\Entity\obj\Debug\Entity.dll
 C:\Users\Mustafa\Desktop\EGTOrtak\UI\Entity\obj\Debug\Entity.pdb
 C:\Users\Mustafa\Desktop\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig1.resources
 C:\Users\Mustafa\Desktop\EGTOrtak\UI\Entity\obj\Debug\Entity.csproj.GenerateResource.cache
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig2.resources

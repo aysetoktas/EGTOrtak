@@ -24,7 +24,7 @@ namespace Entity
         public string ProjectLink { get; set; }
         public string DocumentLink { get; set; }
 
-
+        public virtual ICollection<Education> Educations { get; set; }
         public virtual ICollection<Student> Students { get; set; }
         public virtual ICollection<Syllabu> Syllabus { get; set; }
         public virtual ICollection<Achievement> Achievements { get; set; }
