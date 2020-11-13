@@ -98,6 +98,7 @@ C:\Users\Mustafa\Desktop\EGTOrtak\UI\Entity\obj\Debug\Entity.csproj.CoreCompileI
 C:\Users\Mustafa\Desktop\EGTOrtak\UI\Entity\obj\Debug\Entity.csproj.CopyComplete
 C:\Users\Mustafa\Desktop\EGTOrtak\UI\Entity\obj\Debug\Entity.dll
 C:\Users\Mustafa\Desktop\EGTOrtak\UI\Entity\obj\Debug\Entity.pdb
-C:\Users\Mustafa\Desktop\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig1.resources
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig00.resources
 C:\Users\Mustafa\Desktop\EGTOrtak\UI\Entity\obj\Debug\Entity.csproj.GenerateResource.cache
-C:\Users\Mustafa\Desktop\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig2.resources
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig001.resources
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig01.resources

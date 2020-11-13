@@ -15,8 +15,6 @@ namespace Entity
         public int StartDate { get; set; }
         public int EndDate { get; set; }
         public string Certificate { get; set; }
-        
-
 
         public virtual ICollection<Student> Students { get; set; }
         public virtual ICollection<Teacher> Teachers { get; set; }
