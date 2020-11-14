@@ -6201,7 +6201,9 @@
     <Compile Include="Areas\Member\Controllers\LessonController.cs" />
     <Compile Include="Areas\Member\Controllers\TeacherController.cs" />
     <Compile Include="Areas\Member\MemberAreaRegistration.cs" />
+    <Compile Include="Areas\Student\Controllers\EducationController.cs" />
     <Compile Include="Areas\Student\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Student\Controllers\LessonController.cs" />
     <Compile Include="Areas\Student\StudentAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Global.asax.cs">
@@ -7476,6 +7478,8 @@
     <Content Include="Areas\Student\assets\vendor\bootstrap\css\bootstrap.css.map" />
     <Content Include="Areas\Student\assets\vendor\bootstrap\css\bootstrap.min.css.map" />
     <Content Include="Areas\Student\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Student\Views\Education\Index.cshtml" />
+    <Content Include="Areas\Student\Views\Lesson\Index.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />

@@ -1,0 +1,77 @@
+﻿
+@using Entity
+@model Lesson
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Student/Views/Shared/_StudentLayout.cshtml";
+}
+
+<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content" style="padding-top:30px;">
+    <!--Begin::App-->
+    <div class="kt-grid kt-grid--desktop kt-grid--ver kt-grid--ver-desktop kt-app">
+
+        <!--Begin:: App Aside Mobile Toggle-->
+        <button class="kt-app__aside-close" id="kt_user_profile_aside_close">
+            <i class="la la-close"></i>
+        </button>
+
+        <!--End:: App Aside Mobile Toggle-->
+        <!--Begin:: App Aside-->
+        <div class="kt-grid__item kt-app__toggle kt-app__aside" id="kt_user_profile_aside">
+
+            <!--begin:: Widgets/Applications/User/Profile1-->
+            <div class="kt-portlet ">
+                <div class="kt-portlet__body kt-portlet__body--fit-y" style="padding-top:20px;">
+                    <h3 class="kt-portlet__head-title"> @Model.Name</h3>
+                    <ul class="list-group list-group-flush">
+                        @if (Model.Achievements is null)
+                        {
+                            <li class="list-group-item"> </li>
+                        }
+                        else
+                        {
+                            foreach (var content in Model.Achievements)
+                            {
+                                <li class="list-group-item">@content.Name</li>
+                            }
+                        }
+
+
+                    </ul>
+                    <!--end::Widget -->
+                </div>
+            </div>
+            <!--end:: Widgets/Applications/User/Profile1-->
+        </div>
+
+        <!--End:: App Aside-->
+        <!--Begin:: App Content-->
+        <div class="kt-grid__item kt-grid__item--fluid kt-app__content">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="kt-portlet">
+                        <div class="kt-portlet__head">
+                            <div class="kt-portlet__head-label">
+                                <h3 class="kt-portlet__head-title">Ders Slaytı <small>Ders içeriğinde eksiklikler tespit edildiğinde İçerik Geribildirim grubuna yazmanızı rica ederiz.</small></h3>
+                            </div>
+                        </div>
+                        <form class="kt-form kt-form--label-right">
+                            <div class="kt-portlet__body" style="align-items: center;">
+                                <div class="kt-section kt-section--first">
+                                    <div class="kt-section__body">
+                                        <iframe src="@Model.Path" frameborder="0" width="749" height="451" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--End:: App Content-->
+    </div>
+
+    <!--End::App-->
+</div>
