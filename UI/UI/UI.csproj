@@ -112,6 +112,7 @@
     <Content Include="Areas\Admin\Content\img\faces\card-profile2-square.jpg" />
     <Content Include="Areas\Admin\Content\img\faces\marc.jpg" />
     <Content Include="Areas\Admin\Content\img\favicon.png" />
+    <Content Include="Areas\Admin\Content\img\logo.png" />
     <Content Include="Areas\Admin\Content\img\mask.png" />
     <Content Include="Areas\Admin\Content\img\new_logo.png" />
     <Content Include="Areas\Admin\Content\img\sidebar-1.jpg" />
@@ -492,6 +493,7 @@
     <Content Include="Areas\Student\assets\images\kus.png" />
     <Content Include="Areas\Student\assets\images\Köstebek_Oyunu.png" />
     <Content Include="Areas\Student\assets\images\l.png" />
+    <Content Include="Areas\Student\assets\images\logo.png" />
     <Content Include="Areas\Student\assets\images\logoşekil.png" />
     <Content Include="Areas\Student\assets\images\m.png" />
     <Content Include="Areas\Student\assets\images\Makey Makey.png" />

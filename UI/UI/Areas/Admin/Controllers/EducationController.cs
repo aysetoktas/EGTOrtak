@@ -29,7 +29,7 @@ namespace UI.Areas.Admin.Controllers
         {
             Education yeni = new Education();
          
-            yeni.Categories = data.Categories;
+            //yeni.Categories = data.Categories;
             yeni.Name = data.Name;
             yeni.Note = data.Note;
             yeni.ImagePath = data.ImagePath;

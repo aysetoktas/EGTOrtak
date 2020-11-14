@@ -31,24 +31,16 @@ namespace UI.Areas.Admin.Controllers
         [HttpPost]
         public ActionResult Add(Lesson data)
         {
-            Lesson yeni = new Lesson();
-            //List<Category> categories = new List<Category>();
-            //foreach (var catID in categories)
-            //{
-            //    categories.Add(db.Categories.Find(Convert.ToInt32(catID)));
-            //}
-            //Category cat = new Category();
-            //yeni.ID = data2.ID;
-            //yeni.Categories.Add(db.Educations.Add(cat);
-       
+            Lesson yeni = new Lesson(); 
             yeni.EducationID = data.EducationID;
             yeni.Name = data.Name;
             yeni.StartDate = data.StartDate;
             yeni.EndDate = data.EndDate;
+            yeni.ProjectLink = data.ProjectLink;
+            yeni.DocumentLink = data.DocumentLink;
             yeni.TeacherID = data.TeacherID;
 
-            db.Lessons.Add(yeni);
-            //db.Categories.Add(cat);
+            db.Lessons.Add(yeni);        
             db.SaveChanges();
             return RedirectToAction("Index2");
         }
@@ -74,7 +66,7 @@ namespace UI.Areas.Admin.Controllers
             updLesson.DocumentLink = data.DocumentLink;
 
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index2");
         }
 
         public ActionResult Delete(int id)
@@ -82,7 +74,7 @@ namespace UI.Areas.Admin.Controllers
             Lesson delLesson = db.Lessons.Find(id);
             db.Lessons.Remove(delLesson);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index2");
         }
     }
 }
