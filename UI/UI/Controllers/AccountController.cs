@@ -23,18 +23,18 @@ namespace UI.Controllers
             if (ModelState.IsValid)
             {
                 //User currentUser = db.Users.Where(x => x.UserName == data.UserName && x.Password == data.Password).FirstOrDefault();
-                Student currentUsers = db.Students.Where(x => x.FirstName == data.UserName && x.Password == data.Password).FirstOrDefault();
+                Student currentStudent = db.Students.Where(x => x.FirstName == data.UserName && x.Password == data.Password).FirstOrDefault();
                 Teacher currentTeacher = db.Teachers.Where(x => x.FirstName == data.UserName && x.Password == data.Password).FirstOrDefault();
+                Admin currentAdmin = db.Admins.Where(x => x.FirstName == data.UserName && x.Password == data.Password).FirstOrDefault();
 
-                if (currentUsers != null || currentTeacher != null)
+                if (currentStudent != null || currentTeacher != null || currentAdmin!=null)
                 {
-
-                    if (currentUsers != null)
+                    if (currentStudent != null)
                     {
-                        Session["currentUsers"] = currentUsers;
+                        Session["currentUsers"] = currentStudent;
                         return RedirectToAction("Index", "Home", new { area = "Member" });
                     }
-                    else if (currentTeacher != null)
+                    else if (currentAdmin != null)
                     {
                         Session["currentTeacher"] = currentTeacher;
                         return RedirectToAction("Index", "Home", new { area = "Admin" });
@@ -43,7 +43,6 @@ namespace UI.Controllers
                     {
                         return RedirectToAction("Index", "Home", new { area = "Admin" });
                     }
-
                 }
                 else
                 {
