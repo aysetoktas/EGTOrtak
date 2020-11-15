@@ -66,6 +66,17 @@
     </div>
 </aside>
 
+    @*<div class="form-group">
+            <label for="CategoryID">Sınıf Seçiniz:</label>
+            <select name="CategoryID" class="form-control">
+                @foreach (var item in categories)
+                {
+                    <option value="@item.ID">@item.Name</option>
+                }
+            </select>
+        </div>*@
+
+
 <div id="fh5co-course-categories">
     <div class="container">
         <div class="row animate-box">
@@ -93,7 +104,7 @@
                     catCount++;
                 }
             }
-        
+
         </div>
     </div>
 </div>
@@ -181,7 +192,7 @@
                                 <div class="item">
                                     <div class="testimony-slide active htext-center">
                                         <div class="user" style="background-image: url(/Areas/Member/Content/images/person1.jpg);"></div>
-                                        <span><p>@teach.FirstName @teach.LastName</p><br><small>Öğretmen</small></span>
+                                        <span>@teach.FirstName @teach.LastName<br><small>Öğretmen</small></span>
                                         <blockquote>
                                             <p>&ldquo;@teach.Note&rdquo;</p>
                                         </blockquote>
@@ -226,31 +237,31 @@
             </div>
         </div>
         @*<div class="row row-padded-mb">
-            <div class="col-md-4 animate-box">
-                <div class="fh5co-event">
-                    <div class="date text-center"><span>15<br>Mar.</span></div>
-                    <h3><a href="#">USA, International Triathlon Event</a></h3>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p><a href="#">Read More</a></p>
+                <div class="col-md-4 animate-box">
+                    <div class="fh5co-event">
+                        <div class="date text-center"><span>15<br>Mar.</span></div>
+                        <h3><a href="#">USA, International Triathlon Event</a></h3>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <p><a href="#">Read More</a></p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4 animate-box">
-                <div class="fh5co-event">
-                    <div class="date text-center"><span>15<br>Mar.</span></div>
-                    <h3><a href="#">USA, International Triathlon Event</a></h3>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p><a href="#">Read More</a></p>
+                <div class="col-md-4 animate-box">
+                    <div class="fh5co-event">
+                        <div class="date text-center"><span>15<br>Mar.</span></div>
+                        <h3><a href="#">USA, International Triathlon Event</a></h3>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <p><a href="#">Read More</a></p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4 animate-box">
-                <div class="fh5co-event">
-                    <div class="date text-center"><span>15<br>Mar.</span></div>
-                    <h3><a href="#">New Device Develope by Microsoft</a></h3>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p><a href="#">Read More</a></p>
+                <div class="col-md-4 animate-box">
+                    <div class="fh5co-event">
+                        <div class="date text-center"><span>15<br>Mar.</span></div>
+                        <h3><a href="#">New Device Develope by Microsoft</a></h3>
+                        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                        <p><a href="#">Read More</a></p>
+                    </div>
                 </div>
-            </div>
-        </div>*@
+            </div>*@
         <div class="row">
 
             @foreach (var item in lessons)

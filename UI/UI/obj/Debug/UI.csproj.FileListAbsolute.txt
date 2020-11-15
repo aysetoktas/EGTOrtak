@@ -530,3 +530,6 @@ C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\UI\obj\Debug\UI.csproj.CoreCompile
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\UI\obj\Debug\UI.csproj.CopyComplete
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\UI\obj\Debug\UI.dll
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\UI\obj\Debug\UI.pdb
+C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\UI\bin\Utility.dll
+C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\UI\bin\Utility.pdb
+C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\UI\bin\Utility.dll.config

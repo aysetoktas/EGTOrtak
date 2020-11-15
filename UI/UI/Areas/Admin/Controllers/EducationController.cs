@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using Utility;
 
 namespace UI.Areas.Admin.Controllers
 {
@@ -25,10 +25,11 @@ namespace UI.Areas.Admin.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Add(Education data,HttpPostedFileBase Image)
+        public ActionResult Add(Education data, HttpPostedFileBase Image)
         {
             Education yeni = new Education();
-         
+            data.ImagePath = ImageUploader.UploadSingleImage("/Uploads/", Image);
+
             //yeni.Categories = data.Categories;
             yeni.Name = data.Name;
             yeni.Note = data.Note;
@@ -50,11 +51,19 @@ namespace UI.Areas.Admin.Controllers
             return View(updEducation);
         }
         [HttpPost]
-        public ActionResult Update(Education data)
+        public ActionResult Update(Education data, HttpPostedFileBase Image)
         {
+            data.ImagePath = ImageUploader.UploadSingleImage("/Uploads/", Image);
+
             Education updEducation = db.Educations.Find(data.ID);
+
+            if (data.ImagePath != "0" || data.ImagePath != "1" || data.ImagePath != "2")
+            {
+                updEducation.ImagePath = data.ImagePath;
+            }
             updEducation.Name = data.Name;
             updEducation.Note = data.Note;
+        
             updEducation.Hour = data.Hour;
             updEducation.StartDate = data.StartDate;
             updEducation.EndDate = data.EndDate;

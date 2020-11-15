@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Utility;
 
 namespace UI.Areas.Admin.Controllers
 {
@@ -29,11 +30,14 @@ namespace UI.Areas.Admin.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Add(Lesson data)
+        public ActionResult Add(Lesson data, HttpPostedFileBase Image)
         {
-            Lesson yeni = new Lesson(); 
+            Lesson yeni = new Lesson();
+            data.Logo = ImageUploader.UploadSingleImage("/Uploads/", Image);
+
             yeni.EducationID = data.EducationID;
             yeni.Name = data.Name;
+            yeni.Logo = data.Logo;
             yeni.StartDate = data.StartDate;
             yeni.EndDate = data.EndDate;
             yeni.ProjectLink = data.ProjectLink;
@@ -51,16 +55,22 @@ namespace UI.Areas.Admin.Controllers
             return View(updLesson);
         }
         [HttpPost]
-        public ActionResult Update(Lesson data)
+        public ActionResult Update(Lesson data, HttpPostedFileBase Image)
         {
+            data.Logo = ImageUploader.UploadSingleImage("/Uploads/", Image);
+
             Lesson updLesson = db.Lessons.Find(data.ID);
+            if (data.Logo != "0" || data.Logo != "1" || data.Logo != "2")
+            {
+                updLesson.Logo = data.Logo;
+            }
             updLesson.Name = data.Name;
             updLesson.TeacherID = data.TeacherID;
             updLesson.EducationID = data.EducationID;
             updLesson.StartDate = data.StartDate;
             updLesson.EndDate = data.EndDate;
             updLesson.Content = data.Content;
-            updLesson.Logo = data.Logo;
+          
             updLesson.Path = data.Path;
             updLesson.ProjectLink = data.ProjectLink;
             updLesson.DocumentLink = data.DocumentLink;

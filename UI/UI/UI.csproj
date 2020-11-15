@@ -7505,6 +7505,10 @@
       <Project>{EC628571-E5C8-4A3E-A741-31892E04A91D}</Project>
       <Name>Entity</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Utility\Utility.csproj">
+      <Project>{b2b1c160-1ed5-4ba7-9c5b-7bbb3a1ad9d3}</Project>
+      <Name>Utility</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

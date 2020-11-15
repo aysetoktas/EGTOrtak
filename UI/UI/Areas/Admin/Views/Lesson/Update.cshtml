@@ -22,6 +22,14 @@
                     <div class="card-body">
                         <form action="/Admin/Lesson/Update" method="post" enctype="multipart/form-data">
                             <div class="form-group">
+                                <img src="@Model.Logo" class="rounded" height="100" />
+                            </div>
+
+                            <div class="">
+                                <label for="Image" style="color:coral">Eğitim Logosunu Güncelle</label>
+                                <input type="file" name="Image" />
+                            </div>
+                            <div class="form-group">
                                 <label for="ID">Eğitim ID</label>
                                 <input name="ID" readonly value="@Model.ID" class="form-control disabled" />
                             </div>
@@ -60,10 +68,7 @@
                                 <label for="Content">İçerik</label>
                                 <input name="Content" value="@Model.Content" class="form-control" />
                             </div>
-                            <div class="form-group">
-                                <label for="Logo">Ders Logosu</label>
-                                <input name="Logo" value="@Model.Logo" class="form-control" />
-                            </div>
+
                             <div class="form-group">
                                 <label for="Path">Path</label>
                                 <input name="Path" value="@Model.Path" class="form-control" />
