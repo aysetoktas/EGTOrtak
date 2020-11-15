@@ -7,7 +7,7 @@
     Layout = "~/Areas/Student/Views/Shared/_StudentLayout.cshtml";
 }
 
-<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content" style="padding-top:30px;">
+<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content" style="padding-top: 0px;">
     <!--Begin::App-->
     <div class="kt-grid kt-grid--desktop kt-grid--ver kt-grid--ver-desktop kt-app">
 
@@ -23,21 +23,16 @@
             <!--begin:: Widgets/Applications/User/Profile1-->
             <div class="kt-portlet ">
                 <div class="kt-portlet__body kt-portlet__body--fit-y" style="padding-top:20px;">
-                    <h3 class="kt-portlet__head-title"> @Model.Name</h3>
+                    <h3 class="kt-portlet__head-title"> @Model.Education.Name</h3>
                     <ul class="list-group list-group-flush">
-                        @if (Model.Achievements is null)
+                        @if (Model.Content is null)
                         {
                             <li class="list-group-item"> </li>
                         }
                         else
                         {
-                            foreach (var content in Model.Achievements)
-                            {
-                                <li class="list-group-item">@content.Name</li>
-                            }
+                            <li class="list-group-item">@Model.Content</li>
                         }
-
-
                     </ul>
                     <!--end::Widget -->
                 </div>

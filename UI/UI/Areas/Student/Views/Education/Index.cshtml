@@ -8,53 +8,115 @@
     string a = "";
     string b = "";
     ViewBag.Title = "Index";
-    Layout = "~/Areas/Student/Views/Shared/_StudentLayout.cshtml";}
-</br>
-<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
+    Layout = "~/Areas/Student/Views/Shared/_StudentLayout.cshtml";
+    Student currentUsers = Session["currentUsers"] as Student;
+}
+
+<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content" style="padding-top: 0px;">
     <!--Begin::Section-->
     <div class="row" style="justify-content: center;">
-
         @foreach (var item in Model)
         {
-            <div class="col-sm-2">
-                <!--Begin::Portlet-->
-                <div class="kt-portlet kt-portlet--height-fluid">
-                    <div class="kt-portlet__head kt-portlet__head--noborder">
-                        @**@
-                    </div>
+            if (item.ProjectLink == "0")
+            {
+                <div class="kt-portlet col-10">
                     <div class="kt-portlet__body">
-                        <!--begin::LED -->
-                        <div class="kt-widget kt-widget--user-profile-2" style="align-items:center;">
-                            <div class="kt-widget__head">
-                                <div class="kt-widget__media">
-                                    <img class="" src="@item.Logo" style="width:100%; padding-bottom:10px" alt="image">
+                        <div class="kt-widget kt-widget--user-profile-3">
+                            <div class="kt-widget__top">
+                                <div class="kt-widget__media kt-hidden-">
+                                    <img src="@item.Logo" style="width: 180px;" alt="image">
+                                </div>
+                                <div class="kt-widget__pic kt-widget__pic--danger kt-font-danger kt-font-boldest kt-font-light kt-hidden">
+                                    @item.Name.ToUpper()
+                                </div>
+                                <div class="kt-widget__content">
+                                    <div class="kt-widget__head">
+                                        <a href="#" class="kt-widget__username">
+                                            @item.Name.ToUpper()
+                                            <i class="flaticon2-correct kt-font-success"></i>
+                                        </a>
+                                        <div class="kt-widget__action">
+
+                                        </div>
+                                    </div>
+                                    <div class="kt-widget__subhead">
+                                        <a href="mailto:@item.Teacher.Email"><i class="flaticon2-new-email"></i>@item.Teacher.Email</a>
+                                        <a href="Tel: @item.Teacher.Phone"><i class="flaticon2-calendar-3"></i>@item.Teacher.Phone </a>
+                                        @*<a href="#"><i class="flaticon2-placeholder"></i>@item.Teacher.Address</a>*@
+                                    </div>
+                                    <div class="kt-widget__info">
+                                        <div class="kt-widget__desc">
+                                            <div class="row">
+                                                <div class="col-9">
+                                                    @item.Content
+
+                                                </div>
+                                                <div class="col-3" style="padding-right:0px; padding-left: 15px;">
+                                                    @if (item.ID == 0)
+                                                    {
+                                                        <div class="embed-responsive kt-widget__footer">
+                                                            <a type="button" class="btn btn-label-danger btn-lg btn-upper" style="background:rgba(135, 135, 135, 0.90); color:white; cursor: not-allowed;">Derse Git</a>
+                                                        </div>
+                                                    }
+                                                    else
+                                                    {
+                                                        <div class="embed-responsive kt-widget__footer">
+                                                            <a href="Lesson/Index?id=@item.ID" type="button" id="@item.ID" class="btn btn-label-success btn-lg btn-upper" style="">Derse Git</a>
+                                                        </div>
+                                                    }
+                                                </div>
+                                            </div>
+                                            <br />
+                                        </div>
+                                        <br />
+                                        <div class="kt-widget__progress" style="max-width: 1200px;">
+
+                                            <div class="kt-widget__text">
+                                                Progress
+                                            </div>
+                                            <div class="progress" style="height: 5px;width: 100%;">
+                                                <div class="progress-bar kt-bg-success" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                            <div class="kt-widget__stats">
+                                                78%
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="kt-widget__body" style="text-align: center;">
-                                <div class="kt-widget__contact" style="">
-                                    <h5 style="color:#616682;">@item.Name</h5>
-                                </div>
-                            </div>
-                            @if (item.ID == 0)
-                            {
-                                <div class="embed-responsive kt-widget__footer">
-                                    <a type="button" class="btn btn-label-danger btn-lg btn-upper" style="background:rgba(135, 135, 135, 0.90); color:white; cursor: not-allowed;">Derse Git</a>
-                                </div>
-                            }
-                            else
-                            {
-                                <div class="embed-responsive kt-widget__footer">
-                                    <a href="Lesson/Index?id=@item.ID" type="button" id="@item.ID" class="btn btn-label-danger btn-lg btn-upper" style="">Derse Git</a>
-                                </div>
-                            }
                         </div>
-                        <!--end::LED -->
                     </div>
+
                 </div>
-                <!--End::Portlet-->
-            </div>
 
+                <div class="col-sm-2">
+                    <!--Begin::Portlet-->
+                    <div class="kt-portlet kt-portlet--height-fluid">
+                        <div class="kt-portlet__head kt-portlet__head--noborder">
+                            @**@
+                        </div>
+                        <div class="kt-portlet__body">
+                            <!--begin::LED -->
+                            <div class="kt-widget kt-widget--user-profile-2" style="align-items:center;">
+                                <div class="kt-widget__head">
+                                    <div class="kt-widget__media">
+                                        <img class="" src="@item.Teacher.Address" style="width:100%; padding-bottom:10px" alt="image">
+                                    </div>
+                                </div>
+                                <div class="kt-widget__body" style="text-align: center;">
+                                    <div class="kt-widget__contact" style="">
+                                        <h5 style="color:#616682;"> @item.Teacher.FirstName.ToUpper() @item.Teacher.LastName.ToUpper()</h5>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!--end::LED -->
+                        </div>
+                    </div>
+                    <!--End::Portlet-->
+                </div>
+            }
         }
-
     </div>
+
 </div>

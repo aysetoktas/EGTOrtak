@@ -26,5 +26,10 @@ namespace UI.Areas.Member.Controllers
         {
             return View();
         }
+        public ActionResult Buy( int? id)
+        {
+
+            return View();
+        }
     }
 }
