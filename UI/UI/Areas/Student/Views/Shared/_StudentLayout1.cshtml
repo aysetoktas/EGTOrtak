@@ -164,9 +164,8 @@
 
                             @foreach (var item in educations)
                             {
-
                                 <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
-                                    <a href="/Student/Education/Index?id=@item.ID" class="kt-menu__link kt-menu__toggle">
+                                    <a href="/Student/Stream/Index?id=@item.ID" class="kt-menu__link kt-menu__toggle">
                                         <span class="kt-menu__link-icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
                                                 <!-- İcon -->
@@ -181,7 +180,6 @@
                                         <span class="kt-menu__link-text">@item.Name </span><i class="kt-menu__ver-arrow la la-angle-right"></i>
                                     </a>
                                 </li>
-
                                 @*<li class="kt-menu__item" aria-haspopup="true"><a href="Education/Index/?id=@item.ID" class="kt-menu__link "><i class="kt-menu__link-icon fa fa-book"></i><span class="kt-menu__link-text">@item.Name</span></a></li>*@
                             }
                         </ul>
@@ -211,6 +209,7 @@
                                 <li class="kt-menu__item  kt-menu__item--submenu kt-menu__item--rel" data-ktmenu-submenu-toggle="click" aria-haspopup="true">
                                     <a href="/Account/Logout" class="btn btn-label"><span class="kt-menu__link-text">Çıkış</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
                                 </li>
+
                             </ul>
                         </div>
                     </div>

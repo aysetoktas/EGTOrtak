@@ -1,14 +1,15 @@
-﻿using System;
+﻿using Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Entity;
 
 namespace UI.Areas.Student.Controllers
 {
-    public class EducationController : Controller
+    public class StreamController : Controller
     {
+        // GET: Student/Stream
         EduContext db = new EduContext();
 
         // GET: Student/Education

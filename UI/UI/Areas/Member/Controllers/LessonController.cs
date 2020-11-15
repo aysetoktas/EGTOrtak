@@ -16,5 +16,13 @@ namespace UI.Areas.Member.Controllers
             List<Lesson> lessons = db.Lessons.Where(x => x.EducationID == id).OrderBy(x => x.EducationID).ToList();
             return View(lessons);
         }
+        public ActionResult Buy(int? id)
+        {
+            Lesson lesson = db.Lessons.Find(id);
+            Entity.Student currentUsers = Session["currentUsers"] as Entity.Student;
+            currentUsers.Lessons.Add(lesson);
+            db.SaveChanges();
+            return RedirectToAction("Index","Home");
+        }
     }
 }

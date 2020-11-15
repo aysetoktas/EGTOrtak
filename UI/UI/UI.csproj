@@ -480,6 +480,7 @@
     <Content Include="Areas\Student\assets\images\flappy.png" />
     <Content Include="Areas\Student\assets\images\flappy1.png" />
     <Content Include="Areas\Student\assets\images\g.PNG" />
+    <Content Include="Areas\Student\assets\images\geniş logo.png" />
     <Content Include="Areas\Student\assets\images\giga gameover.jpg" />
     <Content Include="Areas\Student\assets\images\GormeEngelli.jpg" />
     <Content Include="Areas\Student\assets\images\h.PNG" />
@@ -512,6 +513,7 @@
     <Content Include="Areas\Student\assets\images\mblocklogo.png" />
     <Content Include="Areas\Student\assets\images\mesafeguncel.png" />
     <Content Include="Areas\Student\assets\images\mstf.png" />
+    <Content Include="Areas\Student\assets\images\mustafa.jpg" />
     <Content Include="Areas\Student\assets\images\n.png" />
     <Content Include="Areas\Student\assets\images\o.png" />
     <Content Include="Areas\Student\assets\images\p.png" />
@@ -6204,6 +6206,8 @@
     <Compile Include="Areas\Student\Controllers\EducationController.cs" />
     <Compile Include="Areas\Student\Controllers\HomeController.cs" />
     <Compile Include="Areas\Student\Controllers\LessonController.cs" />
+    <Compile Include="Areas\Student\Controllers\ProfileController.cs" />
+    <Compile Include="Areas\Student\Controllers\StreamController.cs" />
     <Compile Include="Areas\Student\StudentAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Global.asax.cs">
@@ -7480,6 +7484,9 @@
     <Content Include="Areas\Student\Views\Home\Index.cshtml" />
     <Content Include="Areas\Student\Views\Education\Index.cshtml" />
     <Content Include="Areas\Student\Views\Lesson\Index.cshtml" />
+    <Content Include="Areas\Student\Views\Profile\Index.cshtml" />
+    <Content Include="Areas\Student\Views\Stream\Index.cshtml" />
+    <Content Include="Areas\Student\Views\Shared\_StudentLayout1.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />

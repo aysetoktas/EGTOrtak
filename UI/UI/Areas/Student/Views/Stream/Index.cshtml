@@ -1,0 +1,241 @@
+﻿
+@using Entity
+@model List<Lesson>
+
+@{
+    int sayac = 0;
+    List<Education> educations = Query.EducationList();
+    List<Lesson> lessons = Query.LessonList();
+    string a = "";
+    string b = "";
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Student/Views/Shared/_StudentLayout1.cshtml";
+    Student currentUsers = Session["currentUsers"] as Student;
+}
+
+<div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content" style="padding-top: 0px;">
+    <!--Begin::Section-->
+    <div class="row" style="justify-content: center;">
+        @foreach (var item in Model)
+        {
+            if (item.ProjectLink == "1")
+            {
+                <div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content" style="padding-top:0px;">
+
+                    <!--Begin::Dashboard 6-->
+                    <!--begin:: Widgets/Stats-->
+                    <!--end:: Widgets/Stats-->
+                    <!--Begin::Section-->
+                    <div class="row">
+                        <div class="col-xl-4">
+
+                            <!--begin:: Widgets/Download Files-->
+                            <div class="kt-portlet kt-portlet--height-fluid">
+                                <div class="kt-portlet__head">
+                                    <div class="kt-portlet__head-label">
+                                        <h3 class="kt-portlet__head-title">
+                                            Ders Dökümanları
+                                        </h3>
+                                    </div>
+                                    <div class="kt-portlet__head-toolbar">
+                                        <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right">
+
+                                            <!--begin::Nav-->
+                                            <ul class="kt-nav">
+                                                <li class="kt-nav__head">
+                                                    Export Options
+                                                    <i class="flaticon2-information" data-toggle="kt-tooltip" data-placement="right" title="Click to learn more..."></i>
+                                                </li>
+                                                <li class="kt-nav__separator"></li>
+                                                <li class="kt-nav__item">
+                                                    <a href="#" class="kt-nav__link">
+                                                        <i class="kt-nav__link-icon flaticon2-drop"></i>
+                                                        <span class="kt-nav__link-text">Activity</span>
+                                                    </a>
+                                                </li>
+                                                <li class="kt-nav__item">
+                                                    <a href="#" class="kt-nav__link">
+                                                        <i class="kt-nav__link-icon flaticon2-calendar-8"></i>
+                                                        <span class="kt-nav__link-text">FAQ</span>
+                                                    </a>
+                                                </li>
+                                                <li class="kt-nav__item">
+                                                    <a href="#" class="kt-nav__link">
+                                                        <i class="kt-nav__link-icon flaticon2-link"></i>
+                                                        <span class="kt-nav__link-text">Settings</span>
+                                                    </a>
+                                                </li>
+                                                <li class="kt-nav__item">
+                                                    <a href="#" class="kt-nav__link">
+                                                        <i class="kt-nav__link-icon flaticon2-new-email"></i>
+                                                        <span class="kt-nav__link-text">Support</span>
+                                                        <span class="kt-nav__link-badge">
+                                                            <span class="kt-badge kt-badge--success">5</span>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                <li class="kt-nav__separator"></li>
+                                                <li class="kt-nav__foot">
+                                                    <a class="btn btn-label-danger btn-bold btn-sm" href="#">Upgrade plan</a>
+                                                    <a class="btn btn-clean btn-bold btn-sm" href="#" data-toggle="kt-tooltip" data-placement="right" title="Click to learn more...">Learn more</a>
+                                                </li>
+                                            </ul>
+
+                                            <!--end::Nav-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="kt-portlet__body">
+
+                                    <!--begin::k-widget4-->
+                                    <div class="kt-widget4">
+                                        <div class="kt-widget4__item">
+
+                                            <div class="kt-widget4__pic kt-widget4__pic--icon">
+                                                <img src="~/Areas/Student/assets/media/files/doc.svg" alt="">
+                                            </div>
+                                            <a href="#" class="kt-widget4__title">
+                                                Metronic Documentation
+                                            </a>
+                                            <div class="kt-widget4__tools">
+                                                <a href="#" class="btn btn-clean btn-icon btn-sm">
+                                                    <i class="flaticon2-download-symbol-of-down-arrow-in-a-rectangle"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="kt-widget4__item">
+                                            <div class="kt-widget4__pic kt-widget4__pic--icon">
+                                                <img src="~/Areas/Student/assets/media/files/jpg.svg" alt="">
+                                            </div>
+                                            <a href="#" class="kt-widget4__title">
+                                                Project Launch Event
+                                            </a>
+                                            <div class="kt-widget4__tools">
+                                                <a href="#" class="btn btn-clean btn-icon btn-sm">
+                                                    <i class="flaticon2-download-symbol-of-down-arrow-in-a-rectangle"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="kt-widget4__item">
+                                            <div class="kt-widget4__pic kt-widget4__pic--icon">
+                                                <img src="~/Areas/Student/assets/media/files/pdf.svg" alt="">
+                                            </div>
+                                            <a href="#" class="kt-widget4__title">
+                                                Full Developer Manual For 4.7
+                                            </a>
+                                            <div class="kt-widget4__tools">
+                                                <a href="#" class="btn btn-clean btn-icon btn-sm">
+                                                    <i class="flaticon2-download-symbol-of-down-arrow-in-a-rectangle"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="kt-widget4__item">
+                                            <div class="kt-widget4__pic kt-widget4__pic--icon">
+                                                <img src="~/Areas/Student/assets/media/files/javascript.svg" alt="">
+                                            </div>
+                                            <a href="#" class="kt-widget4__title">
+                                                Make JS Great Again
+                                            </a>
+                                            <div class="kt-widget4__tools">
+                                                <a href="#" class="btn btn-clean btn-icon btn-sm">
+                                                    <i class="flaticon2-download-symbol-of-down-arrow-in-a-rectangle"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="kt-widget4__item">
+                                            <div class="kt-widget4__pic kt-widget4__pic--icon">
+                                                <img src="~/Areas/Student/assets/media/files/zip.svg" alt="">
+                                            </div>
+                                            <a href="#" class="kt-widget4__title">
+                                                Download Ziped version OF 5.0
+                                            </a>
+                                            <div class="kt-widget4__tools">
+                                                <a href="#" class="btn btn-clean btn-icon btn-sm">
+                                                    <i class="flaticon2-download-symbol-of-down-arrow-in-a-rectangle"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="kt-widget4__item">
+                                            <div class="kt-widget4__pic kt-widget4__pic--icon">
+                                                <img src="~/Areas/Student/assets/media/files/pdf.svg" alt="">
+                                            </div>
+                                            <a href="#" class="kt-widget4__title">
+                                                Finance Report 2016/2017
+                                            </a>
+                                            <div class="kt-widget4__tools">
+                                                <a href="#" class="btn btn-clean btn-icon btn-sm">
+                                                    <i class="flaticon2-download-symbol-of-down-arrow-in-a-rectangle"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!--end::Widget 9-->
+                                </div>
+                            </div>
+
+                            <!--end:: Widgets/Download Files-->
+                        </div>
+                        <div class="col-xl-8">
+
+                            <!--begin:: Widgets/Blog-->
+                            <div class="kt-portlet kt-portlet--height-fluid kt-widget19">
+                                <div class="kt-portlet__body kt-portlet__body--fit kt-portlet__body--unfill">
+                                    <div class="kt-widget19__pic kt-portlet-fit--top kt-portlet-fit--sides" style="min-height: 300px; background-image: url(@item.Logo)">
+                                        <h3 class="kt-widget19__title kt-font-light">
+                                            @item.Name
+                                        </h3>
+                                    </div>
+                                </div>
+                                <div class="kt-portlet__body">
+                                    <div class="kt-widget19__wrapper">
+                                        <div class="kt-widget19__content">
+                                            <div class="kt-widget19__userpic">
+                                                <img src="@item.Teacher.Address" alt="">
+                                            </div>
+                                            <div class="kt-widget19__info">
+                                                <a class="kt-widget19__username">
+                                                    @item.Teacher.FirstName.ToUpper() @item.Teacher.LastName.ToUpper() 
+                                                </a>
+                                                <span class="kt-widget19__time" style="padding-top:4px;">
+                                                    <a href="mailto:@item.Teacher.Email" style="padding-top:2px;">
+                                                        @item.Teacher.Email
+                                                    </a>
+                                                </span>
+                                            </div>
+                                            <div class="kt-widget19__stats">
+                                                <span class="kt-widget19__number kt-font-brand">
+                                                    @item.StartDate
+                                                </span>
+                                                <a href="#" class="kt-widget19__comment">
+                                                    Başlama Saati
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="kt-widget19__text">
+                                            @item.Content
+                                        </div>
+                                    </div>
+                                    <div class="kt-widget19__action" style="align-self: center;">
+                                        <a href="@item.Path" class="btn btn-sm btn-label-brand btn-bold" style="padding: 0.5rem 24rem;">Canlı Derse Katıl</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--end:: Widgets/Blog-->
+                        </div>
+                    </div>
+                </div>
+
+            }
+        }
+
+    </div>
+
+</div>
+
+
+
+
+
+
