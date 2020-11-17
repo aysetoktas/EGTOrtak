@@ -112,6 +112,7 @@
     <Content Include="Areas\Admin\Content\img\faces\card-profile2-square.jpg" />
     <Content Include="Areas\Admin\Content\img\faces\marc.jpg" />
     <Content Include="Areas\Admin\Content\img\favicon.png" />
+    <Content Include="Areas\Admin\Content\img\geniş logo.png" />
     <Content Include="Areas\Admin\Content\img\logo.png" />
     <Content Include="Areas\Admin\Content\img\mask.png" />
     <Content Include="Areas\Admin\Content\img\new_logo.png" />
@@ -141,6 +142,20 @@
     <Content Include="Areas\Admin\Content\js\plugins\nouislider.min.js" />
     <Content Include="Areas\Admin\Content\js\plugins\perfect-scrollbar.jquery.min.js" />
     <Content Include="Areas\Admin\Content\js\plugins\sweetalert2.js" />
+    <Content Include="Areas\Cteacher\Content\css\bootstrap.min.css" />
+    <Content Include="Areas\Cteacher\Content\css\demo.css" />
+    <Content Include="Areas\Cteacher\Content\css\paper-dashboard.css" />
+    <Content Include="Areas\Cteacher\Content\img\apple-icon.png" />
+    <Content Include="Areas\Cteacher\Content\img\favicon.png" />
+    <Content Include="Areas\Cteacher\Content\img\logo-small.png" />
+    <Content Include="Areas\Cteacher\Content\js\bootstrap-notify.js" />
+    <Content Include="Areas\Cteacher\Content\js\bootstrap.min.js" />
+    <Content Include="Areas\Cteacher\Content\js\chartjs.min.js" />
+    <Content Include="Areas\Cteacher\Content\js\demo.js" />
+    <Content Include="Areas\Cteacher\Content\js\jquery.min.js" />
+    <Content Include="Areas\Cteacher\Content\js\paper-dashboard.min.js" />
+    <Content Include="Areas\Cteacher\Content\js\perfect-scrollbar.jquery.min.js" />
+    <Content Include="Areas\Cteacher\Content\js\popper.min.js" />
     <Content Include="Areas\Member\Content\css\animate.css" />
     <Content Include="Areas\Member\Content\css\bootstrap.css" />
     <Content Include="Areas\Member\Content\css\flexslider.css" />
@@ -6197,6 +6212,10 @@
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\LessonController.cs" />
     <Compile Include="Areas\Admin\Controllers\TeacherController.cs" />
+    <Compile Include="Areas\Cteacher\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Cteacher\Controllers\LessonController.cs" />
+    <Compile Include="Areas\Cteacher\Controllers\OnlineLessonController.cs" />
+    <Compile Include="Areas\Cteacher\CteacherAreaRegistration.cs" />
     <Compile Include="Areas\Member\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Member\Controllers\EducationController.cs" />
     <Compile Include="Areas\Member\Controllers\HomeController.cs" />
@@ -7487,6 +7506,18 @@
     <Content Include="Areas\Student\Views\Profile\Index.cshtml" />
     <Content Include="Areas\Student\Views\Stream\Index.cshtml" />
     <Content Include="Areas\Student\Views\Shared\_StudentLayout1.cshtml" />
+    <Content Include="Areas\Cteacher\Views\web.config" />
+    <Content Include="Areas\Cteacher\Views\Shared\_TeacherLayout.cshtml" />
+    <Content Include="Areas\Cteacher\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Cteacher\Views\Lesson\List.cshtml" />
+    <Content Include="Areas\Cteacher\Views\Lesson\Add.cshtml" />
+    <Content Include="Areas\Cteacher\Views\Lesson\Update.cshtml" />
+    <Content Include="Areas\Cteacher\Views\OnlineLesson\List.cshtml" />
+    <Content Include="Areas\Cteacher\Views\OnlineLesson\Add.cshtml" />
+    <Content Include="Areas\Cteacher\Views\OnlineLesson\Update.cshtml" />
+    <Content Include="Areas\Cteacher\Views\Lesson\List2.cshtml" />
+    <Content Include="Areas\Cteacher\Views\Home\Profil.cshtml" />
+    <Content Include="Areas\Cteacher\Views\Home\Ders.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
@@ -7501,6 +7532,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Cteacher\Data\" />
     <Folder Include="Areas\Member\Models\" />
     <Folder Include="Areas\Student\Data\" />
     <Folder Include="Models\" />

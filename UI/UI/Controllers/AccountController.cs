@@ -27,7 +27,7 @@ namespace UI.Controllers
                 Teacher currentTeacher = db.Teachers.Where(x => x.FirstName == data.UserName && x.Password == data.Password).FirstOrDefault();
                 Admin currentAdmin = db.Admins.Where(x => x.FirstName == data.UserName && x.Password == data.Password).FirstOrDefault();
 
-                if (currentStudent != null || currentTeacher != null || currentAdmin!=null)
+                if (currentStudent != null || currentTeacher != null || currentAdmin != null)
                 {
                     if (currentStudent != null)
                     {
@@ -36,12 +36,17 @@ namespace UI.Controllers
                     }
                     else if (currentAdmin != null)
                     {
-                        Session["currentTeacher"] = currentTeacher;
+                        Session["currentAdmin"] = currentAdmin;
                         return RedirectToAction("Index", "Home", new { area = "Admin" });
+                    }
+                    else if (currentTeacher != null)
+                    {
+                        Session["currentTeacher"] = currentTeacher;
+                        return RedirectToAction("Index", "Home", new { area = "Cteacher" });
                     }
                     else
                     {
-                        return RedirectToAction("Index", "Home", new { area = "Admin" });
+                        return RedirectToAction("Index", "Home", new { area = "Cteacher" });
                     }
                 }
                 else
@@ -57,11 +62,11 @@ namespace UI.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Register(User newUser)
+        public ActionResult Register(Student newUser)
         {
-            newUser.Role = Role.Member;
-            db.Users.Add(newUser);
-            //db.SaveChanges();
+            //newUser.Role = Role.Member;
+            db.Students.Add(newUser);
+            db.SaveChanges();
             return RedirectToAction("Login", "Account");
 
         }
@@ -71,11 +76,11 @@ namespace UI.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult RegisterTeacher(User newUser)
+        public ActionResult RegisterTeacher(Teacher newUser)
         {
-            newUser.Role = Role.Teacher;
-            db.Users.Add(newUser);
-            //db.SaveChanges();
+            //newUser.Role = Role.Teacher;
+            db.Teachers.Add(newUser);
+            db.SaveChanges();
             return RedirectToAction("Login", "Account");
         }
 
