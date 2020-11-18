@@ -42,5 +42,12 @@ namespace UI.Areas.Cteacher.Controllers
             return View(lesson);
         }
 
+        public ActionResult EducationList(int? id)
+        {
+            Teacher currentTeacher = Session["currentTeacher"] as Teacher;
+            List<Lesson> lessons = db.Lessons.Where(x => x.EducationID == id).ToList();
+            return View(lessons);
+        }
+
     }
 }

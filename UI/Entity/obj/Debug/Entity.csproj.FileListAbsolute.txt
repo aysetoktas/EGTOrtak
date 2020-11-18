@@ -113,6 +113,10 @@ C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Entity\obj\Debug\Entity.csprojAsse
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig00.resources
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig001.resources
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig01.resources
+C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig02.resources
+C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig03.resources
+C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig04.resources
+C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig06.resources
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Entity\obj\Debug\Entity.csproj.GenerateResource.cache
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Entity\obj\Debug\Entity.csproj.CopyComplete

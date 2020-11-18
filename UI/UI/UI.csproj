@@ -7518,6 +7518,12 @@
     <Content Include="Areas\Cteacher\Views\Lesson\List2.cshtml" />
     <Content Include="Areas\Cteacher\Views\Home\Profil.cshtml" />
     <Content Include="Areas\Cteacher\Views\Home\Ders.cshtml" />
+    <Content Include="Areas\Cteacher\Views\Home\EducationList.cshtml" />
+    <Content Include="Areas\Admin\Views\Lesson\Index3.cshtml" />
+    <Content Include="Areas\Cteacher\Views\Lesson\List3.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\UpdateProfil.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\AdminAdd.cshtml" />
+    <Content Include="Areas\Admin\Views\Home\AdminList.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />

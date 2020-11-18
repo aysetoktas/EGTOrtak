@@ -15,7 +15,7 @@ namespace UI.Areas.Cteacher.Controllers
         public ActionResult List(int? id)
         {
             Teacher currentTeacher = Session["currentTeacher"] as Teacher;
-            List<Lesson> lessons= db.Lessons.Where(x => x.TeacherID== id).ToList();
+            List<Lesson> lessons= db.Lessons.Where(x => x.EducationID== id).ToList();
             return View(lessons);
         }
 
@@ -24,6 +24,10 @@ namespace UI.Areas.Cteacher.Controllers
             Teacher currentTeacher = Session["currentTeacher"] as Teacher;
             List<Lesson> lessons = db.Lessons.Where(x => x.EducationID == id).ToList();
             return View(lessons);
+        }
+        public ActionResult List3()
+        {
+            return View();
         }
 
         [HttpGet]

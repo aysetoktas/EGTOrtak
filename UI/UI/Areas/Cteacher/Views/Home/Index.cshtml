@@ -44,7 +44,7 @@
                     </div>
                     <div class="col-7 col-md-8">
                         <div class="numbers">
-                            <p class="card-category"><a href="@Url.Action("Add","Lesson", new {area="Admin" })">Ders Ekle</a></p>
+                            <p class="card-category"><a href="@Url.Action("Add","Lesson", new {area="Cteacher" })">Ders Ekle</a></p>
                             <p class="card-title">||||||||
                             <p>
                         </div>
@@ -59,6 +59,34 @@
             </div>
         </div>
     </div>
+
+    <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+            <div class="card-body ">
+                <div class="row">
+                    <div class="col-5 col-md-4">
+                        <div class="icon-big text-center icon-warning">
+                            <i class="fa fa-clock-o"></i>
+                        </div>
+                    </div>
+                    <div class="col-7 col-md-8">
+                        <div class="numbers">
+                            <p class="card-category"><a href="@Url.Action("Add","OnlineLesson", new { area="Cteacher"})">Canlı Ders Ekle</a></p>
+                            <p class="card-title">|||||||||
+                            <p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer ">
+                <hr>
+                <div class="stats">
+                    <i class="fa fa-clock-o"></i> Test Ekle
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="col-lg-3 col-md-6 col-sm-6">
         <div class="card card-stats">
             <div class="card-body ">
@@ -70,7 +98,7 @@
                     </div>
                     <div class="col-7 col-md-8">
                         <div class="numbers">
-                            <p class="card-category"><a href="@Url.Action("Add","Category", new {area="Admin" })">Profil</a></p>
+                            <p class="card-category"><a href="@Url.Action("Profil","Home", new {area="Cteacher" })">Profil</a></p>
                             <p class="card-title">|||||||||||
                             <p>
                         </div>
@@ -85,6 +113,60 @@
             </div>
         </div>
     </div>
+
+    <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+            <div class="card-body ">
+                <div class="row">
+                    <div class="col-5 col-md-4">
+                        <div class="icon-big text-center icon-warning">
+                            <i class="fa fa-file"></i>
+                        </div>
+                    </div>
+                    <div class="col-7 col-md-8">
+                        <div class="numbers">
+                            <p class="card-category"><a href="@Url.Action("List","Lesson", new { area="Cteacher"})">Dersler</a></p>
+                            <p class="card-title">|||||||||||
+                            <p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer ">
+                <hr>
+                <div class="stats">
+                    <i class="fa fa-file"></i> Tüm Dersler
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+            <div class="card-body ">
+                <div class="row">
+                    <div class="col-5 col-md-4">
+                        <div class="icon-big text-center icon-warning">
+                            <i class="fa fa-book"></i>
+                        </div>
+                    </div>
+                    <div class="col-7 col-md-8">
+                        <div class="numbers">
+                            <p class="card-category"><a href="@Url.Action("Add","Lesson", new {area="Cteacher" })">Ders Ekle</a></p>
+                            <p class="card-title">||||||||
+                            <p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer ">
+                <hr>
+                <div class="stats">
+                    <i class="fa fa-book"></i> Ders Ekle
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="col-lg-3 col-md-6 col-sm-6">
         <div class="card card-stats">
             <div class="card-body ">
@@ -96,7 +178,7 @@
                     </div>
                     <div class="col-7 col-md-8">
                         <div class="numbers">
-                            <p class="card-category"><a href="@Url.Action("Add","Product", new { area="Admin"})">Test Ekle</a></p>
+                            <p class="card-category"><a href="@Url.Action("Add","OnlineLesson", new { area="Cteacher"})">Canlı Ders Ekle</a></p>
                             <p class="card-title">|||||||||
                             <p>
                         </div>
@@ -107,6 +189,33 @@
                 <hr>
                 <div class="stats">
                     <i class="fa fa-clock-o"></i> Test Ekle
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+            <div class="card-body ">
+                <div class="row">
+                    <div class="col-5 col-md-4">
+                        <div class="icon-big text-center icon-warning">
+                            <i class="fa fa-user"></i>
+                        </div>
+                    </div>
+                    <div class="col-7 col-md-8">
+                        <div class="numbers">
+                            <p class="card-category"><a href="@Url.Action("Profil","Home", new {area="Cteacher" })">Profil</a></p>
+                            <p class="card-title">|||||||||||
+                            <p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer ">
+                <hr>
+                <div class="stats">
+                    <i class="fa fa-user"></i> Profil
                 </div>
             </div>
         </div>

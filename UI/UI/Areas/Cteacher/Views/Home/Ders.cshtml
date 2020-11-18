@@ -13,10 +13,13 @@
                 <div class="card-header ">
                     <img src="@Model.Logo" style="width:100px;" />
                     <b>  @Model.Education.Name.ToUpper() </b> <br /><hr />
-                    @Model.Name     <hr />             
+                    <b>   @Model.Name </b>    <hr />
                 </div>
                 <div class="card-body ">
-                    <div id="map" class="text">   @Model.Content</div>
+                    <div id="map" class="text"><b> Özet: </b><br /> @Model.Content</div> <hr />
+ 
+                    <p><b>Öğretmen:</b> @Model.Teacher.FirstName @Model.Teacher.LastName</p>
+
                 </div>
             </div>
         </div>
@@ -40,6 +43,6 @@
 </div>
 <div class="content">
     <div class="row">
-        
+
     </div>
 </div>

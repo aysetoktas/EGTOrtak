@@ -39,16 +39,13 @@
                 Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
             -->
             <div class="logo">
-                <a href="http://www.creative-tim.com" class="simple-text logo-mini">
+                <a href="/Cteacher/Home/Index" class="simple-text logo-mini">
                     <div class="logo-image-small">
                         <img src="~/Areas/Admin/Content/img/logo.png">
                     </div>
                 </a>
                 <a href="@Url.Action("Index","Home", new {  area="Cteacher"})" class="simple-text logo-normal">
-                    BİLİM VE TEKNOLOJİ <br /> OKULU
-                    <!-- <div class="logo-image-big">
-                      <img src="../assets/img/logo-big.png">
-                    </div> -->
+                    <b> BİLİM VE TEKNOLOJİ <br /> OKULU</b>
                 </a>
             </div>
             <div class="sidebar-wrapper">
@@ -56,37 +53,37 @@
                     <li class="active">
                         <a href="@Url.Action("Index","Home",new {area="Cteacher" })">
                             <i class="fa fa-circle-thin"></i>
-                            <p>Anasayfa</p>
+                            <p><b>Anasayfa</b></p>
                         </a>
                     </li>
                     <li>
-                        <a href="/Cteacher/Lesson/List?id=@currentTeacher.ID ">
+                        <a href="/Cteacher/Home/EducationList?id=@currentTeacher.ID ">
                             <i class="fa fa-circle-thin"></i>
-                            <p>Tüm Derslerim</p>
+                            <p><b>TÜM EĞİTİMLERİM</b></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Cteacher/Lesson/List3">
+                            <i class="fa fa-circle-thin"></i>
+                            <p><b>TÜM DERSLERİM</b></p>
                         </a>
                     </li>
                     <li>
                         <a href="@Url.Action("Add","Lesson",new {area="Cteacher" })">
                             <i class="fa fa-circle-thin"></i>
-                            <p>Ders Ekle</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="@Url.Action("Profil","Home",new {area="Cteacher" })">
-                            <i class="fa fa-circle-thin"></i>
-                            <p>Profilim</p>
+                            <p><b>DERS EKLE</b></p>
                         </a>
                     </li>
                     <li>
                         <a href="@Url.Action("Add","OnlineLesson",new {area="Cteacher" })">
                             <i class="fa fa-circle-thin"></i>
-                            <p>Canlı Ders Ekle</p>
+                            <p><b>CANLI DERS EKLE</b></p>
                         </a>
                     </li>
                     <li>
-                        <a href="@Url.Action("List","Order",new { area="Cteacher"})">
+                        <a href="@Url.Action("Profil","Home",new {area="Cteacher" })">
                             <i class="fa fa-circle-thin"></i>
-                            <p>test Görseli</p>
+                            <p><b>PROFİLİM</b></p>
                         </a>
                     </li>
 
@@ -123,9 +120,9 @@
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Çıkış Yap
                                     @*<i class="nc-icon nc-bell-55"></i>*@
-                                    <p>
+                                    @*<p>
                                         <span class="d-lg-none d-md-block">Some Actions</span>
-                                    </p>
+                                    </p>*@
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                                     <a class="dropdown-item" href="@Url.Action("Logout","Account",new {area="" })">Çıkış Yap</a>

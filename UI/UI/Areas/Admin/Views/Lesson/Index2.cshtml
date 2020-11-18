@@ -27,32 +27,34 @@
                                 <th>Ders Logosu</th>
                                 <th>Başlama Tarihi</th>
                                 <th>Bitiş Tarihi</th>
-                                <th>Ders Linki</th>
+                                <th>Video Linki</th>
                                 <th>Döküman Linki</th>
-                                <th>Öğretmen Adı</th>
+                                <th>Proje Linki</th>
+                                <th>Öğretmen</th>
                                 </thead>
                                 <tbody>
                                     @foreach (var item in lessons)
                                     {
-                                        <tr>
-                                            <td>@item.Education.Name</td>
-                                            <td>@item.Name</td>
-                                            <td><img src="@item.Path" style="height:100px;width:100px;" /></td>
-                                            <td>@item.StartDate</td>
-                                            <td>@item.EndDate</td>
-                                            <td>@item.ProjectLink</td>
-                                            <td>@item.DocumentLink</td>
-                                            <td>@item.Teacher.FirstName @item.Teacher.LastName</td>
-                                            <td>
-                                                <a href="/Admin/Lesson/Update/@item.ID">
-                                                    <input type="submit" value="Güncelle" class="btn btn-primary" />
-                                                </a>
+                                    <tr>
+                                        <td>@item.Education.Name</td>
+                                        <td>@item.Name</td>
+                                        <td> <img src="@item.Logo" style="width:100px;height:100px;" /></td>
+                                        <td>@item.StartDate</td>
+                                        <td>@item.EndDate</td>
+                                        <td>@item.Path</td>
+                                        <td>@item.DocumentLink</td>
+                                        <td>@item.ProjectLink</td>
+                                        <td>@item.Teacher.FirstName @item.Teacher.LastName</td>
+                                        <td>
+                                            <a href="/Admin/Lesson/Update/@item.ID">
+                                                <input type="submit" value="Güncelle" class="btn btn-primary" />
+                                            </a>
 
-                                                <a href="/Admin/Lesson/Delete/@item.ID">
-                                                    <input type="submit" value="SİL" class="btn btn-danger" />
-                                                </a>
-                                            </td>
-                                        </tr>
+                                            <a href="/Admin/Lesson/Delete/@item.ID">
+                                                <input type="submit" value="SİL" class="btn btn-danger" />
+                                            </a>
+                                        </td>
+                                    </tr>
                                     }
 
                                 </tbody>

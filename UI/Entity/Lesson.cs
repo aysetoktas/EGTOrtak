@@ -13,8 +13,9 @@ namespace Entity
         public int TeacherID { get; set; }
         public virtual Teacher Teacher { get; set; }
         public int EducationID { get; set; }
-        public virtual Education Education { get; set; } 
-
+        public virtual Education Education { get; set; }
+        public int? CategoryID { get; set; }
+        public virtual Category Category { get; set; }
 
         public int StartDate { get; set; }
         public int EndDate { get; set; }
@@ -26,7 +27,5 @@ namespace Entity
         public virtual ICollection<Student> Students { get; set; }
         public virtual ICollection<Syllabu> Syllabus { get; set; }
         public virtual ICollection<Achievement> Achievements { get; set; }
-        public virtual ICollection<Category> Categories { get; set; }
-
     }
 }
