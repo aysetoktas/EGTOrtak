@@ -34,7 +34,7 @@
                     </div>
                 </div>
             </li>
-            <li style="background-image: url(/Areas/Member/Content/images/slider3.jpg);">
+            <li style="background-image: url(/Areas/Member/Content/images/slider33.jpg);">
                 <div class="overlay-gradient"></div>
                 <div class="container">
                     <div class="row">
@@ -86,24 +86,113 @@
             </div>
         </div>
         <div class="row">
-            @foreach (var item in categories)
+            @*@foreach (var item in categories)
+        {
+            if (catCount < 8)
             {
-                if (catCount < 8)
-                {
-                    <div class="col-md-3 col-sm-6 text-center animate-box">
-                        <div class="services">
-                            <span class="icon">
-                                <i class="icon-note"></i>
-                            </span>
-                            <div class="desc">
-                                <h3><a href="#">@item.Name</a></h3>
-                                <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-                            </div>
+                <div class="col-md-3 col-sm-6 text-center animate-box">
+                    <div class="services">
+                        <span class="icon">
+                            <i class="icon-note"></i>
+                        </span>
+                        <div class="desc">
+                            <h3><a href="#">@item.Name</a></h3>
+                            <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
                         </div>
                     </div>
-                    catCount++;
-                }
+                </div>
+                catCount++;
             }
+        }*@
+
+            <div class="col-md-3 col-sm-6 text-center animate-box">
+                <div class="services">
+                    <span class="icon">
+                        <i class="icon-note"></i>
+                    </span>
+                    <div class="desc">
+                        <h3><a href="/Member/Category/SınıfBir">1.SINIF</a></h3>
+                        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 text-center animate-box">
+                <div class="services">
+                    <span class="icon">
+                        <i class="icon-note"></i>
+                    </span>
+                    <div class="desc">
+                        <h3><a href="/Member/Category/SınıfIki">2.SINIF</a></h3>
+                        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 text-center animate-box">
+                <div class="services">
+                    <span class="icon">
+                        <i class="icon-note"></i>
+                    </span>
+                    <div class="desc">
+                        <h3><a href="/Member/Category/SınıfUc">3.SINIF</a></h3>
+                        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 text-center animate-box">
+                <div class="services">
+                    <span class="icon">
+                        <i class="icon-note"></i>
+                    </span>
+                    <div class="desc">
+                        <h3><a href="/Member/Category/SınıfDort">4.SINIF</a></h3>
+                        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 text-center animate-box">
+                <div class="services">
+                    <span class="icon">
+                        <i class="icon-note"></i>
+                    </span>
+                    <div class="desc">
+                        <h3><a href="/Member/Category/SınıfBes">5.SINIF</a></h3>
+                        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 text-center animate-box">
+                <div class="services">
+                    <span class="icon">
+                        <i class="icon-note"></i>
+                    </span>
+                    <div class="desc">
+                        <h3><a href="/Member/Category/SınıfAlti">6.SINIF</a></h3>
+                        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 text-center animate-box">
+                <div class="services">
+                    <span class="icon">
+                        <i class="icon-note"></i>
+                    </span>
+                    <div class="desc">
+                        <h3><a href="/Member/Category/SınıfYedi">7.SINIF</a></h3>
+                        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 text-center animate-box">
+                <div class="services">
+                    <span class="icon">
+                        <i class="icon-note"></i>
+                    </span>
+                    <div class="desc">
+                        <h3><a href="/Member/Category/SınıfSekiz">8.SINIF</a></h3>
+                        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>
@@ -161,7 +250,7 @@
                             <div class="desc">
                                 <h3><a href="#">@item.Name</a></h3>
                                 <p>@item.Note</p>
-                                <span><a href="#" class="btn btn-primary btn-sm btn-course">Satın Al</a></span>
+                                @*<span><a href="#" class="btn btn-primary btn-sm btn-course">Satın Al</a></span>*@
                             </div>
                         </div>
                     </div>
@@ -191,7 +280,7 @@
                             {
                                 <div class="item">
                                     <div class="testimony-slide active htext-center">
-                                        <div class="user" style="background-image: url(/Areas/Member/Content/images/person1.jpg);"></div>
+                                        <div class="user" style="background-image: url(@teach.Detail);"></div>
                                         <span>@teach.FirstName @teach.LastName<br><small>Öğretmen</small></span>
                                         <blockquote>
                                             <p>&ldquo;@teach.Note&rdquo;</p>
@@ -233,7 +322,7 @@
         <div class="row animate-box">
             <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
                 <h2>DERSLER</h2>
-                <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+                @*<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>*@
             </div>
         </div>
         @*<div class="row row-padded-mb">
@@ -270,11 +359,11 @@
                 {
                     <div class="col-lg-4 col-md-4">
                         <div class="fh5co-blog animate-box">
-                            <a href="#" class="blog-img-holder" style="background-image: url(@item.Path);"></a>
+                            <a href="#" class="blog-img-holder" style="background-image: url(@item.Logo);"></a>
                             <div class="blog-text">
                                 <h3><a href="#">@item.Name</a></h3>
-                                <span class="posted_on">@item.Content</span>
-                                <span class="comment"><a href="">21<i class="icon-speech-bubble"></i></a></span>
+                                <span class="posted_on">@item.Education.Name</span>
+                                <span class="comment"><i class="icon-speech-bubble"></i></span>
                                 <p>@item.Teacher.FirstName @item.Teacher.LastName</p>
                             </div>
                         </div>
@@ -318,7 +407,7 @@
     <div class="container">
         <div class="row animate-box">
             <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-                <h2>Plan &amp; Pricing</h2>
+                <h2>Plan &amp; Ödeme</h2>
                 <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
             </div>
         </div>
@@ -327,11 +416,11 @@
 
                 @foreach (var edu in educations)
                 {
-                    if (priCount < 3)
+                    if (priCount < 4)
                     {
 
 
-                        <div class="col-md-4 animate-box">
+                        <div class="col-md-3 animate-box">
                             <div class="pricing__item">
                                 <div class="wrap-price">
                                     <!-- <div class="icon icon-user2"></div> -->
@@ -340,27 +429,29 @@
                                 </div>
                                 <div class="pricing__price">
                                     <span class="pricing__anim pricing__anim--1">
-                                        <span class="pricing__currency">$</span>0
+                                        59
+                                        <span class="pricing__currency">₺</span>
                                     </span>
                                     <span class="pricing__anim pricing__anim--2">
-                                        <span class="pricing__period">per year</span>
+                                        <span class="pricing__period">aylık</span>
                                     </span>
                                 </div>
                                 <div class="wrap-price">
-                                    <ul class="pricing__feature-list">
+                                    @*<ul class="pricing__feature-list">
                                         @foreach (var les in lessons)
                                         {
 
                                             <li class="pricing__feature">@les.Name</li>
                                         }
-                                    </ul>
-                                    <button class="pricing__action">Choose plan</button>
+                                    </ul>*@
+                                    <button class="pricing__action">Satın Al</button>
                                 </div>
                             </div>
                         </div>
                         priCount++;
                     }
                 }
+  
                 @*<div class="col-md-4 animate-box">
                         <div class="pricing__item">
                             <div class="wrap-price">
@@ -424,7 +515,7 @@
     </div>
 </div>
 
-<div id="fh5co-register" style="background-image: url(/Areas/Member/Content/images/img_bg_2.jpg);">
+@*<div id="fh5co-register" style="background-image: url(/Areas/Member/Content/images/img_bg_2.jpg);">
     <div class="overlay"></div>
     <div class="row">
         <div class="col-md-8 col-md-offset-2 animate-box">
@@ -437,7 +528,7 @@
             </div>
         </div>
     </div>
-</div>
+</div>*@
 
 <div id="fh5co-gallery" class="fh5co-bg-section">
     <div class="row text-center">
@@ -445,17 +536,17 @@
     </div>
     <div class="row">
         <div class="col-md-3 col-padded">
-            <a href="#" class="gallery" style="background-image: url(/Areas/Member/Content/images/1.png);"></a>
+            <i class="gallery" style="background-image: url(/Areas/Member/Content/images/1.png);"></i>
 
         </div>
         <div class="col-md-3 col-padded">
-            <a href="#" class="gallery" style="background-image: url(/Areas/Member/Content/images/2.png);"></a>
+            <i class="gallery" style="background-image: url(/Areas/Member/Content/images/2.png);"></i>
         </div>
         <div class="col-md-3 col-padded">
-            <a href="#" class="gallery" style="background-image: url(/Areas/Member/Content/images/1.png);"></a>
+            <i class="gallery" style="background-image: url(/Areas/Member/Content/images/1.png);"></i>
         </div>
         <div class="col-md-3 col-padded">
-            <a href="#" class="gallery" style="background-image: url(/Areas/Member/Content/images/2.png);"></a>
+            <i class="gallery" style="background-image: url(/Areas/Member/Content/images/2.png);"></i>
         </div>
     </div>
 </div>

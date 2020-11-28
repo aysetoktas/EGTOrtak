@@ -23,13 +23,14 @@ namespace UI.Areas.Admin.Controllers
         {
             Entity.Admin currentAdmin = Session["currentAdmin"] as Entity.Admin;
             id = currentAdmin.ID;
-            Entity.Admin updAdmin = db.Admins.Find(id);
-            return View(updAdmin);
+             return View();
         }
         [HttpPost]
         public ActionResult UpdateProfil(Entity.Admin data)
         {
+           
             Entity.Admin updAdmin = db.Admins.Find(data.ID);
+            updAdmin.ID = data.ID;
             updAdmin.Email = data.Email;
             updAdmin.FirstName = data.FirstName;
             updAdmin.LastName = data.LastName;
@@ -58,6 +59,15 @@ namespace UI.Areas.Admin.Controllers
         public ActionResult AdminList()
         {
             return View();
+        }
+
+        public ActionResult AdminDelete(int id)
+        {
+            Entity.Admin delAdmin = db.Admins.Find(id);
+            db.Admins.Remove(delAdmin);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+       
         }
              
     }

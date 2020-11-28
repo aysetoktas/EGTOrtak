@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Utility;
 
 namespace UI.Areas.Admin.Controllers
 {
@@ -23,16 +24,17 @@ namespace UI.Areas.Admin.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Add(Teacher data)
+        public ActionResult Add(Teacher data, HttpPostedFileBase Image)
         {
             Teacher yeni = new Teacher();
+            yeni.Detail = ImageUploader.UploadSingleImage("/Uploads/", Image);
+
             yeni.FirstName = data.FirstName;
             yeni.LastName = data.LastName;
             yeni.Email = data.Email;
             yeni.Password = data.Password;
             yeni.Phone = data.Phone;
-            yeni.Address = data.Address;
-            yeni.Detail = data.Detail;
+            yeni.Address = data.Address;      
             yeni.Note = data.Note;
 
             db.Teachers.Add(yeni);

@@ -41,6 +41,7 @@ namespace UI.Areas.Admin.Controllers
             data.Logo = ImageUploader.UploadSingleImage("/Uploads/", Image);
 
             yeni.EducationID = data.EducationID;
+            yeni.CategoryID = data.CategoryID;
             yeni.Name = data.Name;
             yeni.Logo = data.Logo;
             yeni.StartDate = data.StartDate;
