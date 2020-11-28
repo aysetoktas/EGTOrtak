@@ -61,3 +61,17 @@ C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Utility\obj\Debug\Utility.csproj.C
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Utility\obj\Debug\Utility.csproj.CopyComplete
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Utility\obj\Debug\Utility.dll
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Utility\obj\Debug\Utility.pdb
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Utility\bin\Utility.dll.config
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Utility\bin\Utility.dll
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Utility\bin\Utility.pdb
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Utility\bin\EntityFramework.dll
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Utility\bin\EntityFramework.SqlServer.dll
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Utility\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Utility\bin\EntityFramework.xml
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Utility\bin\EntityFramework.SqlServer.xml
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Utility\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Utility\obj\Debug\Utility.csprojAssemblyReference.cache
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Utility\obj\Debug\Utility.csproj.CoreCompileInputs.cache
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Utility\obj\Debug\Utility.csproj.CopyComplete
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Utility\obj\Debug\Utility.dll
+C:\Users\Mustafa\Desktop\EGTOrtak\UI\Utility\obj\Debug\Utility.pdb
