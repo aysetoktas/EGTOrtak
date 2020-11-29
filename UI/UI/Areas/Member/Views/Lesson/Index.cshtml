@@ -40,11 +40,12 @@
 
                 <div class="col-md-6 animate-box">
                     <div class="course">
-                        <a href="#" class="course-img" style="background-image: url(@item.Path);">
+                        <a href="#" class="course-img" style="background-image: url(@item.Logo);">
                         </a>
                         <div class="desc">
                             <h3><a href="#">@item.Name</a></h3>
-                            <p>@item.Content</p>
+                         
+                            <p>Öğretmen: @item.Teacher.FirstName @item.Teacher.LastName</p>
                             <span><a href="/Member/Lesson/Buy?id=@item.ID" class="btn btn-primary btn-sm btn-course">Satın Al</a></span>
                         </div>
                     </div>
@@ -57,18 +58,4 @@
     </div>
 </div>
 
-@*<div id="fh5co-register" style="background-image: url(/Areas/Member/Content/images/img_bg_2.jpg);">
-    <div class="overlay"></div>
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2 animate-box">
-            <div class="date-counter text-center">
-                <h2>Get 400 of Online Courses for Free</h2>
-                <h3>By Mike Smith</h3>
-                <div class="simply-countdown simply-countdown-one"></div>
-                <p><strong>Limited Offer, Hurry Up!</strong></p>
-                <p><a href="#" class="btn btn-primary btn-lg btn-reg">Register Now!</a></p>
-            </div>
-        </div>
-    </div>
-</div>*@
 

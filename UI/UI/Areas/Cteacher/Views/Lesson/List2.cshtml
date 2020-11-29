@@ -1,0 +1,72 @@
+﻿@using Entity
+@model List<Lesson>
+@{
+    ViewBag.Title = "List2";
+    Layout = "~/Areas/Cteacher/Views/Shared/_TeacherLayout.cshtml";
+    List<Education> educations = Query.EducationList();
+    List<Lesson> lessons = Query.LessonList();
+    List<Teacher> teachers = Query.TeacherList();
+}
+
+            <!-- End Navbar -->
+            <div class="content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title"> Simple Table</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead class=" text-primary">
+                                        <th></th>
+                                        <th>EğitimAdı</th>
+                                        <th>Ders Adı</th>
+                                        <th>Ders Logosu</th>
+                                        <th>Başlama - Bitiş Tarihi</th>
+                                        <th>Ders Linki</th>
+                                        <th>Döküman Linki</th>
+                                        <th>Öğretmen Adı</th>
+                                        <th colspan="2">Güncelle / Sil</th>
+                                        </thead>
+                                        <tbody>
+                                            @foreach (var item in Model)
+                                            {
+
+                                                <tr style="text-align:center;">
+                                                    <td>
+                                                        <a href="/Cteacher/Lesson/List2/@item.ID">
+                                                            <input type="submit" value="Derse Git" class="btn btn-primary" />
+                                                        </a>
+                                                    </td>
+                                                    <td>@item.Education.Name</td>
+                                                    <td>@item.Name</td>
+                                                    <td> <img src="@item.Logo" style="width:100px;" /></td>
+                                                    <td>@item.StartDate / @item.EndDate</td>
+
+                                                    <td>
+                                                        <iframe width="150" height="150" src="@item.Path" frameborder="0" allow="accelerometer; controls=0;  clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                                                    </td>
+                                                    <td>@item.DocumentLink</td>
+
+                                                    <td>@item.Teacher.FirstName @item.Teacher.LastName</td>
+                                                    <td>
+                                                        <a href="/Cteacher/Lesson/Update/@item.ID">
+                                                            <input type="submit" value="Güncelle" class="btn btn-primary" />
+                                                        </a>
+
+                                                        <a href="/Cteacher/Lesson/Delete/@item.ID">
+                                                            <input type="submit" value="SİL" class="btn btn-danger" />
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>            
+                </div>
+            </div>

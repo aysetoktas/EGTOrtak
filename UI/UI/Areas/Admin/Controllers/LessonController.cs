@@ -23,6 +23,11 @@ namespace UI.Areas.Admin.Controllers
             List<Lesson> lessons = db.Lessons.Where(x => cat.ID == cat.ID).ToList();
             return View();
         }
+        public ActionResult Index3(Category cat)
+        {
+            List<Lesson> lessons = db.Lessons.Where(x => x.CategoryID == cat.ID).ToList();
+            return View(lessons);
+        }
 
         [HttpGet]
         public ActionResult Add()
@@ -36,15 +41,17 @@ namespace UI.Areas.Admin.Controllers
             data.Logo = ImageUploader.UploadSingleImage("/Uploads/", Image);
 
             yeni.EducationID = data.EducationID;
+            yeni.CategoryID = data.CategoryID;
             yeni.Name = data.Name;
             yeni.Logo = data.Logo;
             yeni.StartDate = data.StartDate;
             yeni.EndDate = data.EndDate;
+            yeni.Path = data.Path;
             yeni.ProjectLink = data.ProjectLink;
             yeni.DocumentLink = data.DocumentLink;
             yeni.TeacherID = data.TeacherID;
 
-            db.Lessons.Add(yeni);        
+            db.Lessons.Add(yeni);
             db.SaveChanges();
             return RedirectToAction("Index2");
         }
@@ -69,9 +76,8 @@ namespace UI.Areas.Admin.Controllers
             updLesson.EducationID = data.EducationID;
             updLesson.StartDate = data.StartDate;
             updLesson.EndDate = data.EndDate;
-            updLesson.Content = data.Content;
-          
             updLesson.Path = data.Path;
+            updLesson.Content = data.Content;
             updLesson.ProjectLink = data.ProjectLink;
             updLesson.DocumentLink = data.DocumentLink;
 

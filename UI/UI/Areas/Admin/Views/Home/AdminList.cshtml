@@ -1,0 +1,68 @@
+﻿@using Entity
+@{
+    ViewBag.Title = "AdminList";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    List<Admin> admins = Query.AdminList();
+}
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-primary">
+                            <h3 class="card-title ">Adminler</h3>
+
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead class=" text-primary">
+
+                                    <th>E-mail</th>
+                                    <th>Ad</th>
+                                    <th>Soyad</th>
+                                                               
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in admins)
+                                        {
+                                            <tr>
+                                                <td>@item.Email</td>
+                                                <td>@item.FirstName</td>
+                                                <td>@item.LastName</td>
+                                         
+                                                <td>
+                                                    <a href="/Admin/Home/UpdateProfil/@item.ID">
+                                                        <input type="submit" value="Güncelle" class="btn btn-primary" />
+                                                    </a>
+
+                                                    <a href="/Admin/Home/AdminDelete/@item.ID">
+                                                        <input type="submit" value="SİL" class="btn btn-danger" />
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        }
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</head>
+<body>
+    <div>
+    </div>
+</body>
+</html>
+

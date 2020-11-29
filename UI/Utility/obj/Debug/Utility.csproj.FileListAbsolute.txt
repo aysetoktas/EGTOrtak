@@ -56,7 +56,6 @@ C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Utility\bin\Microsoft.CodeDom.Prov
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Utility\bin\EntityFramework.xml
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Utility\bin\EntityFramework.SqlServer.xml
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Utility\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Utility\obj\Debug\Utility.csprojAssemblyReference.cache
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Utility\obj\Debug\Utility.csproj.CoreCompileInputs.cache
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Utility\obj\Debug\Utility.csproj.CopyComplete
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Utility\obj\Debug\Utility.dll
