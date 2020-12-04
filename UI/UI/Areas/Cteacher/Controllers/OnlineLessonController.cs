@@ -29,10 +29,13 @@ namespace UI.Areas.Cteacher.Controllers
         public ActionResult Add(Lesson data, HttpPostedFileBase Image)
         {
             Teacher currentTeacher = Session["currentTeacher"] as Teacher;
+
             Lesson yeni = new Lesson();
             data.Logo = ImageUploader.UploadSingleImage("/Uploads/", Image);
 
             yeni.EducationID = data.EducationID;
+            yeni.CategoryID = data.CategoryID;
+            //yeni.Category.Name = "1";
             yeni.Name = data.Name;
             yeni.Logo = data.Logo;
             yeni.StartDate = data.StartDate;
@@ -43,7 +46,7 @@ namespace UI.Areas.Cteacher.Controllers
             yeni.TeacherID = currentTeacher.ID;
             db.Lessons.Add(yeni);
             db.SaveChanges();
-            return RedirectToAction("Index","Home",new { area="Cteacher"});
+            return RedirectToAction("List3", "Lesson", new { area = "Cteacher" });
         }
 
         [HttpGet]
@@ -68,9 +71,9 @@ namespace UI.Areas.Cteacher.Controllers
             updLesson.StartDate = data.StartDate;
             updLesson.EndDate = data.EndDate;
             updLesson.Content = data.Content;
-
+            updLesson.CategoryID = data.CategoryID;
             updLesson.Path = data.Path;
-            updLesson.ProjectLink = "1" ;
+            updLesson.ProjectLink = "1";
             updLesson.DocumentLink = data.DocumentLink;
 
             db.SaveChanges();

@@ -121,3 +121,4 @@ C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Entity\obj\Debug\Entity.csproj.Cor
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Entity\obj\Debug\Entity.csproj.CopyComplete
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Entity\obj\Debug\Entity.dll
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Entity\obj\Debug\Entity.pdb
+C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Entity\obj\Debug\Entity.csprojAssemblyReference.cache

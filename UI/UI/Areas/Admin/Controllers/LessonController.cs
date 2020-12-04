@@ -50,7 +50,6 @@ namespace UI.Areas.Admin.Controllers
             yeni.ProjectLink = data.ProjectLink;
             yeni.DocumentLink = data.DocumentLink;
             yeni.TeacherID = data.TeacherID;
-
             db.Lessons.Add(yeni);
             db.SaveChanges();
             return RedirectToAction("Index2");
@@ -71,6 +70,7 @@ namespace UI.Areas.Admin.Controllers
             {
                 updLesson.Logo = data.Logo;
             }
+
             updLesson.Name = data.Name;
             updLesson.TeacherID = data.TeacherID;
             updLesson.EducationID = data.EducationID;

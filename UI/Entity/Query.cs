@@ -79,5 +79,20 @@ namespace Entity
         {
             return db.Categories.ToList();
         }
+
+        public static int EducationCount()
+        {
+            return db.Educations.Count();
+        }
+        public static int LessonCount()
+        {
+            return db.Lessons.Count();
+        }
+        public static int TeacherCount()
+        {
+            return db.Teachers.Count();
+        }
+       
+
     }
 }

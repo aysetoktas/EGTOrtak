@@ -50,10 +50,10 @@ namespace UI.Areas.Cteacher.Controllers
             yeni.ProjectLink = "0";
             yeni.DocumentLink = data.DocumentLink;
             yeni.TeacherID = data.TeacherID;
-
+            yeni.CategoryID = data.CategoryID;
             db.Lessons.Add(yeni);
             db.SaveChanges();
-            return RedirectToAction("List");
+            return RedirectToAction("List3");
         }
 
         [HttpGet]
@@ -77,14 +77,14 @@ namespace UI.Areas.Cteacher.Controllers
             updLesson.EducationID = data.EducationID;
             updLesson.StartDate = data.StartDate;
             updLesson.EndDate = data.EndDate;
-            updLesson.Content = data.Content;
-
+            updLesson.Content = data.Content;          
             updLesson.Path = data.Path;
             updLesson.ProjectLink = "0";
             updLesson.DocumentLink = data.DocumentLink;
+            updLesson.CategoryID = data.CategoryID;
 
             db.SaveChanges();
-            return RedirectToAction("List");
+            return RedirectToAction("List3");
         }
 
         public ActionResult Delete(int id)
@@ -92,7 +92,7 @@ namespace UI.Areas.Cteacher.Controllers
             Lesson delLesson = db.Lessons.Find(id);
             db.Lessons.Remove(delLesson);
             db.SaveChanges();
-            return RedirectToAction("List");
+            return RedirectToAction("List3");
         }
     }
 }

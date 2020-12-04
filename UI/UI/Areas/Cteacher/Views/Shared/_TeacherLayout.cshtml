@@ -4,10 +4,6 @@
     Teacher currentTeacher = Session["currentTeacher"] as Teacher;
 
 }
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,10 +30,7 @@
 
 <body class="">
     <div class="wrapper ">
-        <div class="sidebar" data-color="white" data-active-color="danger">
-            <!--
-                Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
-            -->
+        <div class="sidebar" data-color="white" data-active-color="danger">         
             <div class="logo">
                 <a href="/Cteacher/Home/Index" class="simple-text logo-mini">
                     <div class="logo-image-small">
@@ -56,24 +49,24 @@
                             <p><b>Anasayfa</b></p>
                         </a>
                     </li>
-                    <li>
+                    @*<li>
                         <a href="/Cteacher/Home/EducationList?id=@currentTeacher.ID ">
                             <i class="fa fa-circle-thin"></i>
                             <p><b>TÜM EĞİTİMLERİM</b></p>
                         </a>
-                    </li>
+                    </li>*@
                     <li>
                         <a href="/Cteacher/Lesson/List3">
                             <i class="fa fa-circle-thin"></i>
                             <p><b>TÜM DERSLERİM</b></p>
                         </a>
                     </li>
-                    <li>
+                    @*<li>
                         <a href="@Url.Action("Add","Lesson",new {area="Cteacher" })">
                             <i class="fa fa-circle-thin"></i>
                             <p><b>DERS EKLE</b></p>
                         </a>
-                    </li>
+                    </li>*@
                     <li>
                         <a href="@Url.Action("Add","OnlineLesson",new {area="Cteacher" })">
                             <i class="fa fa-circle-thin"></i>

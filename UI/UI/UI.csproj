@@ -191,7 +191,6 @@
     <Content Include="Areas\Member\Content\images\school.jpg" />
     <Content Include="Areas\Member\Content\images\slider1.png" />
     <Content Include="Areas\Member\Content\images\slider2.jpg" />
-    <Content Include="Areas\Member\Content\images\slider3.jpg" />
     <Content Include="Areas\Member\Content\images\slider33.jpg" />
     <Content Include="Areas\Member\Content\images\slider4.jpg" />
     <Content Include="Areas\Member\Content\images\staff-1.jpg" />
@@ -7524,6 +7523,9 @@
     <Content Include="Areas\Admin\Views\Home\UpdateProfil.cshtml" />
     <Content Include="Areas\Admin\Views\Home\AdminAdd.cshtml" />
     <Content Include="Areas\Admin\Views\Home\AdminList.cshtml" />
+    <Content Include="Areas\Member\Views\Education\List.cshtml" />
+    <Content Include="Areas\Member\Views\Education\List1.cshtml" />
+    <Content Include="Areas\Member\Views\Education\LessonList.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />

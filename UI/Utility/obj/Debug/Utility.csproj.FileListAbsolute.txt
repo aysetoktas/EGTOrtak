@@ -60,3 +60,4 @@ C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Utility\obj\Debug\Utility.csproj.C
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Utility\obj\Debug\Utility.csproj.CopyComplete
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Utility\obj\Debug\Utility.dll
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Utility\obj\Debug\Utility.pdb
+C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Utility\obj\Debug\Utility.csprojAssemblyReference.cache
