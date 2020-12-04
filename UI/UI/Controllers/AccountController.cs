@@ -15,6 +15,7 @@ namespace UI.Controllers
 
         public ActionResult First()
         {
+			
             return RedirectToAction("Index", "Home", new { area = "Member" });
         }
         [HttpGet]
