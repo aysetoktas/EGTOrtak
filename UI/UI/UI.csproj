@@ -6211,6 +6211,7 @@
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\LessonController.cs" />
     <Compile Include="Areas\Admin\Controllers\TeacherController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UnitController.cs" />
     <Compile Include="Areas\Cteacher\Controllers\HomeController.cs" />
     <Compile Include="Areas\Cteacher\Controllers\LessonController.cs" />
     <Compile Include="Areas\Cteacher\Controllers\OnlineLessonController.cs" />
@@ -7526,6 +7527,8 @@
     <Content Include="Areas\Member\Views\Education\List.cshtml" />
     <Content Include="Areas\Member\Views\Education\List1.cshtml" />
     <Content Include="Areas\Member\Views\Education\LessonList.cshtml" />
+    <Content Include="Areas\Admin\Views\Unit\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Unit\Index.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />

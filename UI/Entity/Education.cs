@@ -15,12 +15,16 @@ namespace Entity
         public int StartDate { get; set; }
         public int EndDate { get; set; }
         public string Certificate { get; set; }
+        
 
         public virtual ICollection<Student> Students { get; set; }
         public virtual ICollection<Teacher> Teachers { get; set; }
-        public virtual ICollection<Syllabu> Syllabus { get; set; }
         public virtual ICollection<Category> Categories { get; set; }
         public virtual ICollection<Lesson> Lessons { get; set; }
+        //public virtual ICollection<Unit> Units { get; set; }
+
+
+
 
 
 

@@ -11,7 +11,7 @@ namespace Entity
         public string Name { get; set; }
         public int Hour { get; set; }
         public virtual ICollection<Lesson> Lessons{ get; set; }
-
+        public virtual ICollection<Student> Students { get; set; }
         public virtual ICollection<Education> Educations { get; set; }
     }
 }

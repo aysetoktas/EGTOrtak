@@ -10,10 +10,7 @@ namespace Entity
     {
         private static EduContext db = new EduContext();
 
-        public static List<Achievement> AchievementList()
-        {
-            return db.Achievements.ToList();
-        }
+
 
         public static List<Admin> AdminList()
         {
@@ -39,12 +36,9 @@ namespace Entity
         {
             return db.Educations.ToList();
         }
-       
 
-        public static List<Inspection> InspectionList()
-        {
-            return db.Inspections.ToList();
-        }
+
+
 
         public static List<Lesson> LessonList()
         {
@@ -61,10 +55,7 @@ namespace Entity
             return db.Students.ToList();
         }
 
-        public static List<Syllabu> SyllabuList()
-        {
-            return db.Syllabus.ToList();
-        }
+
         public static List<Teacher> TeacherList()
         {
             return db.Teachers.ToList();
@@ -80,6 +71,11 @@ namespace Entity
             return db.Categories.ToList();
         }
 
+        public static List<Unit> UnitList()
+        {
+            return db.Units.ToList();
+        }
+
         public static int EducationCount()
         {
             return db.Educations.Count();
@@ -92,7 +88,7 @@ namespace Entity
         {
             return db.Teachers.Count();
         }
-       
+        
 
     }
 }

@@ -26,10 +26,9 @@
                             <th></th>
                             <th>EğitimAdı</th>
                             <th>Ders Adı</th>
-                            <th>Ders Logosu</th>
+                            @*<th>Ders Logosu</th>*@
                             <th>Başlama - Bitiş Tarihi</th>
                             <th>Ders Linki</th>
-                            <th>Döküman Linki</th>
                             <th>Öğretmen Adı</th>
                             <th colspan="2">Güncelle / Sil</th>
                             </thead>
@@ -46,14 +45,12 @@
                                             </td>
                                             <td>@item.Education.Name</td>
                                             <td>@item.Name</td>
-                                            <td> <img src="@item.Logo" style="width:100px;" /></td>
+                                            @*<td> <img src="@item.Logo" style="width:100px;" /></td>*@
                                             <td>@item.StartDate / @item.EndDate</td>
 
                                             <td>
                                                 <iframe width="150" height="150" src="@item.Path" frameborder="0" allow="accelerometer; controls=0;  clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                                             </td>
-                                            <td>@item.DocumentLink</td>
-
                                             <td>@item.Teacher.FirstName @item.Teacher.LastName</td>
                                             <td>
                                                 <a href="/Cteacher/Lesson/Update/@item.ID">

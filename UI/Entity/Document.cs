@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    public class Confirmation:BaseEntity
+    public class Document:BaseEntity
     {
-        public string Name { get; set; }
-        public int Hour { get; set; }
+        public int LessonID { get; set; }
+        public virtual Lesson Lesson { get; set; }
     }
 }

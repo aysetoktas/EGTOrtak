@@ -17,11 +17,12 @@ namespace Entity
         public string School { get; set; }
         public string Grade { get; set; }
 
-        public virtual ICollection<Inspection> Inspections { get; set; }
         public virtual ICollection<Lesson> Lessons { get; set; }
         public virtual ICollection<Education> Educations { get; set; }
         public virtual ICollection<Customer> Customers { get; set; }
         public virtual ICollection<User> Users { get; set; }
+        public virtual ICollection<Category> Categories { get; set; }
+
 
     }
 }

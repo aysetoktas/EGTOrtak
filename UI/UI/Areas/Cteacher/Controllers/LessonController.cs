@@ -47,8 +47,7 @@ namespace UI.Areas.Cteacher.Controllers
             yeni.StartDate = data.StartDate;
             yeni.EndDate = data.EndDate;
             yeni.Path = data.Path;
-            yeni.ProjectLink = "0";
-            yeni.DocumentLink = data.DocumentLink;
+            yeni.IsLive = false;
             yeni.TeacherID = data.TeacherID;
             yeni.CategoryID = data.CategoryID;
             db.Lessons.Add(yeni);
@@ -79,8 +78,7 @@ namespace UI.Areas.Cteacher.Controllers
             updLesson.EndDate = data.EndDate;
             updLesson.Content = data.Content;          
             updLesson.Path = data.Path;
-            updLesson.ProjectLink = "0";
-            updLesson.DocumentLink = data.DocumentLink;
+            updLesson.IsLive = true;
             updLesson.CategoryID = data.CategoryID;
 
             db.SaveChanges();

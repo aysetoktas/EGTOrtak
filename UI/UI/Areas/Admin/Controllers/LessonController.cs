@@ -47,8 +47,6 @@ namespace UI.Areas.Admin.Controllers
             yeni.StartDate = data.StartDate;
             yeni.EndDate = data.EndDate;
             yeni.Path = data.Path;
-            yeni.ProjectLink = data.ProjectLink;
-            yeni.DocumentLink = data.DocumentLink;
             yeni.TeacherID = data.TeacherID;
             db.Lessons.Add(yeni);
             db.SaveChanges();
@@ -78,8 +76,6 @@ namespace UI.Areas.Admin.Controllers
             updLesson.EndDate = data.EndDate;
             updLesson.Path = data.Path;
             updLesson.Content = data.Content;
-            updLesson.ProjectLink = data.ProjectLink;
-            updLesson.DocumentLink = data.DocumentLink;
 
             db.SaveChanges();
             return RedirectToAction("Index2");
