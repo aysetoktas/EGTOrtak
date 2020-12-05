@@ -11,7 +11,7 @@ namespace UI.Areas.Admin.Controllers
     public class EducationController : Controller
     {
         EduContext db = new EduContext();
-        
+
         // GET: Admin/Education
         public ActionResult Index(int? id)
         {
@@ -57,13 +57,12 @@ namespace UI.Areas.Admin.Controllers
 
             Education updEducation = db.Educations.Find(data.ID);
 
-            if (data.ImagePath != "0" || data.ImagePath != "1" || data.ImagePath != "2")
-            {
-                updEducation.ImagePath = data.ImagePath;
-            }
+
+            updEducation.ImagePath = data.ImagePath;
+
             updEducation.Name = data.Name;
             updEducation.Note = data.Note;
-        
+
             updEducation.Hour = data.Hour;
             updEducation.StartDate = data.StartDate;
             updEducation.EndDate = data.EndDate;

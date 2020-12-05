@@ -53,7 +53,7 @@ namespace UI.Areas.Admin.Controllers
             yeni.Password = data.Password;
             db.Admins.Add(yeni);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("AdminList");
         }
 
         public ActionResult AdminList()
@@ -66,7 +66,7 @@ namespace UI.Areas.Admin.Controllers
             Entity.Admin delAdmin = db.Admins.Find(id);
             db.Admins.Remove(delAdmin);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("AdminList");
        
         }
              

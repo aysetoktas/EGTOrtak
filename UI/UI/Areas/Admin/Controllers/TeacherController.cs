@@ -48,16 +48,18 @@ namespace UI.Areas.Admin.Controllers
             return View(updTeacher);
         }
         [HttpPost]
-        public ActionResult Update(Teacher data)
+        public ActionResult Update(Teacher data, HttpPostedFileBase Image)
         {
+            data.Detail = ImageUploader.UploadSingleImage("/Uploads/", Image);
+
             Teacher updTeacher = db.Teachers.Find(data.ID);
+            updTeacher.Detail = data.Detail;
             updTeacher.FirstName = data.FirstName;
             updTeacher.LastName = data.LastName;
             updTeacher.Email = data.Email;
             updTeacher.Password = data.Password;
             updTeacher.Phone = data.Phone;
             updTeacher.Address = data.Address;
-            updTeacher.Detail = data.Detail;
             updTeacher.Note = data.Note;
 
             db.SaveChanges();
