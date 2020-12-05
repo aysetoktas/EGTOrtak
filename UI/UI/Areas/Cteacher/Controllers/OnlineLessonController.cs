@@ -26,12 +26,11 @@ namespace UI.Areas.Cteacher.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Add(Lesson data, HttpPostedFileBase Image, string[] students)
+        public ActionResult Add(Lesson data, string[] students)
         {
             Teacher currentTeacher = Session["currentTeacher"] as Teacher;
             Lesson yeni = new Lesson();
             yeni.Students = new List<Entity.Student>();
-            data.Logo = ImageUploader.UploadSingleImage("/Uploads/", Image);
             yeni.EducationID = data.EducationID;
             yeni.CategoryID = data.CategoryID;
             yeni.Name = data.Name;
@@ -66,15 +65,10 @@ namespace UI.Areas.Cteacher.Controllers
             return View(updLesson);
         }
         [HttpPost]
-        public ActionResult Update(Lesson data, HttpPostedFileBase Image)
+        public ActionResult Update(Lesson data)
         {
-            data.Logo = ImageUploader.UploadSingleImage("/Uploads/", Image);
-
             Lesson updLesson = db.Lessons.Find(data.ID);
-            if (data.Logo != "0" || data.Logo != "2")
-            {
-                updLesson.Logo = data.Logo;
-            }
+           
             updLesson.Name = data.Name;
             updLesson.TeacherID = data.TeacherID;
             updLesson.EducationID = data.EducationID;

@@ -20,30 +20,33 @@
                                 <table class="table">
                                     <thead class=" text-primary">
                                     <th></th>
+                                    <th>Eğitim Adı</th>
                                     <th>Ünite Adı</th>
-                                   
+
                                     </thead>
 
                                     <tbody>
                                         @foreach (var item in units)
                                         {
-                                            <tr>
-                                                <td></td>
-                                                @*<td>
-                                                    <a href="/Admin/Lesson/Index3?id=@item.ID">
-                                                        <input type="submit" value="DERSLERİ GÖR" class="btn btn-warning" />
-                                                    </a>
-                                                </td>*@
-                                                <td>@item.Name</td>
-                                                <td>
-                                                    <a href="/Admin/Unit/Update/@item.ID">
-                                                        <input type="submit" value="Güncelle" class="btn btn-primary" />
-                                                    </a>
-                                                    <a href="/Admin/Unit/Delete/@item.ID">
-                                                        <input type="submit" value="SİL" class="btn btn-danger" />
-                                                    </a>
-                                                </td>
-                                            </tr>
+                                        <tr>
+                                            <td></td>
+                                            @*<td>
+            <a href="/Admin/Lesson/Index3?id=@item.ID">
+                <input type="submit" value="DERSLERİ GÖR" class="btn btn-warning" />
+            </a>
+        </td>*@
+                                            <td>@item.Education.Name</td>
+
+                                            <td>@item.Name</td>
+                                            <td>
+                                                <a href="/Admin/Unit/Update/@item.ID">
+                                                    <input type="submit" value="Güncelle" class="btn btn-primary" />
+                                                </a>
+                                                <a href="/Admin/Unit/Delete/@item.ID">
+                                                    <input type="submit" value="SİL" class="btn btn-danger" />
+                                                </a>
+                                            </td>
+                                        </tr>
                                         }
                                     </tbody>
                                 </table>

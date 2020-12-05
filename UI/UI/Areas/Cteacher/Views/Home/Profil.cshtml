@@ -6,23 +6,6 @@
     Teacher currentTeacher = Session["currentTeacher"] as Teacher;
 
 }
-
-
-<!--
-=========================================================
-* Paper Dashboard 2 - v2.0.1
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/paper-dashboard-2
-* Copyright 2020 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
-            <!-- End Navbar -->
             <div class="content">
                 <div class="row">
                     <div class="col-md-4">
@@ -128,7 +111,7 @@ Coded by www.creative-tim.com
                                 <h5 class="card-title">PROFİLİMİ GÜNCELLE</h5>
                             </div>
                             <div class="card-body">
-                                <form enctype="multipart/form-data" method="post" action="/Cteacher/Home/UpdateAccount" runat="server">
+                                <form enctype="multipart/form-data" method="post" action="/Cteacher/Home/UpdateProfil" runat="server">
                                     <div class="row">
                                         <div class="col-md-5 pr-1">
                                             <div class="form-group">
@@ -142,6 +125,8 @@ Coded by www.creative-tim.com
                                     <div class="row">
                                         <div class="col-md-4 pr-1">
                                             <div class="form-group">
+                                                <input value="@currentTeacher.ID" type="hidden" name="ID" />
+
                                                 <label for="exampleInputEmail1">E-mail</label>
                                                 <input type="email" class="form-control" placeholder="Email" value="@currentTeacher.Email">
                                             </div>

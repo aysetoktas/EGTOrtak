@@ -20,6 +20,7 @@ namespace UI.Areas.Cteacher.Controllers
         {
             return View();
         }
+        [HttpPost]
         public ActionResult UpdateProfil(Entity.Teacher teacher)
         {
             Entity.Teacher currentTeacher = db.Teachers.Find(teacher.ID);
@@ -33,7 +34,7 @@ namespace UI.Areas.Cteacher.Controllers
             db.SaveChanges();
             Session["currentTeacher"] = null;
             Session["currentTeacher"] = currentTeacher;
-            return View("Index");
+            return RedirectToAction("Profil","Home");
         }
 
         public ActionResult Ders(int? id)

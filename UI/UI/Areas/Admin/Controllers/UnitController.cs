@@ -33,7 +33,7 @@ namespace UI.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
         [HttpGet]
-        public ActionResult Update(int id)
+        public ActionResult Update(int? id)
         {
             Unit updUnit = db.Units.Find(id);
             return View(updUnit);

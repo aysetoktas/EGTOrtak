@@ -39,7 +39,7 @@ namespace UI.Areas.Admin.Controllers
         {
             Lesson yeni = new Lesson();
             data.Logo = ImageUploader.UploadSingleImage("/Uploads/", Image);
-
+            yeni.UnitID = data.UnitID;
             yeni.EducationID = data.EducationID;
             yeni.CategoryID = data.CategoryID;
             yeni.Name = data.Name;
