@@ -26,16 +26,14 @@ namespace UI.Areas.Cteacher.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Add(Lesson data, HttpPostedFileBase Image)
+        public ActionResult Add(Lesson data, HttpPostedFileBase Image, string[] students)
         {
             Teacher currentTeacher = Session["currentTeacher"] as Teacher;
-
             Lesson yeni = new Lesson();
+            yeni.Students = new List<Entity.Student>();
             data.Logo = ImageUploader.UploadSingleImage("/Uploads/", Image);
-
             yeni.EducationID = data.EducationID;
             yeni.CategoryID = data.CategoryID;
-            //yeni.Category.Name = "1";
             yeni.Name = data.Name;
             yeni.Logo = data.Logo;
             yeni.StartDate = data.StartDate;
@@ -43,7 +41,20 @@ namespace UI.Areas.Cteacher.Controllers
             yeni.Path = data.Path;
             yeni.IsLive = true;
             yeni.TeacherID = currentTeacher.ID;
+            foreach (string id in students)
+            {
+                int stdId = Convert.ToInt32(id);
+                Entity.Student tmpStudent = db.Students.Where(x => x.ID == stdId).SingleOrDefault();
+                yeni.Students.Add(tmpStudent);
+            }
             db.Lessons.Add(yeni);
+            db.SaveChanges();
+            foreach (string id in students)
+            {
+                int stdId = Convert.ToInt32(id);
+                Entity.Student tmpStudent = db.Students.Where(x => x.ID == stdId).SingleOrDefault();
+                tmpStudent.Lessons.Add(yeni);
+            }
             db.SaveChanges();
             return RedirectToAction("List3", "Lesson", new { area = "Cteacher" });
         }

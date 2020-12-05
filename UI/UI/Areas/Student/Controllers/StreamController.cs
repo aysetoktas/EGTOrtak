@@ -13,10 +13,10 @@ namespace UI.Areas.Student.Controllers
         EduContext db = new EduContext();
 
         // GET: Student/Education
-        public ActionResult Index(int? id)
+        public ActionResult Index()
         {
             Entity.Student currentUsers = Session["currentUsers"] as Entity.Student;
-            List<Lesson> lessons = currentUsers.Lessons.Where(x => x.EducationID == id).ToList();
+            List<Lesson> lessons = currentUsers.Lessons.Where(x => x.IsLive == true).ToList();
             return View(lessons);
         }
     }
