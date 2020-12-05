@@ -30,7 +30,7 @@
 
 <body class="">
     <div class="wrapper ">
-        <div class="sidebar" data-color="white" data-active-color="danger">         
+        <div class="sidebar" data-color="white" data-active-color="danger">
             <div class="logo">
                 <a href="/Cteacher/Home/Index" class="simple-text logo-mini">
                     <div class="logo-image-small">
@@ -50,11 +50,11 @@
                         </a>
                     </li>
                     @*<li>
-                        <a href="/Cteacher/Home/EducationList?id=@currentTeacher.ID ">
-                            <i class="fa fa-circle-thin"></i>
-                            <p><b>TÜM EĞİTİMLERİM</b></p>
-                        </a>
-                    </li>*@
+                            <a href="/Cteacher/Home/EducationList?id=@currentTeacher.ID ">
+                                <i class="fa fa-circle-thin"></i>
+                                <p><b>TÜM EĞİTİMLERİM</b></p>
+                            </a>
+                        </li>*@
                     <li>
                         <a href="/Cteacher/Lesson/List3">
                             <i class="fa fa-circle-thin"></i>
@@ -62,11 +62,11 @@
                         </a>
                     </li>
                     @*<li>
-                        <a href="@Url.Action("Add","Lesson",new {area="Cteacher" })">
-                            <i class="fa fa-circle-thin"></i>
-                            <p><b>DERS EKLE</b></p>
-                        </a>
-                    </li>*@
+                            <a href="@Url.Action("Add","Lesson",new {area="Cteacher" })">
+                                <i class="fa fa-circle-thin"></i>
+                                <p><b>DERS EKLE</b></p>
+                            </a>
+                        </li>*@
                     <li>
                         <a href="@Url.Action("Add","OnlineLesson",new {area="Cteacher" })">
                             <i class="fa fa-circle-thin"></i>
@@ -114,8 +114,8 @@
                                     Çıkış Yap
                                     @*<i class="nc-icon nc-bell-55"></i>*@
                                     @*<p>
-                                        <span class="d-lg-none d-md-block">Some Actions</span>
-                                    </p>*@
+                                            <span class="d-lg-none d-md-block">Some Actions</span>
+                                        </p>*@
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                                     <a class="dropdown-item" href="@Url.Action("Logout","Account",new {area="" })">Çıkış Yap</a>
@@ -143,7 +143,7 @@
                                 ©
                                 <script>
                                     document.write(new Date().getFullYear())
-                                </script>, made with by Ayşe Toktaş 
+                                </script>, made with by Ayşe Toktaş
                             </span>
                         </div>
                     </div>
@@ -172,6 +172,7 @@
             demo.initChartsPages();
         });
     </script>
+    <script src="~/Areas/Cteacher/Content/js/CustomScript.js"></script>
 </body>
 
 </html>
