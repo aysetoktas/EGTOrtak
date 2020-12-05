@@ -1,0 +1,72 @@
+﻿@using Entity
+@model List<Lesson>
+
+@{
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    List<Education> educations = Query.EducationList();
+    List<Lesson> lessons = Query.LessonList();
+}
+
+
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <h3 class="card-title ">DERSLER</h3>
+
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                <th>EğitimAdı</th>
+                                <th>Ders Adı</th>
+                                <th>Ders Logosu</th>
+                                <th>Başlama Tarihi</th>
+                                <th>Bitiş Tarihi</th>
+                                <th>Video Linki</th>
+                                <th>Döküman Linki</th>
+                                <th>Proje Linki</th>
+                                <th>Öğretmen</th>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in lessons)
+                                    {
+                                    <tr>
+                                        <td>@item.Education.Name</td>
+                                        <td>@item.Name</td>
+                                        <td> <img src="@item.Logo" style="width:100px;height:100px;" /></td>
+                                        <td>@item.StartDate</td>
+                                        <td>@item.EndDate</td>
+                                        <td>@item.Path</td>
+                                        <td>@item.DocumentLink</td>
+                                        <td>@item.ProjectLink</td>
+                                        <td>@item.Teacher.FirstName @item.Teacher.LastName</td>
+                                        <td>
+                                            <a href="/Admin/Lesson/Update/@item.ID">
+                                                <input type="submit" value="Güncelle" class="btn btn-primary" />
+                                            </a>
+
+                                            <a href="/Admin/Lesson/Delete/@item.ID">
+                                                <input type="submit" value="SİL" class="btn btn-danger" />
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
