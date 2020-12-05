@@ -96,5 +96,18 @@ namespace UI.Areas.Cteacher.Controllers
             db.SaveChanges();
             return RedirectToAction("List");
         }
+
+        public JsonResult GetStudentsByCategoryId(int id)
+        {
+            Category category = db.Categories.Find(id);
+            var jsonData = from s in category.Students
+                           select new
+                           {
+                               ID = s.ID,
+                               FirstName = s.FirstName,
+                               LastName = s.LastName
+                           };
+            return Json(jsonData, JsonRequestBehavior.AllowGet);
+        }
     }
 }

@@ -34,7 +34,8 @@
 
                             <div class="form-group">
                                 <label for="ID">Sınıf Seçiniz</label>
-                                <select name="CategoryID" class="form-control">
+                                <select name="CategoryID" class="form-control" id="CategorySelect">
+                                    <option selected disabled value="">Sınıf Seçiniz.. </option>
                                     @foreach (var item in categories)
                                     {
                                         <option value="@item.ID">@item.Name</option>
@@ -44,11 +45,11 @@
 
                             <div class="form-group">
                                 <label for="ID">Öğrenci Seçiniz</label>
-                                <select name="Students" class="form-control" multiple>
-                                    @foreach (var item in students)
+                                <select name="Students" class="form-control" id="StudentSelect" multiple>
+                                    @*@foreach (var item in students)
                                     {
                                         <option value="@item.ID">@item.FirstName.ToUpper() @item.LastName.ToUpper()</option>
-                                    }
+                                    }*@
                                 </select>
                             </div>
 

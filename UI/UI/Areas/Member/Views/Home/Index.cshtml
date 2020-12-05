@@ -71,15 +71,15 @@
     </div>
 </aside>
 
-    @*<div class="form-group">
-            <label for="CategoryID">Sınıf Seçiniz:</label>
-            <select name="CategoryID" class="form-control">
-                @foreach (var item in categories)
-                {
-                    <option value="@item.ID">@item.Name</option>
-                }
-            </select>
-        </div>*@
+@*<div class="form-group">
+        <label for="CategoryID">Sınıf Seçiniz:</label>
+        <select name="CategoryID" class="form-control">
+            @foreach (var item in categories)
+            {
+                <option value="@item.ID">@item.Name</option>
+            }
+        </select>
+    </div>*@
 
 
 <div id="fh5co-course-categories">
@@ -92,23 +92,23 @@
         </div>
         <div class="row">
             @*@foreach (var item in categories)
-        {
-            if (catCount < 8)
-            {
-                <div class="col-md-3 col-sm-6 text-center animate-box">
-                    <div class="services">
-                        <span class="icon">
-                            <i class="icon-note"></i>
-                        </span>
-                        <div class="desc">
-                            <h3><a href="#">@item.Name</a></h3>
-                            <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+                {
+                    if (catCount < 8)
+                    {
+                        <div class="col-md-3 col-sm-6 text-center animate-box">
+                            <div class="services">
+                                <span class="icon">
+                                    <i class="icon-note"></i>
+                                </span>
+                                <div class="desc">
+                                    <h3><a href="#">@item.Name</a></h3>
+                                    <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                catCount++;
-            }
-        }*@
+                        catCount++;
+                    }
+                }*@
 
             <div class="col-md-3 col-sm-6 text-center animate-box">
                 <div class="services">
@@ -225,10 +225,10 @@
                         <span class="fh5co-counter-label">Öğretmenler</span>
                     </div>
                     @*<div class="col-md-3 col-sm-6 text-center animate-box">
-                        <span class="icon"><i class="icon-bulb"></i></span>
-                        <span class="fh5co-counter js-counter" data-from="0" data-to="200" data-speed="3000" data-refresh-interval="50"></span>
-                        <span class="fh5co-counter-label">Yapılan Ders</span>
-                    </div>*@
+                            <span class="icon"><i class="icon-bulb"></i></span>
+                            <span class="fh5co-counter js-counter" data-from="0" data-to="200" data-speed="3000" data-refresh-interval="50"></span>
+                            <span class="fh5co-counter-label">Yapılan Ders</span>
+                        </div>*@
                 </div>
             </div>
         </div>
@@ -358,25 +358,20 @@
             </div>*@
         <div class="row">
 
-            @foreach (var item in lessons)
+            @foreach (var item in categories)
             {
-                if (lesCount < 6)
-                {
-                    <div class="col-lg-4 col-md-4">
-                        <div class="fh5co-blog animate-box">
-                            <a href="#" class="blog-img-holder" style="background-image: url(@item.Logo);"></a>
-                            <div class="blog-text">
-                                <h3><a href="#">@item.Name</a></h3>
-                                <span class="posted_on">@item.Education.Name</span>
-                                <span class="comment"><i class="icon-speech-bubble"></i></span>
-                                <p>@item.Teacher.FirstName @item.Teacher.LastName</p>
-                                <span><a href="" class="btn btn-primary btn-sm btn-course">SATIN AL</a></span>
-
-                            </div>
+                <div class="col-lg-4 col-md-4">
+                    <div class="fh5co-blog animate-box">
+                        @*<a href="#" class="blog-img-holder" style="background-image: url(@item.Logo);"></a>*@
+                        <div class="blog-text">
+                            <h3><a href="#">@item.Name</a></h3>
+                            @*<span class="posted_on">@item.Education.Name</span>*@
+                            @*<span class="comment"><i class="icon-speech-bubble"></i></span>*@
+                            @*<p>@item.Teacher.FirstName @item.Teacher.LastName</p>*@
+                            <span><a href="" class="btn btn-primary btn-sm btn-course">SATIN AL</a></span>
                         </div>
                     </div>
-                    lesCount++;
-                }
+                </div>
             }
 
 
@@ -413,19 +408,19 @@
 
 
 @*<div id="fh5co-register" style="background-image: url(/Areas/Member/Content/images/img_bg_2.jpg);">
-    <div class="overlay"></div>
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2 animate-box">
-            <div class="date-counter text-center">
-                <h2>Get 400 of Online Courses for Free</h2>
-                <h3>By Mike Smith</h3>
-                <div class="simply-countdown simply-countdown-one"></div>
-                <p><strong>Limited Offer, Hurry Up!</strong></p>
-                <p><a href="#" class="btn btn-primary btn-lg btn-reg">Register Now!</a></p>
+        <div class="overlay"></div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 animate-box">
+                <div class="date-counter text-center">
+                    <h2>Get 400 of Online Courses for Free</h2>
+                    <h3>By Mike Smith</h3>
+                    <div class="simply-countdown simply-countdown-one"></div>
+                    <p><strong>Limited Offer, Hurry Up!</strong></p>
+                    <p><a href="#" class="btn btn-primary btn-lg btn-reg">Register Now!</a></p>
+                </div>
             </div>
         </div>
-    </div>
-</div>*@
+    </div>*@
 
 <div id="fh5co-gallery" class="fh5co-bg-section">
     <div class="row text-center">

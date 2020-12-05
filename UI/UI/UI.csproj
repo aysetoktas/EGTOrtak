@@ -151,6 +151,7 @@
     <Content Include="Areas\Cteacher\Content\js\bootstrap-notify.js" />
     <Content Include="Areas\Cteacher\Content\js\bootstrap.min.js" />
     <Content Include="Areas\Cteacher\Content\js\chartjs.min.js" />
+    <Content Include="Areas\Cteacher\Content\js\CustomScript.js" />
     <Content Include="Areas\Cteacher\Content\js\demo.js" />
     <Content Include="Areas\Cteacher\Content\js\jquery.min.js" />
     <Content Include="Areas\Cteacher\Content\js\paper-dashboard.min.js" />
