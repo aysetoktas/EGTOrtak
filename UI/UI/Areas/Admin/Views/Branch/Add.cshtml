@@ -1,0 +1,29 @@
+﻿@using Entity
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    List<Branch> branches = Query.BranchList();
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <h3 class="card-title ">BRANŞ EKLE</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="/Admin/Branch/Add" method="post">
+                            <div class="form-group">
+                                <label for="Name">Branş Adı</label>
+                                <input name="Name" class="form-control" rows="3" />
+                            </div>
+                            <input type="submit" value="Ekle" class="form-control btn btn-primary" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

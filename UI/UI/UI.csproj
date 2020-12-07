@@ -6207,6 +6207,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\BranchController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\EducationController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
@@ -7531,6 +7532,7 @@
     <Content Include="Areas\Admin\Views\Unit\Add.cshtml" />
     <Content Include="Areas\Admin\Views\Unit\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Unit\Update.cshtml" />
+    <Content Include="Areas\Admin\Views\Branch\Add.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
