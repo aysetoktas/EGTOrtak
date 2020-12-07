@@ -30,6 +30,26 @@ namespace UI.Areas.Admin.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
+        [HttpGet]
+        public ActionResult Update(int? id)
+        {
+            Branch updBranch = db.Branches.Find(id);
+            return View(updBranch);
+        }
+        [HttpPost]
+        public ActionResult Update(Branch data)
+        {
+            Branch updBranch = db.Branches.Find(data.ID);
+            updBranch.Name = data.Name;
+            db.SaveChanges();
+            return View("Index");
+        }
+        public ActionResult Delete(int id)
+        {
+            Branch delBranch = db.Branches.Find(id);
+            db.Branches.Remove(delBranch);
+            db.SaveChanges();
+            return View("Index");
+        }
     }
 }
