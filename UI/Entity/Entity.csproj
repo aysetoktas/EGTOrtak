@@ -106,6 +106,10 @@
     <Compile Include="Migrations\202012051407451_mig10.designer.cs">
       <DependentUpon>202012051407451_mig10.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202012072110283_migDateTime.cs" />
+    <Compile Include="Migrations\202012072110283_migDateTime.designer.cs">
+      <DependentUpon>202012072110283_migDateTime.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Payment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -152,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202012051407451_mig10.resx">
       <DependentUpon>202012051407451_mig10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012072110283_migDateTime.resx">
+      <DependentUpon>202012072110283_migDateTime.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

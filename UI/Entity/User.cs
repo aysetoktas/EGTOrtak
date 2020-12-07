@@ -23,7 +23,7 @@ namespace Entity
         public string ImagePath { get; set; }
         public string Name { get; set; }
         public string LastName { get; set; }
-        public int BirthDate { get; set; }
+        public DateTime BirthDate { get; set; }
         public string Email { get; set; }
 
         public int TeacherID { get; set; }
