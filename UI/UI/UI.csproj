@@ -123,6 +123,7 @@
     <Content Include="Areas\Admin\Content\js\core\bootstrap-material-design.min.js" />
     <Content Include="Areas\Admin\Content\js\core\jquery.min.js" />
     <Content Include="Areas\Admin\Content\js\core\popper.min.js" />
+    <Content Include="Areas\Admin\Content\js\CustomScript.js" />
     <Content Include="Areas\Admin\Content\js\material-dashboard.js" />
     <Content Include="Areas\Admin\Content\js\material-dashboard.min.js" />
     <Content Include="Areas\Admin\Content\js\plugins\arrive.min.js" />

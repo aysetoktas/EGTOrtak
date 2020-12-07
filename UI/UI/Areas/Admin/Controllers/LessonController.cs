@@ -88,5 +88,17 @@ namespace UI.Areas.Admin.Controllers
             db.SaveChanges();
             return RedirectToAction("Index2");
         }
+
+        public JsonResult GetUnitsByEducationId(int id)
+        {
+            Education education = db.Educations.Find(id);
+            var jsonData = from u in education.Units
+                           select new
+                           {
+                               ID = u.ID,
+                               Name = u.Name
+                           };
+            return Json(jsonData, JsonRequestBehavior.AllowGet);
+        }
     }
 }

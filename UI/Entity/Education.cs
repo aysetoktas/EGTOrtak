@@ -12,8 +12,8 @@ namespace Entity
         public string Note { get; set; }
         public string ImagePath { get; set; }
         public int Hour { get; set; }
-        public int StartDate { get; set; }
-        public int EndDate { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
         public string Certificate { get; set; }
         
 

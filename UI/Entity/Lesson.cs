@@ -19,8 +19,8 @@ namespace Entity
         public int? UnitID { get; set; }
         public virtual Unit Unit { get; set; }
 
-        public int StartDate { get; set; }
-        public int EndDate { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
         public string Content { get; set; }
         public string Logo { get; set; }
         public string Path { get; set; }
