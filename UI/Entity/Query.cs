@@ -42,7 +42,7 @@ namespace Entity
 
         public static List<Lesson> LessonList()
         {
-            return db.Lessons.ToList();
+            return db.Lessons.AsNoTracking().ToList();
         }
 
         public static List<Payment> PaymentList()
@@ -52,7 +52,7 @@ namespace Entity
 
         public static List<Student> StudentList()
         {
-            return db.Students.ToList();
+            return db.Students.AsNoTracking().ToList();
         }
 
 
