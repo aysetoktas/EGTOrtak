@@ -1,0 +1,68 @@
+﻿@using Entity
+@model List<Lesson>
+@{
+    Layout = null;
+    List<Lesson> lessons = Query.LessonList();
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DataTable</title>
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Areas/Admin/Content/DataTables/datatables.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <table id="lessonTable">
+            <thead>
+                <tr>
+                    <th>EğitimAdı</th>
+                    <th>ÜniteAdı</th>
+                    <th>Ders Adı</th>
+                    <th>Başlama Tarihi</th>
+                    <th>Bitiş Tarihi</th>
+                    <th>Video Linki</th>
+                    <th>Öğretmen</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in lessons)
+                {
+                    <tr>
+                        <td>@item.Education.Name</td>
+                        <td>@item.Unit.Name</td>
+                        <td>@item.Name</td>
+                        <td>@item.StartDate</td>
+                        <td>@item.EndDate</td>
+                        <td>@item.Path</td>
+                        <td>@item.Teacher.FirstName @item.Teacher.LastName</td>
+                        <td>
+                            <a href="/Admin/Lesson/Update/@item.ID">
+                                <input type="submit" value="Güncelle" class="btn btn-primary" />
+                            </a>
+
+                            <a href="/Admin/Lesson/Delete/@item.ID">
+                                <input type="submit" value="SİL" class="btn btn-danger" />
+                            </a>
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="~/Areas/Admin/Content/DataTables/js/jquery.dataTables.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <script src="~/Areas/Admin/Content/DataTables/js/dataTables.bootstrap.js"></script>
+    <script>
+        $(document).ready(function () {
+            debugger
+            $('#lessonTable').DataTable();
+        });
+    </script>
+</body>
+</html>
