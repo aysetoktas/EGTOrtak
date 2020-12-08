@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
+using Utility;
 
 namespace UI.Controllers
 {
@@ -82,9 +83,19 @@ namespace UI.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult RegisterTeacher(Teacher newUser)
+        public ActionResult RegisterTeacher(Teacher newUser, HttpPostedFileBase Image)
         {
-            //newUser.Role = Role.Teacher;
+            Teacher yeni = new Teacher();
+            newUser.Detail= ImageUploader.UploadSingleImage("/Uploads/", Image);
+
+            yeni.FirstName = newUser.FirstName;
+            yeni.LastName = newUser.LastName;
+            yeni.Email = newUser.Email;
+            yeni.Password = newUser.Password;
+            yeni.Phone = newUser.Detail;
+            yeni.Address = newUser.Address;
+            yeni.Detail = newUser.Detail;
+            
             db.Teachers.Add(newUser);
             db.SaveChanges();
             return RedirectToAction("Login", "Account");
