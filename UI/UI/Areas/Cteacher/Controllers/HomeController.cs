@@ -1,8 +1,6 @@
 ﻿using Entity;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace UI.Areas.Cteacher.Controllers
@@ -15,26 +13,27 @@ namespace UI.Areas.Cteacher.Controllers
         {
             return View();
         }
-
-        public ActionResult Profil()
+        [HttpGet]
+        public ActionResult UpdateProfil(int id)
         {
+            Entity.Teacher currentTeacher = Session["currentTeacher"] as Entity.Teacher;
+            id = currentTeacher.ID;
             return View();
         }
         [HttpPost]
         public ActionResult UpdateProfil(Entity.Teacher teacher)
         {
-            Entity.Teacher currentTeacher = db.Teachers.Find(teacher.ID);
-            currentTeacher.FirstName = teacher.FirstName;
-            currentTeacher.LastName = teacher.LastName;
-            currentTeacher.Email = teacher.Email;
-            currentTeacher.Password = teacher.Password;
-            currentTeacher.Phone = teacher.Phone;
-            currentTeacher.Address = teacher.Address;
-            currentTeacher.Note = teacher.Note;
+            Entity.Teacher updTeacher = db.Teachers.Find(teacher.ID);
+            updTeacher.ID = teacher.ID;
+            updTeacher.FirstName = teacher.FirstName;
+            updTeacher.LastName = teacher.LastName;
+            updTeacher.Email = teacher.Email;
+            updTeacher.Password = teacher.Password;
+            updTeacher.Phone = teacher.Phone;
+            updTeacher.Address = teacher.Address;
+            updTeacher.Note = teacher.Note;
             db.SaveChanges();
-            Session["currentTeacher"] = null;
-            Session["currentTeacher"] = currentTeacher;
-            return RedirectToAction("Profil","Home");
+            return RedirectToAction("Index");
         }
 
         public ActionResult Ders(int? id)

@@ -536,8 +536,6 @@ D:\GitHub\xx\EGTOrtak\UI\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
 D:\GitHub\xx\EGTOrtak\UI\UI\obj\Debug\UI.csproj.CopyComplete
 D:\GitHub\xx\EGTOrtak\UI\UI\obj\Debug\UI.dll
 D:\GitHub\xx\EGTOrtak\UI\UI\obj\Debug\UI.pdb
-C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\UI\obj\Debug\UI.csprojAssemblyReference.cache
-C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\UI\bin\UI.dll.config
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\UI\bin\UI.dll
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\UI\bin\UI.pdb
@@ -612,6 +610,8 @@ C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\UI\bin\System.Web.Webpages.Razor.x
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\UI\bin\System.Web.Helpers.xml
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\UI\bin\System.Web.Mvc.xml
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\UI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\UI\obj\Debug\UI.csprojAssemblyReference.cache
+C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\UI\obj\Debug\UI.csproj.CopyComplete
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\UI\obj\Debug\UI.dll
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\UI\obj\Debug\UI.pdb
