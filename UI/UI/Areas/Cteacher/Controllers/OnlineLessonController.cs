@@ -14,9 +14,8 @@ namespace UI.Areas.Cteacher.Controllers
 
         EduContext db = new EduContext();
         // GET: Cteacher/Lesson
-        public ActionResult List(Category cat)
+        public ActionResult List()
         {
-            List<Lesson> lessons = db.Lessons.Where(x => cat.ID == cat.ID).ToList();
             return View();
         }
 

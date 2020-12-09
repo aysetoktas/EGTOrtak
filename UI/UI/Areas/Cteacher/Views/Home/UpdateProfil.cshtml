@@ -1,7 +1,7 @@
 ﻿@using Entity
-
+@model Teacher
 @{
-    ViewBag.Title = "Profil";
+    ViewBag.Title = "UpdateProfil";
     Layout = "~/Areas/Cteacher/Views/Shared/_TeacherLayout.cshtml";
     Teacher currentTeacher = Session["currentTeacher"] as Teacher;
 
@@ -125,7 +125,7 @@
                                     <div class="row">
                                         <div class="col-md-4 pr-1">
                                             <div class="form-group">
-                                                <input value="@currentTeacher.ID" type="hidden" name="ID" />
+                                                <input type="hidden" value="@currentTeacher.ID" name="ID" />
 
                                                 <label for="exampleInputEmail1">E-mail</label>
                                                 <input type="email" class="form-control" placeholder="Email" value="@currentTeacher.Email">
@@ -134,7 +134,7 @@
 
                                         <div class="col-md-4 pr-1">
                                             <div class="form-group">
-                                                <label">Şifre</label>
+                                                <label>Şifre</label>
                                                 <input type="text" class="form-control" placeholder="Password" value="@currentTeacher.Password">
                                             </div>
                                         </div>
@@ -193,7 +193,10 @@
                                     </div>
                                     <div class="row">
                                         <div class="update ml-auto mr-auto">
-                                            <button type="submit" class="btn btn-primary btn-round" onclick="UpdateProfil()">PROFİLİMİ GÜNCELLE</button>
+                                             <a href="/CTeacher/Home/UpdateProfil">
+                                            <button type="submit" class="btn btn-primary btn-round">PROFİLİMİ GÜNCELLE</button>
+                                            <div class="clearfix"></div>
+                                        </a>
                                         </div>
                                     </div>
                                 </form>

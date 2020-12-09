@@ -133,6 +133,7 @@ C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Entity\bin\Debug\EntityFramework.d
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Entity\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Entity\bin\Debug\EntityFramework.xml
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Entity\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Entity\obj\Debug\Entity.csprojAssemblyReference.cache
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig00.resources
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig001.resources
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig01.resources
@@ -150,4 +151,3 @@ C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Entity\obj\Debug\Entity.csproj.Cor
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Entity\obj\Debug\Entity.csproj.CopyComplete
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Entity\obj\Debug\Entity.dll
 C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Entity\obj\Debug\Entity.pdb
-C:\Users\aysetoktas\Desktop\Ortak\EGTOrtak\UI\Entity\obj\Debug\Entity.csprojAssemblyReference.cache

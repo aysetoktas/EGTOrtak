@@ -36,7 +36,7 @@ namespace UI.Areas.Admin.Controllers
             updAdmin.LastName = data.LastName;
             updAdmin.Password = data.Password;
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("AdminList");
         }
         [HttpGet]
         public ActionResult AdminAdd()

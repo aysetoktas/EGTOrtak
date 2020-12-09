@@ -14,32 +14,28 @@ namespace Entity
 
         public static List<Admin> AdminList()
         {
-            return db.Admins.ToList();
+            return db.Admins.AsNoTracking().ToList();
         }
 
         public static List<Branch> BranchList()
         {
-            return db.Branches.ToList();
+            return db.Branches.AsNoTracking().ToList();
         }
 
         public static List<Contract> ContractList()
         {
-            return db.Contracts.ToList();
+            return db.Contracts.AsNoTracking().ToList();
         }
 
         public static List<Customer> CustomerList()
         {
-            return db.Customers.ToList();
+            return db.Customers.AsNoTracking().ToList();
         }
 
         public static List<Education> EducationList()
         {
-            return db.Educations.ToList();
+            return db.Educations.AsNoTracking().ToList();
         }
-
-
-
-
         public static List<Lesson> LessonList()
         {
             return db.Lessons.AsNoTracking().ToList();
@@ -47,7 +43,7 @@ namespace Entity
 
         public static List<Payment> PaymentList()
         {
-            return db.Payments.ToList();
+            return db.Payments.AsNoTracking().ToList();
         }
 
         public static List<Student> StudentList()
@@ -58,22 +54,22 @@ namespace Entity
 
         public static List<Teacher> TeacherList()
         {
-            return db.Teachers.ToList();
+            return db.Teachers.AsNoTracking().ToList();
         }
 
         public static List<User> UserList()
         {
-            return db.Users.ToList();
+            return db.Users.AsNoTracking().ToList();
         }
 
         public static List<Category> CategoryList()
         {
-            return db.Categories.ToList();
+            return db.Categories.AsNoTracking().ToList();
         }
 
         public static List<Unit> UnitList()
         {
-            return db.Units.ToList();
+            return db.Units.AsNoTracking().ToList();
         }
 
         public static int EducationCount()
