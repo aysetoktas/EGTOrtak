@@ -173,6 +173,18 @@
         });
     </script>
     <script src="~/Areas/Cteacher/Content/js/CustomScript.js"></script>
+    <!--Datatable-->
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedcolumns/3.3.2/css/fixedColumns.dataTables.min.css" />
+    <script type="text/javascript" src="//cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/fixedcolumns/3.3.2/js/dataTables.fixedColumns.min.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#eduLessonTable').DataTable();
+        });
+    </script>
 </body>
 
 </html>

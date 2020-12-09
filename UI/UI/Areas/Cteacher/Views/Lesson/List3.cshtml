@@ -20,17 +20,18 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table">
-
-                            <thead class=" text-primary">
-                            <th></th>
-                            <th>EğitimAdı</th>
-                            <th>Ders Adı</th>
-                            @*<th>Ders Logosu</th>*@
-                            <th>Başlama - Bitiş Tarihi</th>
-                            <th>Ders Linki</th>
-                            <th>Öğretmen Adı</th>
-                            <th colspan="2">Güncelle / Sil</th>
+                        <table class="display" style="width:100%" id="eduLessonTable">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>EğitimAdı</th>
+                                    <th>Ders Adı</th>
+                                    @*<th>Ders Logosu</th>*@
+                                    <th>Başlama - Bitiş Tarihi</th>
+                                    <th>Ders Linki</th>
+                                    <th>Öğretmen Adı</th>
+                                    <th>Güncelle / Sil</th>
+                                </tr>
                             </thead>
                             <tbody>
                                 @foreach (var item in lessons)
