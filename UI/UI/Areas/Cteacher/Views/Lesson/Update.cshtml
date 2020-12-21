@@ -5,16 +5,14 @@
     Layout = "~/Areas/Cteacher/Views/Shared/_TeacherLayout.cshtml";
     List<Education> educations = Query.EducationList();
     List<Teacher> teachers = Query.TeacherList();
+    List<Category> categories = Query.CategoryList();
 }
-
-
-<form action="/Cteacher/Lesson/Update" method="post">
-
+<form action="/Cteacher/Lesson/Update" method="post" enctype="multipart/form-data">
     <div class="form-group">
         <img src="@Model.Logo" class="rounded" height="100" />
     </div>
     <div class="">
-        <label for="Image" style="color:coral">Eğitim Logosunu Güncelle</label>
+        <label for="Logo" style="color:coral">Eğitim Logosunu Güncelle</label>
         <input type="file" name="Image" />
     </div>
 
@@ -45,6 +43,15 @@
             }
         </select>
     </div>
+    @*<div class="form-group">
+        <label for="CategoryID">Sınıf Seçiniz:</label>
+        <select name="CategoryID" class="form-control">
+            @foreach (var item in categories)
+            {
+                <option @(Model.CategoryID == item.ID ? "selected=\"selected\"" : "" ) value="@item.ID">@item.Name</option>
+            }
+        </select>
+    </div>*@
     <div class="form-group">
         <label for="StartDate">Başlama Tarihi</label>
         <input name="StartDate" value="@Model.StartDate" class="form-control" />
@@ -62,7 +69,7 @@
         <label for="Path">Path</label>
         <input name="Path" value="@Model.Path" class="form-control" />
     </div>
-    
+
     <div class="form-group">
         <label for="DocumentLink">DocumentLink</label>
         <input name="DocumentLink" value="@Model.DocumentLink" class="form-control" />

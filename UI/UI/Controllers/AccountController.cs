@@ -12,6 +12,12 @@ namespace UI.Controllers
     {
         EduContext db = new EduContext();
         // GET: Account
+
+        public ActionResult First()
+        {
+			
+            return RedirectToAction("Index", "Home", new { area = "Member" });
+        }
         [HttpGet]
         public ActionResult Login()
         {

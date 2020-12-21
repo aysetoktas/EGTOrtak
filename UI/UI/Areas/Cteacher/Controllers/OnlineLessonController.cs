@@ -26,24 +26,37 @@ namespace UI.Areas.Cteacher.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Add(Lesson data, HttpPostedFileBase Image)
+        public ActionResult Add(Lesson data, HttpPostedFileBase Image, string[] students)
         {
             Teacher currentTeacher = Session["currentTeacher"] as Teacher;
             Lesson yeni = new Lesson();
+            yeni.Students = new List<Entity.Student>();
             data.Logo = ImageUploader.UploadSingleImage("/Uploads/", Image);
-
             yeni.EducationID = data.EducationID;
+            yeni.CategoryID = data.CategoryID;
             yeni.Name = data.Name;
             yeni.Logo = data.Logo;
             yeni.StartDate = data.StartDate;
             yeni.EndDate = data.EndDate;
             yeni.Path = data.Path;
-            yeni.ProjectLink = "1";
-            yeni.DocumentLink = data.DocumentLink;
+            yeni.IsLive = true;
             yeni.TeacherID = currentTeacher.ID;
+            foreach (string id in students)
+            {
+                int stdId = Convert.ToInt32(id);
+                Entity.Student tmpStudent = db.Students.Where(x => x.ID == stdId).SingleOrDefault();
+                yeni.Students.Add(tmpStudent);
+            }
             db.Lessons.Add(yeni);
             db.SaveChanges();
-            return RedirectToAction("Index","Home",new { area="Cteacher"});
+            foreach (string id in students)
+            {
+                int stdId = Convert.ToInt32(id);
+                Entity.Student tmpStudent = db.Students.Where(x => x.ID == stdId).SingleOrDefault();
+                tmpStudent.Lessons.Add(yeni);
+            }
+            db.SaveChanges();
+            return RedirectToAction("List3", "Lesson", new { area = "Cteacher" });
         }
 
         [HttpGet]
@@ -68,10 +81,9 @@ namespace UI.Areas.Cteacher.Controllers
             updLesson.StartDate = data.StartDate;
             updLesson.EndDate = data.EndDate;
             updLesson.Content = data.Content;
-
+            updLesson.CategoryID = data.CategoryID;
             updLesson.Path = data.Path;
-            updLesson.ProjectLink = "1" ;
-            updLesson.DocumentLink = data.DocumentLink;
+            updLesson.IsLive = true;
 
             db.SaveChanges();
             return RedirectToAction("List");
