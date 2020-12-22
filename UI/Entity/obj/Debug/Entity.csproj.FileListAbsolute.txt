@@ -158,7 +158,6 @@ D:\GitHub\Freelance\xx\EGTOrtak\UI\Entity\bin\Debug\EntityFramework.dll
 D:\GitHub\Freelance\xx\EGTOrtak\UI\Entity\bin\Debug\EntityFramework.SqlServer.dll
 D:\GitHub\Freelance\xx\EGTOrtak\UI\Entity\bin\Debug\EntityFramework.xml
 D:\GitHub\Freelance\xx\EGTOrtak\UI\Entity\bin\Debug\EntityFramework.SqlServer.xml
-D:\GitHub\Freelance\xx\EGTOrtak\UI\Entity\obj\Debug\Entity.csprojAssemblyReference.cache
 D:\GitHub\Freelance\xx\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig00.resources
 D:\GitHub\Freelance\xx\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig001.resources
 D:\GitHub\Freelance\xx\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig01.resources
