@@ -1,0 +1,90 @@
+﻿@using Entity
+@model Category
+@{
+    Category ct = new Category();
+    ViewBag.Title = "Add";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    List<Lesson> lessons = Query.LessonList();
+    List<Education> educations = Query.EducationList();
+    List<Teacher> teachers = Query.TeacherList();
+    List<Category> categories = Query.CategoryList();
+}
+
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <h3 class="card-title ">DERS EKLE</h3>
+
+                    </div>
+                    <div class="card-body">
+                        <form action="/Admin/Lesson/Add" method="post" enctype="multipart/form-data">
+                          
+                            <div class="form-group">
+                                <label for="EducationID">Eğitim Seçiniz:</label>
+                                <select name="EducationID" class="form-control">
+                                    @foreach (var item in educations)
+                                    {
+                                        <option value="@item.ID">@item.Name</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="CategoryID">Sınıf Seçiniz:</label>
+                                <select name="CategoryID" class="form-control">
+                                    @foreach (var item in categories)
+                                    {
+                                        <option value="@item.ID">@item.Name</option>
+                                    }
+                                </select>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Name">Ders Adı</label>
+                                <input name="Name" class="form-control" rows="3" />
+
+                            </div>
+                            <div class="">
+                                <label for="Image">Eğitim Logosu Ekle</label>
+                                <input type="file" name="Image">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="StartDate">Başlama Tarihi</label>
+                                <input name="StartDate" class="form-control" rows="3" />
+                            </div>
+                            <div class="form-group">
+                                <label for="EndDate">Bitiş Tarihi</label>
+                                <input name="EndDate" class="form-control" rows="3" />
+                            </div>
+                            <div class="form-group">
+                                <label for="Path">Video Linki</label>
+                                <input name="Path" class="form-control" rows="3" />
+                            </div>
+                            <div class="form-group">
+                                <label for="DocumentLink">Döküman Linki</label>
+                                <input name="DocumentLink" class="form-control" rows="3" />
+                            </div>
+                            <div class="form-group">
+                                <label for="TeacherID">Öğretmen Seçiniz:</label>
+                                <select name="TeacherID" class="form-control">
+                                    @foreach (var item in teachers)
+                                    {
+                                        <option value="@item.ID">@item.ID @item.FirstName @item.LastName</option>
+                                    }
+                                </select>
+                            </div>
+                            <input type="submit" value="Ekle" class="form-control btn btn-primary" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
