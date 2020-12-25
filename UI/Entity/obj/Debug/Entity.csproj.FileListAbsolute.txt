@@ -175,3 +175,5 @@ D:\GitHub\Freelance\xx\EGTOrtak\UI\Entity\obj\Debug\Entity.csproj.CoreCompileInp
 D:\GitHub\Freelance\xx\EGTOrtak\UI\Entity\obj\Debug\Entity.csproj.CopyComplete
 D:\GitHub\Freelance\xx\EGTOrtak\UI\Entity\obj\Debug\Entity.dll
 D:\GitHub\Freelance\xx\EGTOrtak\UI\Entity\obj\Debug\Entity.pdb
+D:\GitHub\Freelance\xx\EGTOrtak\UI\Entity\obj\Debug\Entity.csprojAssemblyReference.cache
+D:\GitHub\Freelance\xx\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig22122020.resources
