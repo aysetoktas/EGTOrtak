@@ -9,6 +9,7 @@ namespace Entity
     public class Lesson:BaseEntity
     {
         public string Name { get; set; }
+        public string ExamLink { get; set; }
 
         public int TeacherID { get; set; }
         public virtual Teacher Teacher { get; set; }
