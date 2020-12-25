@@ -20,31 +20,35 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table">
-
+                        <table class="display" style="width:100%" id="teacherLessonTable">
                             <thead class=" text-primary">
-                            <th></th>
-                            <th>EğitimAdı</th>
-                            <th>Ders Adı</th>
-                            <th>Ders Logosu</th>
-                            <th>Başlama - Bitiş Tarihi</th>
-                            <th>Ders Linki</th>
-                            <th>Döküman Linki</th>
-                            <th>Öğretmen Adı</th>
-                            <th colspan="2">Güncelle / Sil</th>
+                                <tr>
+                                    <th>Ders</th>
+                                    <th>Sınıf</th>
+                                    <th>Eğitim Adı</th>
+                                    <th>Ünite Adı</th>
+                                    <th>Ders Adı</th>
+                                    <th>Ders Logosu</th>
+                                    <th>Başlama - Bitiş Tarihi</th>
+                                    <th>Ders Linki</th>
+                                    <th>Öğretmen Adı</th>
+                                    <th>İşlemler</th>
+                                </tr>
                             </thead>
                             <tbody>
                                 @foreach (var item in lessons)
                                 {
-                                    if (item.TeacherID == currentTeacher.ID)
+                                    if (item.TeacherID == currentTeacher.ID && item.IsLive == false)
                                     {
-                                        <tr style="text-align:center;">
+                                        <tr @*style="text-align:center;"*@>
                                             <td>
                                                 <a href="/Cteacher/Home/Ders/@item.ID">
                                                     <input type="submit" value="Derse Git" class="btn btn-warning" />
                                                 </a>
                                             </td>
+                                            <td>@item.Category.Name</td>
                                             <td>@item.Education.Name</td>
+                                            <td>@item.Unit.Name</td>
                                             <td>@item.Name</td>
                                             <td> <img src="@item.Logo" style="width:100px;" /></td>
                                             <td>@item.StartDate / @item.EndDate</td>
@@ -52,8 +56,6 @@
                                             <td>
                                                 <iframe width="150" height="150" src="@item.Path" frameborder="0" allow="accelerometer; controls=0;  clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                                             </td>
-                                            <td>@item.DocumentLink</td>
-
                                             <td>@item.Teacher.FirstName @item.Teacher.LastName</td>
                                             <td>
                                                 <a href="/Cteacher/Lesson/Update/@item.ID">
@@ -70,14 +72,14 @@
                                 }
 
                             </tbody>
-                            @if (count == 0)
+                            @*@if (count == 0)
                             {
                                 <div style="padding-top:30px;padding-bottom:30px;">
                                     <h1>Bu Eğitime Ait Dersiniz Bulunmamaktadır...</h1>
 
                                 </div>
 
-                            }
+                            }*@
                         </table>
                     </div>
                 </div>

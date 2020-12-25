@@ -1,0 +1,66 @@
+﻿@using Entity
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    List<Unit> units = Query.UnitList();
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-primary">
+                            <h3 class="card-title ">ÜNİTELER</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class ="display" style="width:100%" id="unitTable">
+                                    <thead class=" text-primary">
+                                        <tr>
+                                            <th></th>
+                                            <th>Eğitim Adı</th>
+                                            <th>Ünite Adı</th>
+                                            <th>İşlemler</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in units)
+                                        {
+                                            <tr>
+                                                <td></td>
+                                                @*<td>
+                                                        <a href="/Admin/Lesson/Index3?id=@item.ID">
+                                                            <input type="submit" value="DERSLERİ GÖR" class="btn btn-warning" />
+                                                        </a>
+                                                    </td>*@
+                                                <td>@item.Education.Name</td>
+
+                                                <td>@item.Name</td>
+                                                <td>
+                                                    <a href="/Admin/Unit/Update/@item.ID">
+                                                        <input type="submit" value="Güncelle" class="btn btn-primary" />
+                                                    </a>
+                                                    <a href="/Admin/Unit/Delete/@item.ID">
+                                                        <input type="submit" value="SİL" class="btn btn-danger" />
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                    </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</head>
+<body>
+    <div>
+    </div>
+</body>
+</html>

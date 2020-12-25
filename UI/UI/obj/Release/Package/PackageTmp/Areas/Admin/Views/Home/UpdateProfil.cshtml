@@ -23,6 +23,7 @@
                                             <div class="col-md-5">
                                                 <div class="form-group">
                                                     <label class="bmd-label-floating">ADMİN</label>
+                                                    <input type="hidden" value="@currentAdmin.ID" name="ID" />
                                                     <input type="text" class="form-control" disabled>
                                                 </div>
                                             </div>
@@ -82,7 +83,7 @@
                                     <p class="card-description">
                                        @currentAdmin.Email
                                     </p>
-                                    <a href="/Admin/Home/Profil" class="btn btn-primary btn-round">PROFİLİM</a>
+                                    <a href="/Admin/Home/UpdateProfil?id=@currentAdmin.ID" class="btn btn-primary btn-round">PROFİLİM</a>
                                 </div>
                             </div>
                         </div>

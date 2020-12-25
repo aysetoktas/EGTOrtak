@@ -24,35 +24,29 @@
                 <div class="signup-content">
                     <div class="signup-form">
                         <h2 class="form-title">Öğretmen Kayıt Ol</h2>
-                        <form action="@Url.Action("RegisterTeacher","Account",new {area="" })" method="POST" class="register-form" id="register-form">
+                        <form action="@Url.Action("RegisterTeacher","Account",new {area="" })" method="POST" class="register-form" id="register-form" enctype="multipart/form-data">
 
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="UserName" id="name" placeholder="Kullanıcı Adı" />
+                                <input type="text" name="FirstName" id="name" placeholder="Adınız" />
                             </div>
-
-                            <div class="form-group">
-                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="Password" id="pass" placeholder="Şifre" />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="email"><i class="zmdi zmdi-email"></i></label>
-                                <input type="email" name="Email" id="email" placeholder="E-mail" />
-                            </div>
-
-                            <div class="form-group">
-                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="Name" id="name" placeholder="Adınız" />
-                            </div>
-
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="LastName" id="lastname" placeholder="Soyadınız" />
                             </div>
                             <div class="form-group">
+                                <label for="email"><i class="zmdi zmdi-email"></i></label>
+                                <input type="email" name="Email" id="email" placeholder="E-mail" />
+                            </div>
+                            <div class="form-group">
+                                <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="Password" id="pass" placeholder="Şifre" />
+                            </div>
+
+
+                            <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-phone"></i></label>
-                                <input type="text" name="PhoneNumber" id="phonenumber" placeholder="Telefon Numaranız" />
+                                <input type="text" name="Phone" id="phonenumber" placeholder="Telefon Numaranız" />
                             </div>
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-layers"></i></label>
@@ -62,6 +56,12 @@
                                 <label for="name"><i class="zmdi zmdi-layers"></i></label>
                                 <input type="text" name="BirthDate" id="birthdate" placeholder="Doğum Tarihi" />
                             </div>
+
+                            <h3>Profil Fotoğrafı Seçiniz</h3>
+                            <div class="form-group">
+                                <input type="file" name="Detail">
+                            </div>
+
                             <div class="form-group">
                                 <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
                                 <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
