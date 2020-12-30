@@ -92,9 +92,10 @@ namespace UI.Controllers
             yeni.LastName = newUser.LastName;
             yeni.Email = newUser.Email;
             yeni.Password = newUser.Password;
-            yeni.Phone = newUser.Detail;
+            yeni.Phone = newUser.Phone;
             yeni.Address = newUser.Address;
             yeni.Detail = newUser.Detail;
+            yeni.Note = newUser.Note;
             
             db.Teachers.Add(newUser);
             db.SaveChanges();

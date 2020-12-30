@@ -45,5 +45,21 @@ namespace UI.Areas.Member.Controllers
         {
             return View();
         }
+        public ActionResult SınıfDokuz()
+        {
+            return View();
+        }
+        public ActionResult SınıfOn()
+        {
+            return View();
+        }
+        public ActionResult SınıfOnbir()
+        {
+            return View();
+        }
+        public ActionResult SınıfOniki()
+        {
+            return View();
+        }
     }
 }

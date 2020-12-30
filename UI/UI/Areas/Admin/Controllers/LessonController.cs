@@ -35,10 +35,11 @@ namespace UI.Areas.Admin.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Add(Lesson data, HttpPostedFileBase Image)
+        public ActionResult Add(Lesson data, HttpPostedFileBase Image, HttpPostedFileBase Pdf)
         {
             Lesson yeni = new Lesson();
             data.Logo = ImageUploader.UploadSingleImage("/Uploads/", Image);
+            data.Content = PdfUploader.UploadPdf("UploadContent", Pdf);
             yeni.UnitID = data.UnitID;
             yeni.EducationID = data.EducationID;
             yeni.CategoryID = data.CategoryID;
@@ -47,6 +48,7 @@ namespace UI.Areas.Admin.Controllers
             yeni.StartDate = data.StartDate;
             yeni.EndDate = data.EndDate;
             yeni.Path = data.Path;
+       
             yeni.TeacherID = data.TeacherID;
             db.Lessons.Add(yeni);
             db.SaveChanges();
@@ -59,9 +61,10 @@ namespace UI.Areas.Admin.Controllers
             return View(updLesson);
         }
         [HttpPost]
-        public ActionResult Update(Lesson data, HttpPostedFileBase Image)
+        public ActionResult Update(Lesson data, HttpPostedFileBase Image, HttpPostedFileBase Pdf)
         {
             data.Logo = ImageUploader.UploadSingleImage("/Uploads/", Image);
+            data.Content = PdfUploader.UploadPdf("/UploadContent/", Pdf);
 
             Lesson updLesson = db.Lessons.Find(data.ID);
             if (data.Logo != "0" || data.Logo != "1" || data.Logo != "2")
