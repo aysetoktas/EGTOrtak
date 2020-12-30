@@ -22,28 +22,30 @@
                         <div class="table-responsive">
                             <table class="table">
                                 <thead class=" text-primary">
-                                <th>EğitimAdı</th>
-                                <th>Ders Adı</th>
-                                <th>Ders Logosu</th>
-                                <th>Başlama Tarihi</th>
-                                <th>Bitiş Tarihi</th>
-                                <th>Video Linki</th>
-                                <th>Döküman Linki</th>
-                                <th>Proje Linki</th>
-                                <th>Öğretmen</th>
+                                    <tr>
+                                        <th>Sınıf</th>
+                                        <th>EğitimAdı</th>
+                                        <th>Ünite Adı</th>
+                                        <th>Ders Adı</th>
+                                        <th>Ders Logosu</th>
+                                        <th>Başlama Tarihi</th>
+                                        <th>Bitiş Tarihi</th>
+                                        <th>Video Linki</th>
+                                        <th>Öğretmen</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
                                     @foreach (var item in Model)
                                     {
                                         <tr>
+                                            <td>@item.Category.Name</td>
                                             <td>@item.Education.Name</td>
+                                            <td>@item.Unit.Name</td>
                                             <td>@item.Name</td>
                                             <td> <img src="@item.Logo" style="width:100px;height:100px;" /></td>
                                             <td>@item.StartDate</td>
                                             <td>@item.EndDate</td>
                                             <td>@item.Path</td>
-                                            <td>@item.DocumentLink</td>
-                                            <td>@item.ProjectLink</td>
                                             <td>@item.Teacher.FirstName @item.Teacher.LastName</td>
                                             <td>
                                                 <a href="/Admin/Lesson/Update/@item.ID">

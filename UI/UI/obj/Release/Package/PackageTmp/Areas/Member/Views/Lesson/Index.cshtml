@@ -3,20 +3,20 @@
     ViewBag.Title = "Index";
     Layout = "~/Areas/Member/Views/Shared/_MemberLayout.cshtml";
     List<Lesson> lessons = Query.LessonList();
+    List<Category> categories = Query.CategoryList();
 }
 
 
 <aside id="fh5co-hero">
     <div class="flexslider">
         <ul class="slides">
-            <li style="background-image: url(/Areas/Member/Content/images/slider33.jpg); width:">
+            <li style="background-image: url(/Areas/Member/Content/images/slider33.jpg); ">
                 <div class="overlay-gradient"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 text-center slider-text">
                             <div class="slider-text-inner">
                                 <h1 class="heading-section">DERSLER</h1>
-                                @*<h2>Free html5 templates Made by <a href="http://freehtml5.co/" target="_blank">freehtml5.co</a></h2>*@
                             </div>
                         </div>
                     </div>
@@ -29,9 +29,19 @@
 <div id="fh5co-course">
     <div class="container">
         <div class="row animate-box">
-            <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+            <div class="col-md-12 text-center fh5co-heading">
                 <h2>DERSLER</h2>
                 <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+                <div class="col-md-2 ">
+                </div>
+                @foreach (var item in categories)
+                {
+                    <div class="col-md-1 ">
+                        <span><a href="/Member/Education/List1?id=@item.ID" class="btn btn-primary btn-sm btn-course">@item.Name</a></span>
+                    </div>
+                }
+                <div class="col-md-2 ">
+                </div>
             </div>
         </div>
         <div class="row">
@@ -44,17 +54,15 @@
                         </a>
                         <div class="desc">
                             <h3><a href="#">@item.Name</a></h3>
-                         
+
                             <p>Öğretmen: @item.Teacher.FirstName @item.Teacher.LastName</p>
+                            <p>Eğitim: @item.Education.Name</p>
                             <span><a href="/Member/Lesson/Buy?id=@item.ID" class="btn btn-primary btn-sm btn-course">Satın Al</a></span>
                         </div>
                     </div>
                 </div>
             }
         </div>
-
-
-
     </div>
 </div>
 

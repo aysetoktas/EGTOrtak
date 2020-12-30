@@ -6,141 +6,216 @@
     List<Education> educations = Query.EducationList();
     List<Lesson> lessons = Query.LessonList();
     Admin currentAdmin = Session["currentAdmin"] as Admin;
-
-
 }
-
-            <!-- End Navbar -->
-            <div class="content">
-                <div class="container-fluid">
-            
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card card-chart">
-                                <div class="card-header card-header-success">
-                                    <div class="ct-chart" id="dailySalesChart"></div>
-                                </div>
-                                <div class="card-body">
-                                    <h3 class="card-title"><a href="/Admin/Category/Index"><b>SINIFLAR</b></a></h3>                                   
-                                </div>
-                                <div class="card-footer">
-                                    <div class="stats">
-                                        <p> Tüm Sınıflar</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card card-chart">
-                                <div class="card-header card-header-warning">
-                                    <div class="ct-chart" id="websiteViewsChart"></div>
-                                </div>
-                                <div class="card-body">
-                                    <h3 class="card-title"><a href="/Admin/Education/Index"><b>EĞİTİMLER</b></a></h3>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="stats">
-                                        <p>Tüm Eğitimler</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card card-chart">
-                                <div class="card-header card-header-rose">
-                                    <div class="ct-chart" id="completedTasksChart"></div>
-                                </div>
-                                <div class="card-body">
-                                    <h3 class="card-title"><a href="/Admin/Lesson/Index2"><b>DERSLER</b></a></h3>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="stats">
-                                        <p>Tüm Dersler</p>
-                                    </div>
-                                </div>
-                            </div>
+<!-- End Navbar -->
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card card-chart">
+                    <div class="card-header card-header-danger">
+                        @*<div class="ct-chart" id="completedTasksChart"></div>*@
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="/Admin/Category/Index"><b>SINIFLAR</b></a></h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <p>Tüm Sınıflar</p>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card card-chart">
-                                <div class="card-header card-header-danger">
-                                    <div class="ct-chart" id="dailySalesChart"></div>
-                                </div>
-                                <div class="card-body">
-                                    <h3 class="card-title"><a href="/Admin/Teacher/Index"><b>ÖĞRETMENLER</b></a></h3>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="stats">
-                                        <p>Tüm Öğretmenler</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card card-chart">
-                                <div class="card-header card-header-info">
-                                    <div class="ct-chart" id="websiteViewsChart"></div>
-                                </div>
-                                <div class="card-body">
-                                    <h3 class="card-title"><a href="/Admin/Teacher/Add"><b>ÖĞRETMEN EKLE</b></a></h3>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="stats">
-                                        <p>Öğretmen Ekle</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="card card-chart">
-                                <div class="card-header card-header-primary">
-                                    <div class="ct-chart" id="completedTasksChart"></div>
-                                </div>
-                                <div class="card-body">
-                                    <h3 class="card-title"><a href="/Admin/Home/UpdateProfil?id=@currentAdmin.ID"><b>ADMİN PROFİL</b></a></h3>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="stats">
-                                        <p>Admin Profil</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="card card-chart">
-                                <div class="card-header card-header-warning">
-                                    <div class="ct-chart" id="completedTasksChart"></div>
-                                </div>
-                                <div class="card-body">
-                                    <h3 class="card-title"><a href="/Admin/Home/AdminAdd"><b>ADMİN EKLE</b></a></h3>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="stats">
-                                        <p>Admin Ekle</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="card card-chart">
-                                <div class="card-header card-header-rose">
-                                    <div class="ct-chart" id="completedTasksChart"></div>
-                                </div>
-                                <div class="card-body">
-                                    <h3 class="card-title"><a href="/Admin/Home/AdminList"><b>TÜM ADMİNLER</b></a></h3>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="stats">
-                                        <p>Tüm Adminler</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
- 
+            <div class="col-md-4">
+                <div class="card card-chart">
+                    <div class="card-header card-header-danger">
+                        @*<div class="ct-chart" id="completedTasksChart"></div>*@
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="/Admin/Category/Add"><b>SINIF EKLE</b></a></h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <p>Sınıf Ekle</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-chart">
+                    <div class="card-header card-header-warning">
+                        @*<div class="ct-chart" id="completedTasksChart"></div>*@
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="/Admin/Education/Index"><b>EĞİTİMLER</b></a></h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <p>Tüm Eğitimler</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card card-chart">
+                    <div class="card-header card-header-warning">
+                        @*<div class="ct-chart" id="completedTasksChart"></div>*@
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="/Admin/Education/Add"><b>EĞİTİM EKLE</b></a></h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <p>Eğitim Ekle</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-chart">
+                    <div class="card-header card-header-info">
+                        @*<div class="ct-chart" id="completedTasksChart"></div>*@
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="/Admin/Unit/Index"><b>ÜNİTELER</b></a></h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <p>Üniteler</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-chart">
+                    <div class="card-header card-header-info">
+                        @*<div class="ct-chart" id="completedTasksChart"></div>*@
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="/Admin/Unit/Add"><b>ÜNİTE EKLE</b></a></h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <p>Ünite Ekle</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card card-chart">
+                    <div class="card-header card-header-rose">
+                        @*<div class="ct-chart" id="completedTasksChart"></div>*@
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="/Admin/Lesson/Index2"><b>DERSLER</b></a></h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <p>Tüm Dersler</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-chart">
+                    <div class="card-header card-header-rose">
+                        @*<div class="ct-chart" id="completedTasksChart"></div>*@
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="/Admin/Lesson/Add"><b>DERS EKLE</b></a></h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <p>Ders Ekle</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-chart">
+                    <div class="card-header card-header-success">
+                        @*<div class="ct-chart" id="dailySalesChart"></div>*@
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="/Admin/Teacher/Index"><b>ÖĞRETMENLER</b></a></h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <p>Tüm Öğretmenler</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card card-chart">
+                    <div class="card-header card-header-success">
+                        @*<div class="ct-chart" id="websiteViewsChart"></div>*@
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="/Admin/Teacher/Add"><b>ÖĞRETMEN EKLE</b></a></h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <p>Öğretmen Ekle</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card card-chart">
+                    <div class="card-header card-header-primary">
+                        @*<div class="ct-chart" id="completedTasksChart"></div>*@
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="/Admin/Home/UpdateProfil?id=@currentAdmin.ID"><b>ADMİN PROFİL</b></a></h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <p>Admin Profil</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card card-chart">
+                    <div class="card-header card-header-primary">
+                        @*<div class="ct-chart" id="completedTasksChart"></div>*@
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="/Admin/Home/AdminAdd"><b>ADMİN EKLE</b></a></h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <p>Admin Ekle</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card card-chart">
+                    <div class="card-header card-header-primary">
+                        @*<div class="ct-chart" id="completedTasksChart"></div>*@
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title"><a href="/Admin/Home/AdminList"><b>TÜM ADMİNLER</b></a></h3>
+                    </div>
+                    <div class="card-footer">
+                        <div class="stats">
+                            <p>Tüm Adminler</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
