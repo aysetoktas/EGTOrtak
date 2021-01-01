@@ -201,8 +201,20 @@
     <Content Include="Areas\Member\Content\fonts\bootstrap\glyphicons-halflings-regular.svg" />
     <Content Include="Areas\Member\Content\fonts\icomoon\icomoon.svg" />
     <Content Include="Areas\Member\Content\images\1.png" />
+    <Content Include="Areas\Member\Content\images\10s.png" />
+    <Content Include="Areas\Member\Content\images\11s.png" />
+    <Content Include="Areas\Member\Content\images\12s.png" />
+    <Content Include="Areas\Member\Content\images\1s.png" />
     <Content Include="Areas\Member\Content\images\2.png" />
+    <Content Include="Areas\Member\Content\images\2s.png" />
     <Content Include="Areas\Member\Content\images\3.png" />
+    <Content Include="Areas\Member\Content\images\3s.png" />
+    <Content Include="Areas\Member\Content\images\4s.png" />
+    <Content Include="Areas\Member\Content\images\5s.png" />
+    <Content Include="Areas\Member\Content\images\6s.png" />
+    <Content Include="Areas\Member\Content\images\7s.png" />
+    <Content Include="Areas\Member\Content\images\8s.png" />
+    <Content Include="Areas\Member\Content\images\9s.png" />
     <Content Include="Areas\Member\Content\images\as1.jpg" />
     <Content Include="Areas\Member\Content\images\as2.jpg" />
     <Content Include="Areas\Member\Content\images\as3.jpg" />
@@ -6131,6 +6143,7 @@
     <Compile Include="Areas\Admin\Controllers\EducationController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\LessonController.cs" />
+    <Compile Include="Areas\Admin\Controllers\StudentController.cs" />
     <Compile Include="Areas\Admin\Controllers\TeacherController.cs" />
     <Compile Include="Areas\Admin\Controllers\UnitController.cs" />
     <Compile Include="Areas\Cteacher\Controllers\HomeController.cs" />
@@ -7455,6 +7468,9 @@
     <Content Include="Areas\Member\Views\Category\SınıfOn.cshtml" />
     <Content Include="Areas\Member\Views\Category\SınıfOnbir.cshtml" />
     <Content Include="Areas\Member\Views\Category\SınıfOniki.cshtml" />
+    <Content Include="Areas\Admin\Views\Student\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Student\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Student\Update.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
@@ -7473,6 +7489,7 @@
     <Folder Include="Areas\Member\Models\" />
     <Folder Include="Areas\Student\Data\" />
     <Folder Include="Models\" />
+    <Folder Include="UploadContent\" />
     <Folder Include="Uploads\" />
     <Folder Include="Views\Home\" />
   </ItemGroup>

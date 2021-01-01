@@ -4,6 +4,8 @@
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
     List<Education> educations = Query.EducationList();
     List<Teacher> teachers = Query.TeacherList();
+    List<Category> categories = Query.CategoryList();
+    List<Unit> units = Query.UnitList();
 }
 
 @using Entity
@@ -21,6 +23,10 @@
                     <div class="card-body">
                         <form action="/Admin/Lesson/Update" method="post" enctype="multipart/form-data">
                             <div class="form-group">
+                                <label for="ID">Ders ID</label>
+                                <input name="ID" readonly value="@Model.ID" class="form-control disabled" />
+                            </div>
+                            <div class="form-group">
                                 <img src="@Model.Logo" class="rounded" height="100" />
                             </div>
 
@@ -32,30 +38,68 @@
                                 <label for="Pdf" style="color:coral">Pdf Güncelle</label>
                                 <input type="file" name="Pdf" />
                             </div>
+
                             <div class="form-group">
-                                <label for="ID">Eğitim ID</label>
-                                <input name="ID" readonly value="@Model.ID" class="form-control disabled" />
+                                <label for="Name">Ders Adı</label>
+                                <input name="Name" value="@Model.Name" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label for="CategoryID">Sınıf Seçiniz:</label>
+                                <select name="CategoryID" class="form-control">
+                                    @foreach (var item in categories)
+                                    {
+                                        <option @(Model.CategoryID == item.ID ? "selected=\"selected\"" : "" ) value="@item.ID">@item.Name</option>
+                                    }
+                                </select>
                             </div>
 
                             <div class="form-group">
-                                <label for="Name">Ürün Adı</label>
-                                <input name="Name" value="@Model.Name" class="form-control" />
+                                <label for="EducationID">Eğitim Seçiniz:</label>
+                                <select name="EducationID" class="form-control" id="educationSelect">
+                                    <option selected disabled value="">Eğitim Seçiniz.. </option>
+                                    @foreach (var item in educations)
+                                    {
+                                        <option value="@item.ID">@item.Name</option>
+                                    }
+                                </select>
                             </div>
+                            <div class="form-group">
+                                <label for="UnitID">Ünite Seçiniz:</label>
+                                <select name="UnitID" class="form-control" id="unitSelect">
+                                    @*@foreach (var item in units)
+                                        {
+                                            <option value="@item.ID">@item.Education.Name / @item.Name</option>
+                                        }*@
+                                </select>
+                            </div>
+
+
+
+                            @*<div class="form-group">
+                                    <label for="EducationID">Eğitim Seçiniz:</label>
+                                    <select name="EducationID" class="form-control">
+
+                                        @foreach (var item in educations)
+                                        {
+                                            <option @(Model.EducationID == item.ID ? "selected=\"selected\"" : "" ) value="@item.ID">@item.Name</option>
+                                        }
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="UnitID">Ünite Seçiniz:</label>
+                                    <select name="UnitID" class="form-control" id="unitSelect">
+                                        @foreach (var item in units)
+                                        {
+                                            <option @(Model.UnitID == item.ID ? "selected=\"selected\"" : "" ) value="@item.ID">@item.Name</option>
+                                        }
+                                    </select>
+                                </div>*@
                             <div class="form-group">
                                 <label for="TeacherID">Öğretmen Seçiniz:</label>
                                 <select name="TeacherID" class="form-control">
                                     @foreach (var item in teachers)
                                     {
                                         <option @(Model.TeacherID == item.ID ? "selected=\"selected\"" : "" ) value="@item.ID">@item.FirstName @item.LastName</option>
-                                    }
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="EducationID">Eğitim Seçiniz:</label>
-                                <select name="EducationID" class="form-control">
-                                    @foreach (var item in educations)
-                                    {
-                                        <option @(Model.EducationID == item.ID ? "selected=\"selected\"" : "" ) value="@item.ID">@item.Name</option>
                                     }
                                 </select>
                             </div>
@@ -67,14 +111,14 @@
                                 <label for="EndDate">Bitiş Tarihi</label>
                                 <input name="EndDate" value="@Model.EndDate" class="form-control" />
                             </div>
-                            <div class="form-group">
-                                <label for="Content">İçerik</label>
-                                <input name="Content" value="@Model.Content" class="form-control" />
-                            </div>
 
                             <div class="form-group">
-                                <label for="Path">Path</label>
+                                <label for="Path">Ders Videosu</label>
                                 <input name="Path" value="@Model.Path" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label for="ExamLink">Sınav Linki</label>
+                                <input name="ExamLink" value="@Model.ExamLink" class="form-control" />
                             </div>
                             <input type="submit" value="Güncelle" class="form-control btn btn-primary" />
 

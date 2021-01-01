@@ -1,6 +1,7 @@
 ﻿@using Entity
 @{
     List<Education> educations = Query.EducationList();
+    Admin currentAdmin = Session["currentAdmin"] as Admin;
 }
 
 <!DOCTYPE html>
@@ -112,6 +113,9 @@
                         <span class="navbar-toggler-icon icon-bar"></span>
                         <span class="navbar-toggler-icon icon-bar"></span>
                     </button>
+                    <div class="collapse navbar-collapse justify-content-md-start">
+                        <span class="title">Hoşgeldiniz Sn. @currentAdmin.FirstName.ToUpper() @currentAdmin.LastName.ToUpper()</span>
+                    </div>
                     <div class="collapse navbar-collapse justify-content-end">
                         <ul class="navbar-nav">
                             <li class="nav-item btn-rotate dropdown">
@@ -177,6 +181,12 @@
             $('#eduLessonTable').DataTable();
             $('#educationTable').DataTable();
             $('#teacherTable').DataTable({
+                "autoWidth": false,
+                "columnDefs": [
+                    { "width": "20%", "targets": 0 }
+                ]
+            });
+            $('#studentTable').DataTable({
                 "autoWidth": false,
                 "columnDefs": [
                     { "width": "20%", "targets": 0 }

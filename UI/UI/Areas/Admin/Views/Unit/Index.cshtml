@@ -20,17 +20,25 @@
                                 <table class ="display" style="width:100%" id="unitTable">
                                     <thead class=" text-primary">
                                         <tr>
-                                            <th></th>
+                                            <th>İşlemler</th>
                                             <th>Eğitim Adı</th>
                                             <th>Ünite Adı</th>
-                                            <th>İşlemler</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
                                         @foreach (var item in units)
                                         {
                                             <tr>
-                                                <td></td>
+                                                <td>
+                                                    <a href="/Admin/Unit/Update/@item.ID">
+                                                        <i style="margin-left: 12px;" class="material-icons">edit</i>
+                                                    </a>
+
+                                                    <a href="/Admin/Unit/Delete/@item.ID">
+                                                        <i class="material-icons">delete</i>
+                                                    </a>
+                                                </td>
                                                 @*<td>
                                                         <a href="/Admin/Lesson/Index3?id=@item.ID">
                                                             <input type="submit" value="DERSLERİ GÖR" class="btn btn-warning" />
@@ -39,14 +47,7 @@
                                                 <td>@item.Education.Name</td>
 
                                                 <td>@item.Name</td>
-                                                <td>
-                                                    <a href="/Admin/Unit/Update/@item.ID">
-                                                        <input type="submit" value="Güncelle" class="btn btn-primary" />
-                                                    </a>
-                                                    <a href="/Admin/Unit/Delete/@item.ID">
-                                                        <input type="submit" value="SİL" class="btn btn-danger" />
-                                                    </a>
-                                                </td>
+                                                
                                             </tr>
                                         }
                                     </tbody>

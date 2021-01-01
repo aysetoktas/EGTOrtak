@@ -38,18 +38,20 @@ namespace UI.Areas.Admin.Controllers
         public ActionResult Add(Lesson data, HttpPostedFileBase Image, HttpPostedFileBase Pdf)
         {
             Lesson yeni = new Lesson();
-            data.Logo = ImageUploader.UploadSingleImage("/Uploads/", Image);
-            data.Content = PdfUploader.UploadPdf("UploadContent", Pdf);
+            yeni.Logo = ImageUploader.UploadSingleImage("/Uploads/", Image);
+            yeni.Content = PdfUploader.UploadPdf("/UploadContent/", Pdf);
             yeni.UnitID = data.UnitID;
             yeni.EducationID = data.EducationID;
             yeni.CategoryID = data.CategoryID;
             yeni.Name = data.Name;
-            yeni.Logo = data.Logo;
+            //yeni.Logo = data.Logo;
             yeni.StartDate = data.StartDate;
             yeni.EndDate = data.EndDate;
             yeni.Path = data.Path;
-       
             yeni.TeacherID = data.TeacherID;
+            yeni.IsLive = false;
+            yeni.ExamLink = data.ExamLink;
+            //yeni.Content = data.Content;
             db.Lessons.Add(yeni);
             db.SaveChanges();
             return RedirectToAction("Index2");
@@ -67,10 +69,10 @@ namespace UI.Areas.Admin.Controllers
             data.Content = PdfUploader.UploadPdf("/UploadContent/", Pdf);
 
             Lesson updLesson = db.Lessons.Find(data.ID);
-            if (data.Logo != "0" || data.Logo != "1" || data.Logo != "2")
-            {
-                updLesson.Logo = data.Logo;
-            }
+            //if (data.Logo != "0" || data.Logo != "1" || data.Logo != "2")
+            //{
+            //    updLesson.Logo = data.Logo;
+            //}
 
             updLesson.Name = data.Name;
             updLesson.TeacherID = data.TeacherID;
@@ -79,6 +81,10 @@ namespace UI.Areas.Admin.Controllers
             updLesson.EndDate = data.EndDate;
             updLesson.Path = data.Path;
             updLesson.Content = data.Content;
+            updLesson.Logo = data.Logo;
+            updLesson.CategoryID = data.CategoryID;
+            updLesson.UnitID = data.UnitID;
+            updLesson.ExamLink = data.ExamLink;          
 
             db.SaveChanges();
             return RedirectToAction("Index2");

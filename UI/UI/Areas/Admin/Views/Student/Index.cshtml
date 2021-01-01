@@ -1,0 +1,71 @@
+﻿@using Entity
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    List<Student> students = Query.StudentList();
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header card-header-primary">
+                            <h3 class="card-title ">Öğrenciler</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="display" style="width:100%" id="studentTable">
+                                    <thead class=" text-primary">
+                                        <tr>
+                                            <th>İşlem</th>
+                                            <th>Ad</th>
+                                            <th>Soyad</th>
+                                            <th>E-mail</th>
+                                            <th>Şifre</th>
+                                            <th>Telefon</th>
+                                            <th>Okul</th>
+                                            <th>Sınıf</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in students)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    <div class="row">
+                                                        <a href="/Admin/Student/Update/@item.ID">
+                                                            <i style="margin-left: 12px;" class="material-icons">edit</i>
+                                                        </a>
+                                                        <a href="/Admin/Student/Delete/@item.ID">
+                                                            <i class="material-icons">delete</i>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                                <td>@item.FirstName</td>
+                                                <td>@item.LastName</td>
+                                                <td>@item.Email</td>
+                                                <td>@item.Password</td>
+                                                <td>@item.PhoneNumber</td>
+                                                <td>@item.School</td>
+                                                <td>@item.Grade</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</head>
+<body>
+    <div>
+    </div>
+</body>
+</html>
