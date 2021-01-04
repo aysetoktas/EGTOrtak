@@ -1,0 +1,40 @@
+﻿@using Entity
+@{
+    ViewBag.Title = "ToClassroom";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    List<Category> categories = Query.CategoryList();
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <h3 class="card-title ">Öğrenci Bilgileri Güncelle</h3>
+
+                    </div>
+                    <div class="card-body">
+                        <form action="/Admin/Student/ToClassroom" method="post">
+                            <div class="form-group">
+                                <label for="ID">Öğrenci ID</label>
+                                <input name="ID" readonly value="@Model.ID" class="form-control disabled" />
+                            </div>
+                            <div class="form-group">
+                                <label for="categoryID">Öğrenci ID</label>
+                                <select name="categoryID" class="form-control" required>
+                                    <option value="" selected disabled> Sınıf Seçiniz</option>
+                                    @foreach (var cat in categories)
+                                    {
+                                        <option value="@cat.ID">@cat.Name</option>
+                                    }
+                                </select>
+                            </div>
+                            <input type="submit" value="Güncelle" class="form-control btn btn-primary" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
