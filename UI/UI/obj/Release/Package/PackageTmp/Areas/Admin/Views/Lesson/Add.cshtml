@@ -21,7 +21,7 @@
                         <h3 class="card-title ">DERS EKLE</h3>
                     </div>
                     <div class="card-body">
-                        <form action="/Admin/Lesson/Add" method="post">
+                        <form action="/Admin/Lesson/Add" method="post" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="CategoryID">Sınıf Seçiniz:</label>
                                 <select name="CategoryID" class="form-control">
@@ -45,18 +45,14 @@
                                 <label for="UnitID">Ünite Seçiniz:</label>
                                 <select name="UnitID" class="form-control" id="unitSelect">
                                     @*@foreach (var item in units)
-                                    {
-                                        <option value="@item.ID">@item.Education.Name / @item.Name</option>
-                                    }*@
+                {
+                    <option value="@item.ID">@item.Education.Name / @item.Name</option>
+                }*@
                                 </select>
                             </div>
                             <div class="form-group">
                                 <label for="Name">Ders Adı</label>
                                 <input name="Name" class="form-control" rows="3" />
-                            </div>
-                            <div class="">
-                                <label for="Image">Eğitim Logosu Ekle</label>
-                                <input type="file" name="Image">
                             </div>
                             <div class="form-group">
                                 <label for="StartDate">Başlama Tarihi</label>
@@ -71,8 +67,8 @@
                                 <input name="Path" class="form-control" rows="3" />
                             </div>
                             <div class="form-group">
-                                <label for="DocumentLink">Döküman Linki</label>
-                                <input name="DocumentLink" class="form-control" rows="3" />
+                                <label for="ExamLink">Sınav Linki</label>
+                                <input name="ExamLink" class="form-control" rows="3" />
                             </div>
                             <div class="form-group">
                                 <label for="TeacherID">Öğretmen Seçiniz:</label>
@@ -82,6 +78,14 @@
                                         <option value="@item.ID">@item.ID @item.FirstName @item.LastName</option>
                                     }
                                 </select>
+                            </div>
+                            <div class="">
+                                <label for="Pdf"><b>Pdf Ekle</b></label>
+                                <input type="file" name="Pdf">
+                            </div>
+                            <div class="">
+                                <label for="Image"><b>Ders Logosu Ekle</b></label>
+                                <input type="file" name="Image">
                             </div>
                             <input type="submit" value="Ekle" class="form-control btn btn-primary" />
                         </form>

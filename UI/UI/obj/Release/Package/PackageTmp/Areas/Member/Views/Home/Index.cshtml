@@ -25,43 +25,57 @@
 <aside id="fh5co-hero">
     <div class="flexslider">
         <ul class="slides">
-            <li style="background-image: url(/Areas/Member/Content/images/slider2.jpg);">
+            <li style="background-image: url(/Areas/Member/Content/images/slide1.png);">
                 <div class="overlay-gradient"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 text-center slider-text">
                             <div class="slider-text-inner">
-                                <h1>The Roots of Education are Bitter, But the Fruit is Sweet</h1>
-                                <h2>Brought to you by <a href="" target="_blank">gdfsgsf</a></h2>
-                                <p><a class="btn btn-primary btn-lg" href="#">Start Learning Now!</a></p>
+                                @*<h1>The Roots of Education are Bitter, But the Fruit is Sweet</h1>*@
+                                @*<h2>Brought to you by <a href="" target="_blank">gdfsgsf</a></h2>*@
+                                @*<p><a class="btn btn-primary btn-lg" href="#">Start Learning Now!</a></p>*@
                             </div>
                         </div>
                     </div>
                 </div>
             </li>
-            <li style="background-image: url(/Areas/Member/Content/images/slider33.jpg);">
+            <li style="background-image: url(/Areas/Member/Content/images/slide2.png);">
                 <div class="overlay-gradient"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 text-center slider-text">
                             <div class="slider-text-inner">
-                                <h1>The Great Aim of Education is not Knowledge, But Action</h1>
-                                <h2>Brought to you by <a href="" target="_blank">gasfgds</a></h2>
-                                <p><a class="btn btn-primary btn-lg btn-learn" href="#">Start Learning Now!</a></p>
+                                @*<h1>The Great Aim of Education is not Knowledge, But Action</h1>*@
+                                @*<h2>Brought to you by <a href="" target="_blank">gasfgds</a></h2>*@
+                                @*<p><a class="btn btn-primary btn-lg btn-learn" href="#">Start Learning Now!</a></p>*@
                             </div>
                         </div>
                     </div>
                 </div>
             </li>
-            <li style="background-image: url(/Areas/Member/Content/images/slider4.jpg);">
+            <li style="background-image: url(/Areas/Member/Content/images/slide3.png);">
                 <div class="overlay-gradient"></div>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 text-center slider-text">
                             <div class="slider-text-inner">
-                                <h1>We Help You to Learn New Things</h1>
-                                <h2>Brought to you by <a href="" target="_blank">sdgsdg</a></h2>
-                                <p><a class="btn btn-primary btn-lg btn-learn" href="#">Start Learning Now!</a></p>
+                                @*<h1>We Help You to Learn New Things</h1>*@
+                                @*<h2>Brought to you by <a href="" target="_blank">sdgsdg</a></h2>*@
+                                @*<p><a class="btn btn-primary btn-lg btn-learn" href="#">Start Learning Now!</a></p>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li style="background-image: url(/Areas/Member/Content/images/slide4.png);">
+                <div class="overlay-gradient"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2 text-center slider-text">
+                            <div class="slider-text-inner">
+                                @*<h1>We Help You to Learn New Things</h1>*@
+                                @*<h2>Brought to you by <a href="" target="_blank">sdgsdg</a></h2>*@
+                                @*<p><a class="btn btn-primary btn-lg btn-learn" href="#">Start Learning Now!</a></p>*@
                             </div>
                         </div>
                     </div>
@@ -84,121 +98,265 @@
 
 <div id="fh5co-course-categories">
     <div class="container">
-        <div class="row animate-box">
-            <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-                <h2>SINIFLAR</h2>
-                <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-            </div>
-        </div>
         <div class="row">
-            @*@foreach (var item in categories)
-                {
-                    if (catCount < 8)
-                    {
+            <center> <h2>SINIFLAR</h2></center>
+            <div id="fh5co-staff">
+                <div class="container">
+                    <div class="row">
                         <div class="col-md-3 col-sm-6 text-center animate-box">
                             <div class="services">
-                                <span class="icon">
-                                    <i class="icon-note"></i>
-                                </span>
+                                <div class="user">
+                                    <a href="/Member/Category/SınıfBir"><img src="~/Areas/Member/Content/images/1s.png" style="height:100px; width:100px;" /></a>
+                                </div>
+                                <div>&nbsp;</div>
                                 <div class="desc">
-                                    <h3><a href="#">@item.Name</a></h3>
-                                    <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+                                    <h3><a href="/Member/Category/SınıfBir">1.SINIF</a></h3>
+                                    <p><i>Sınıf seviyesi hakkında bilgi almak için lütfen tıklayınız.</i></p>
                                 </div>
                             </div>
                         </div>
-                        catCount++;
-                    }
-                }*@
+                        <div class="col-md-3 col-sm-6 text-center animate-box">
+                            <div class="services">
+                                <div class="user">
+                                    <a href="/Member/Category/SınıfBir"><img src="~/Areas/Member/Content/images/2s.png" style="height:100px; width:100px;" /></a>
+                                </div>
+                                <div>&nbsp;</div>
+                                <div class="desc">
+                                    <h3><a href="/Member/Category/SınıfBir">2.SINIF</a></h3>
+                                    <p><i>Sınıf seviyesi hakkında bilgi almak için lütfen tıklayınız.</i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 text-center animate-box">
+                            <div class="services">
+                                <div class="user">
+                                    <a href="/Member/Category/SınıfBir"><img src="~/Areas/Member/Content/images/3s.png" style="height:100px; width:100px;" /></a>
+                                </div>
+                                <div>&nbsp;</div>
+                                <div class="desc">
+                                    <h3><a href="/Member/Category/SınıfBir">3.SINIF</a></h3>
+                                    <p><i>Sınıf seviyesi hakkında bilgi almak için lütfen tıklayınız.</i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 text-center animate-box">
+                            <div class="services">
+                                <div class="user">
+                                    <a href="/Member/Category/SınıfBir"><img src="~/Areas/Member/Content/images/4s.png" style="height:100px; width:100px;" /></a>
+                                </div>
+                                <div>&nbsp;</div>
+                                <div class="desc">
+                                    <h3><a href="/Member/Category/SınıfBir">4.SINIF</a></h3>
+                                    <p><i>Sınıf seviyesi hakkında bilgi almak için lütfen tıklayınız.</i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 text-center animate-box">
+                            <div class="services">
+                                <div class="user">
+                                    <a href="/Member/Category/SınıfBir"><img src="~/Areas/Member/Content/images/5s.png" style="height:100px; width:100px;" /></a>
+                                </div>
+                                <div>&nbsp;</div>
+                                <div class="desc">
+                                    <h3><a href="/Member/Category/SınıfBir">5.SINIF</a></h3>
+                                    <p><i>Sınıf seviyesi hakkında bilgi almak için lütfen tıklayınız.</i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 text-center animate-box">
+                            <div class="services">
+                                <div class="user">
+                                    <a href="/Member/Category/SınıfBir"><img src="~/Areas/Member/Content/images/6s.png" style="height:100px; width:100px;" /></a>
+                                </div>
+                                <div>&nbsp;</div>
+                                <div class="desc">
+                                    <h3><a href="/Member/Category/SınıfBir">6.SINIF</a></h3>
+                                    <p><i>Sınıf seviyesi hakkında bilgi almak için lütfen tıklayınız.</i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 text-center animate-box">
+                            <div class="services">
+                                <div class="user">
+                                    <a href="/Member/Category/SınıfBir"><img src="~/Areas/Member/Content/images/7s.png" style="height:100px; width:100px;" /></a>
+                                </div>
+                                <div>&nbsp;</div>
+                                <div class="desc">
+                                    <h3><a href="/Member/Category/SınıfBir">7.SINIF</a></h3>
+                                    <p><i>Sınıf seviyesi hakkında bilgi almak için lütfen tıklayınız.</i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 text-center animate-box">
+                            <div class="services">
+                                <div class="user">
+                                    <a href="/Member/Category/SınıfBir"><img src="~/Areas/Member/Content/images/8s.png" style="height:100px; width:100px;" /></a>
+                                </div>
+                                <div>&nbsp;</div>
+                                <div class="desc">
+                                    <h3><a href="/Member/Category/SınıfBir">8.SINIF</a></h3>
+                                    <p><i>Sınıf seviyesi hakkında bilgi almak için lütfen tıklayınız.</i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 text-center animate-box">
+                            <div class="services">
+                                <div class="user">
+                                    <a href="/Member/Category/SınıfBir"><img src="~/Areas/Member/Content/images/9s.png" style="height:100px; width:100px;" /></a>
+                                </div>
+                                <div>&nbsp;</div>
+                                <div class="desc">
+                                    <h3><a href="/Member/Category/SınıfBir">9.SINIF</a></h3>
+                                    <p><i>Sınıf seviyesi hakkında bilgi almak için lütfen tıklayınız.</i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 text-center animate-box">
+                            <div class="services">
+                                <div class="user">
+                                    <a href="/Member/Category/SınıfBir"><img src="~/Areas/Member/Content/images/10s.png" style="height:100px; width:100px;" /></a>
+                                </div>
+                                <div>&nbsp;</div>
+                                <div class="desc">
+                                    <h3><a href="/Member/Category/SınıfBir">10.SINIF</a></h3>
+                                    <p><i>Sınıf seviyesi hakkında bilgi almak için lütfen tıklayınız.</i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 text-center animate-box">
+                            <div class="services">
+                                <div class="user">
+                                    <a href="/Member/Category/SınıfBir"><img src="~/Areas/Member/Content/images/11s.png" style="height:100px; width:100px;" /></a>
+                                </div>
+                                <div>&nbsp;</div>
+                                <div class="desc">
+                                    <h3><a href="/Member/Category/SınıfBir">11.SINIF</a></h3>
+                                    <p><i>Sınıf seviyesi hakkında bilgi almak için lütfen tıklayınız.</i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 text-center animate-box">
+                            <div class="services">
+                                <div class="user">
+                                    <a href="/Member/Category/SınıfBir"><img src="~/Areas/Member/Content/images/12s.png" style="height:100px; width:100px;" /></a>
+                                </div>
+                                <div>&nbsp;</div>
+                                <div class="desc">
+                                    <h3><a href="/Member/Category/SınıfBir">12.SINIF</a></h3>
+                                    <p><i>Sınıf seviyesi hakkında bilgi almak için lütfen tıklayınız.</i></p>
+                                </div>
+                            </div>
+                        </div>
+                        @*<div class="col-md-3 col-sm-6 text-center animate-box">
+                        <div class="services">
+                            <span class="icon">
+                                <i class="icon-note"></i>
+                            </span>
+                            <div class="desc">
+                                <h3><a href="/Member/Category/SınıfOniki">12.SINIF</a></h3>
+                                <p><i>Sınıf seviyesi hakkında bilgi almak için lütfen tıklayınız.</i></p>
+                            </div>
+                        </div>
+                    </div>*@
+                    </div>
+                </div>
+            </div>
 
-            <div class="col-md-3 col-sm-6 text-center animate-box">
-                <div class="services">
-                    <span class="icon">
-                        <i class="icon-note"></i>
-                    </span>
-                    <div class="desc">
-                        <h3><a href="/Member/Category/SınıfBir">1.SINIF</a></h3>
-                        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 text-center animate-box">
-                <div class="services">
-                    <span class="icon">
-                        <i class="icon-note"></i>
-                    </span>
-                    <div class="desc">
-                        <h3><a href="/Member/Category/SınıfIki">2.SINIF</a></h3>
-                        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 text-center animate-box">
-                <div class="services">
-                    <span class="icon">
-                        <i class="icon-note"></i>
-                    </span>
-                    <div class="desc">
-                        <h3><a href="/Member/Category/SınıfUc">3.SINIF</a></h3>
-                        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 text-center animate-box">
-                <div class="services">
-                    <span class="icon">
-                        <i class="icon-note"></i>
-                    </span>
-                    <div class="desc">
-                        <h3><a href="/Member/Category/SınıfDort">4.SINIF</a></h3>
-                        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 text-center animate-box">
-                <div class="services">
-                    <span class="icon">
-                        <i class="icon-note"></i>
-                    </span>
-                    <div class="desc">
-                        <h3><a href="/Member/Category/SınıfBes">5.SINIF</a></h3>
-                        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 text-center animate-box">
-                <div class="services">
-                    <span class="icon">
-                        <i class="icon-note"></i>
-                    </span>
-                    <div class="desc">
-                        <h3><a href="/Member/Category/SınıfAlti">6.SINIF</a></h3>
-                        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 text-center animate-box">
-                <div class="services">
-                    <span class="icon">
-                        <i class="icon-note"></i>
-                    </span>
-                    <div class="desc">
-                        <h3><a href="/Member/Category/SınıfYedi">7.SINIF</a></h3>
-                        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6 text-center animate-box">
-                <div class="services">
-                    <span class="icon">
-                        <i class="icon-note"></i>
-                    </span>
-                    <div class="desc">
-                        <h3><a href="/Member/Category/SınıfSekiz">8.SINIF</a></h3>
-                        <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-                    </div>
-                </div>
-            </div>
 
+
+            @*<div id="fh5co-blog">
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <div class="fh5co-blog animate-box">
+                        <div class="blog-text">
+                            <a href="/Member/Category/SınıfBir" class="blog-img-holder" style="background-image: url(/Areas/Member/Content/images/as1.jpg);"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="fh5co-blog animate-box">
+                        <div class="blog-text">
+                            <a href="/Member/Category/SınıfIki" class="blog-img-holder" style="background-image: url(/Areas/Member/Content/images/as2.jpg);"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="fh5co-blog animate-box">
+                        <div class="blog-text">
+                            <a href="/Member/Category/SınıfUc" class="blog-img-holder" style="background-image: url(/Areas/Member/Content/images/as3.jpg);"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="fh5co-blog animate-box">
+                        <div class="blog-text">
+                            <a href="/Member/Category/SınıfDort" class="blog-img-holder" style="background-image: url(/Areas/Member/Content/images/as4.jpg);"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <div class="fh5co-blog animate-box">
+                        <div class="blog-text">
+                            <a href="/Member/Category/SınıfBes" class="blog-img-holder" style="background-image: url(/Areas/Member/Content/images/as5.jpg);"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="fh5co-blog animate-box">
+                        <div class="blog-text">
+                            <a href="/Member/Category/SınıfAlti" class="blog-img-holder" style="background-image: url(/Areas/Member/Content/images/as6.jpg);"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="fh5co-blog animate-box">
+                        <div class="blog-text">
+                            <a href="/Member/Category/SınıfYedi" class="blog-img-holder" style="background-image: url(/Areas/Member/Content/images/as7.jpg);"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="fh5co-blog animate-box">
+                        <div class="blog-text">
+                            <a href="/Member/Category/SınıfSekiz" class="blog-img-holder" style="background-image: url(/Areas/Member/Content/images/as8.jpg);"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <div class="fh5co-blog animate-box">
+                        <div class="blog-text">
+                            <a href="/Member/Category/SınıfBes" class="blog-img-holder" style="background-image: url(/Areas/Member/Content/images/as5.jpg);"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="fh5co-blog animate-box">
+                        <div class="blog-text">
+                            <a href="/Member/Category/SınıfAlti" class="blog-img-holder" style="background-image: url(/Areas/Member/Content/images/as6.jpg);"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="fh5co-blog animate-box">
+                        <div class="blog-text">
+                            <a href="/Member/Category/SınıfYedi" class="blog-img-holder" style="background-image: url(/Areas/Member/Content/images/as7.jpg);"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <div class="fh5co-blog animate-box">
+                        <div class="blog-text">
+                            <a href="/Member/Category/SınıfSekiz" class="blog-img-holder" style="background-image: url(/Areas/Member/Content/images/as8.jpg);"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+        </div>
         </div>
     </div>
 </div>
@@ -239,8 +397,8 @@
     <div class="container">
         <div class="row animate-box">
             <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-                <h2>EĞİTİMLER</h2>
-                <p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+                <h2><a href="/Member/Education/Index" style="color:black;">EĞİTİMLER</a></h2>
+                @*<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>*@
             </div>
         </div>
         <div class="row">

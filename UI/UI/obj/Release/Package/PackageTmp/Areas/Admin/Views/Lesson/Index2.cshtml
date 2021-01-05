@@ -21,42 +21,52 @@
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="display nowrap" style="width:100%" id="lessonTable">
+                            <table class="display nowrap" style="width:100%" id="eduLessonTable">
                                 <thead class="text-primary">
                                     <tr>
+                                        <th>İşlem</th>
+                                        <th>Sınıf</th>
                                         <th style="width:100px;">EğitimAdı</th>
                                         <th>ÜniteAdı</th>
                                         <th>Ders Adı</th>
                                         <th>Ders Logosu</th>
+                                        <th>Video Linki</th>
+                                        <th>Pdf</th>
+                                        <th>Sınav Linki</th>
                                         <th>Başlama Tarihi</th>
                                         <th>Bitiş Tarihi</th>
-                                        <th>Video Linki</th>
                                         <th>Öğretmen</th>
-                                        <th>İşlem</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach (var item in lessons)
                                     {
-                                        <tr>
-                                            <td>@item.Education.Name</td>
-                                            <td>@item.Unit.Name</td>
-                                            <td>@item.Name</td>
-                                            <td> <img src="@item.Logo" style="width:100px;height:100px;" /></td>
-                                            <td>@item.StartDate</td>
-                                            <td>@item.EndDate</td>
-                                            <td>@item.Path</td>
-                                            <td>@item.Teacher.FirstName @item.Teacher.LastName</td>
-                                            <td>
-                                                <a href="/Admin/Lesson/Update/@item.ID">
-                                                    <input type="submit" value="Güncelle" class="btn btn-primary" />
-                                                </a>
+                                        if (item.IsLive == false)
+                                        {
 
-                                                <a href="/Admin/Lesson/Delete/@item.ID">
-                                                    <input type="submit" value="SİL" class="btn btn-danger" />
-                                                </a>
-                                            </td>
-                                        </tr>
+
+                                            <tr>
+                                                <td>
+                                                    <a href="/Admin/Lesson/Update/@item.ID">
+                                                        <i style="margin-left: 12px;" class="material-icons">edit</i>
+                                                    </a>
+                                                    <a href="/Admin/Lesson/Delete/@item.ID">
+                                                        <i class="material-icons">delete</i>
+                                                    </a>
+                                                </td>
+                                                <td>@item.Category.Name</td>
+                                                <td>@item.Education.Name</td>
+                                                <td>@item.Unit.Name</td>
+                                                <td>@item.Name</td>
+                                                <td> <img src="@item.Logo" style="width:100px;height:100px;" /></td>
+                                                <td><object data="@item.Path" style="width:100px; height:100px;"></object></td>
+                                                <td><object data="@item.Content" style="width:100px; height:100px;"></object></td>
+                                                <td><object data="@item.ExamLink" style="width:100px; height:100px;"></object></td>
+                                                <td>@item.StartDate</td>
+                                                <td>@item.EndDate</td>
+                                                <td>@item.Teacher.FirstName @item.Teacher.LastName</td>
+                                            </tr>
+                                        }
                                     }
                                 </tbody>
                             </table>

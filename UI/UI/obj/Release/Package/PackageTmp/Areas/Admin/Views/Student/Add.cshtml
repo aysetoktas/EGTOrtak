@@ -1,0 +1,53 @@
+﻿@using Entity 
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    List<Student> students = Query.StudentList();
+}
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-primary">
+                        <h3 class="card-title ">ÖĞRENCİ EKLE</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="/Admin/Student/Add" method="post" enctype="multipart/form-data">
+
+                            <div class="form-group">
+                                <label for="FirstName">Ad</label>
+                                <input name="FirstName" class="form-control" rows="3" required="" />
+                            </div>
+                            <div class="form-group">
+                                <label for="LastName">Soyad</label>
+                                <input name="LastName" class="form-control" rows="3" required="" />
+                            </div>
+                            <div class="form-group">
+                                <label for="Email">E-Mail</label>
+                                <input name="Email" class="form-control" rows="3" required=""/>
+                            </div>
+                            <div class="form-group">
+                                <label for="Password">Şifre</label>
+                                <input name="Password" class="form-control" rows="3" required=""/>
+                            </div>
+                            <div class="form-group">
+                                <label for="PhoneNumber">Telefon</label>
+                                <input name="PhoneNumber" class="form-control" rows="3" required=""/>
+                            </div>
+                            <div class="form-group">
+                                <label for="School">Okul</label>
+                                <input name="School" class="form-control" rows="3" required=""/>
+                            </div>
+                            <div class="form-group">
+                                <label for="Grade">Sınıf</label>
+                                <input name="Grade" class="form-control" rows="3" required=""/>
+                            </div>
+                            <input type="submit" value="Ekle" class="form-control btn btn-primary" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

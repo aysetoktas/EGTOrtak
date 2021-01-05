@@ -30,7 +30,7 @@
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">E-mail Adresi</label>
-                                        <input name="Email" type="email" class="form-control" value="">
+                                        <input name="Email" type="email" class="form-control" value="" required="">
                                     </div>
                                 </div>
                             </div>
@@ -38,7 +38,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Ad</label>
-                                        <input name="FirstName" type="text" class="form-control">
+                                        <input name="FirstName" type="text" class="form-control" required="">
                                     </div>
                                 </div>
 
@@ -47,7 +47,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Soyad</label>
-                                        <input name="LastName" type="text" class="form-control">
+                                        <input name="LastName" type="text" class="form-control" required="">
                                     </div>
                                 </div>
                             </div>
@@ -55,30 +55,13 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="bmd-label-floating">Şifre</label>
-                                        <input name="Password" type="text" class="form-control">
+                                        <input name="Password" type="text" class="form-control" required="">
                                     </div>
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary pull-right">YENİ ADMİN EKLE</button>
                             <div class="clearfix"></div>
                         </form>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card card-profile">
-                    <div class="card-avatar">
-                        <a href="javascript:;">
-                            <img class="img" src="~/Areas/Admin/Content/img/new_logo.png" />
-                        </a>
-                    </div>
-                    <div class="card-body">
-                        <h6 class="card-category text-gray">Kullanıcı</h6>
-                        <h4 class="card-title">@currentAdmin.FirstName @currentAdmin.LastName</h4>
-                        <p class="card-description">
-                            @currentAdmin.Email
-                        </p>
-                        <a href="/Admin/Home/Profil" class="btn btn-primary btn-round">Profilim</a>
                     </div>
                 </div>
             </div>
