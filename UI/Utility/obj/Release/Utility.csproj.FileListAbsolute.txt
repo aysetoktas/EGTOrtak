@@ -119,7 +119,6 @@ D:\GitHub\Freelance Projects\EGTOrtak\UI\Utility\bin\Microsoft.CodeDom.Providers
 D:\GitHub\Freelance Projects\EGTOrtak\UI\Utility\bin\EntityFramework.xml
 D:\GitHub\Freelance Projects\EGTOrtak\UI\Utility\bin\EntityFramework.SqlServer.xml
 D:\GitHub\Freelance Projects\EGTOrtak\UI\Utility\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\GitHub\Freelance Projects\EGTOrtak\UI\Utility\obj\Release\Utility.csprojAssemblyReference.cache
 D:\GitHub\Freelance Projects\EGTOrtak\UI\Utility\obj\Release\Utility.csproj.CoreCompileInputs.cache
 D:\GitHub\Freelance Projects\EGTOrtak\UI\Utility\obj\Release\Utility.csproj.CopyComplete
 D:\GitHub\Freelance Projects\EGTOrtak\UI\Utility\obj\Release\Utility.dll

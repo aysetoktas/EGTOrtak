@@ -55,5 +55,20 @@ namespace UI.Areas.Admin.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public ActionResult ToClassroom(int id)
+        {
+            Entity.Student student = db.Students.Find(id);
+            return View(student);
+        }
+        [HttpPost]
+        public ActionResult ToClassroom(int id, int categoryID)
+        {
+            Entity.Category category = db.Categories.Find(categoryID);
+            Entity.Student student = db.Students.Find(id);
+            student.Categories.Add(category);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
