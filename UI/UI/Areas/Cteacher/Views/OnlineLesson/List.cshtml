@@ -17,7 +17,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title"><b> DERSLERİM </b></h4>
+                    <h4 class="card-title"><b>CANLI DERSLERİM </b></h4>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -27,9 +27,8 @@
                                     <th>Ders</th>
                                     <th>Sınıf</th>
                                     <th>Eğitim Adı</th>
-                                    <th>Ünite Adı</th>
                                     <th>Ders Adı</th>
-                                    <th>Ders Logosu</th>
+                                    @*<th>Ders Logosu</th>*@
                                     <th>Başlama - Bitiş Tarihi</th>
                                     <th>Ders Linki</th>
                                     <th>Öğretmen Adı</th>
@@ -42,6 +41,7 @@
                                     if (item.TeacherID == currentTeacher.ID && item.IsLive == true)
                                     {
                                 <tr>
+                                    
                                     <td>
                                         <a href="/Cteacher/Home/Ders/@item.ID">
                                             <input type="submit" value="Derse Git" class="btn btn-warning" />
@@ -49,21 +49,21 @@
                                     </td>
                                     <td>@item.Category.Name</td>
                                     <td>@item.Education.Name</td>
-                                    <td>@item.Unit.Name</td>
+
                                     <td>@item.Name</td>
-                                    <td> <img src="@item.Logo" style="width:100px;" /></td>
+                                    @*<td> <img src="@item.Logo" style="width:100px;" /></td>*@
                                     <td>@item.StartDate / @item.EndDate</td>
 
                                     <td>
-                                        <iframe width="150" height="150" src="@item.Path" frameborder="0" allow="accelerometer; controls=0;  clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                                        <iframe width="100" height="100" src="@item.Path" frameborder="0" allow="accelerometer; controls=0;  clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                                     </td>
                                     <td>@item.Teacher.FirstName @item.Teacher.LastName</td>
                                     <td>
-                                        <a href="/Cteacher/Lesson/Update/@item.ID">
+                                        <a href="/Cteacher/OnlineLesson/Update/@item.ID">
                                             <input type="submit" value="Güncelle" class="btn btn-primary" />
                                         </a>
 
-                                        <a href="/Cteacher/Lesson/Delete/@item.ID">
+                                        <a href="/Cteacher/OnlineLesson/Delete/@item.ID">
                                             <input type="submit" value="SİL" class="btn btn-danger" />
                                         </a>
                                     </td>

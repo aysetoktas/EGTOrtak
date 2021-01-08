@@ -54,7 +54,13 @@
                                                 <td>@item.Password</td>
                                                 <td>@item.PhoneNumber</td>
                                                 <td>@item.School</td>
-                                                <td>@item.Grade</td>
+                                                @{string classrooms = " ";
+                                                    foreach (var c in item.Categories)
+                                                    {
+                                                        classrooms += c.Name+" ";
+                                                    }
+                                                }
+                                                <td>@classrooms</td>
                                             </tr>
                                         }
                                     </tbody>

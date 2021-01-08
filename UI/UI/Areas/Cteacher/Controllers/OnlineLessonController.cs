@@ -33,7 +33,9 @@ namespace UI.Areas.Cteacher.Controllers
             yeni.EducationID = data.EducationID;
             yeni.CategoryID = data.CategoryID;
             yeni.Name = data.Name;
-            yeni.Logo = data.Logo;
+            yeni.Logo = "yok";
+            yeni.Content = "yok";
+            yeni.ExamLink = "yok";
             yeni.StartDate = data.StartDate;
             yeni.EndDate = data.EndDate;
             yeni.Path = data.Path;
@@ -54,7 +56,7 @@ namespace UI.Areas.Cteacher.Controllers
                 tmpStudent.Lessons.Add(yeni);
             }
             db.SaveChanges();
-            return RedirectToAction("List3", "Lesson", new { area = "Cteacher" });
+            return RedirectToAction("List", "OnlineLesson", new { area = "Cteacher" });
         }
 
         [HttpGet]
@@ -72,8 +74,10 @@ namespace UI.Areas.Cteacher.Controllers
             updLesson.TeacherID = data.TeacherID;
             updLesson.EducationID = data.EducationID;
             updLesson.StartDate = data.StartDate;
+            updLesson.Logo = "yok";
+            updLesson.Content = "yok";
+            updLesson.ExamLink = "yok";
             updLesson.EndDate = data.EndDate;
-            updLesson.Content = data.Content;
             updLesson.CategoryID = data.CategoryID;
             updLesson.Path = data.Path;
             updLesson.IsLive = true;

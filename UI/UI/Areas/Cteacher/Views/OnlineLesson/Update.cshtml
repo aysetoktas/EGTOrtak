@@ -13,13 +13,13 @@
 
 <form action="/Cteacher/OnlineLesson/Update" method="post">
 
-    <div class="form-group">
+    @*<div class="form-group">
         <img src="@Model.Logo" class="rounded" height="100" />
     </div>
     <div class="">
         <label for="Image" style="color:coral">Eğitim Logosunu Güncelle</label>
         <input type="file" name="Image" />
-    </div>
+    </div>*@
 
     <div class="form-group">
         <label for="ID">ID</label>
@@ -49,7 +49,7 @@
         </select>
     </div>
     <div class="form-group">
-        <label for="CategoryID">Eğitim Seçiniz:</label>
+        <label for="CategoryID">Sınıf Seçiniz:</label>
         <select name="CategoryID" class="form-control">
             @foreach (var item in categories)
             {
@@ -65,10 +65,10 @@
         <label for="EndDate">Bitiş Tarihi</label>
         <input name="EndDate" type="datetime-local" value="@Model.EndDate" class="form-control" />
     </div>
-    <div class="form-group">
+    @*<div class="form-group">
         <label for="Content">İçerik</label>
         <input name="Content" value="@Model.Content" class="form-control" />
-    </div>
+    </div>*@
 
     <div class="form-group">
         <label for="Path">Path</label>

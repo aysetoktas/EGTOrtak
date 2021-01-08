@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "Ders";
     Layout = "~/Areas/Cteacher/Views/Shared/_TeacherLayout.cshtml";
+    List<Student> students = Query.StudentList();
 }
 
 <!-- End Navbar -->
@@ -11,14 +12,16 @@
         <div class="col-md-4">
             <div class="card ">
                 <div class="card-header ">
-                    <img src="@Model.Logo" style="width:100px;" />
+                    @*<img src="@Model.Logo" style="width:100px;" />*@
                     <b>  @Model.Education.Name.ToUpper() </b> <br /><hr />
                     <b>   @Model.Name </b>    <hr />
+                    <p>Başlama-Bitiş Tarihi :</p>
+                    <b>@Model.StartDate - @Model.EndDate</b><hr />
                 </div>
                 <div class="card-body ">
-                    <div id="map" class="text"><b> Özet: </b><br /> @Model.Content</div> <hr />
- 
-                    <p><b>Öğretmen:</b> @Model.Teacher.FirstName @Model.Teacher.LastName</p>
+                    <div id="map" class="text"><b> Öğrenciler: </b><br /> @Model.Content</div> <hr />
+                    <p><b>Öğretmen:</b> @Model.Teacher.FirstName @Model.Teacher.LastName</p> <hr />
+                    <a href="@Model.Path" target="_blank"><input type="submit" value="Derse Katıl" class="btn btn-warning" /></a>
 
                 </div>
             </div>
@@ -27,10 +30,10 @@
         <div class="col-md-8">
             <div class="card ">
                 <div class="card-header ">
-                    <b> @Model.Name.ToUpper() </b> <hr />
+                    <b>@Model.Education.Name / @Model.Name.ToUpper() </b> <hr />
                 </div>
                 <div class="card-body ">
-                    <div id="map" class="map"> <iframe src="@Model.Path" frameborder="0" width="749" height="451" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
+                    <div id="map" class="map"> <iframe src="@Model.Path" frameborder="0" width="650" height="400" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe></div>
                 </div>
             </div>
         </div>
