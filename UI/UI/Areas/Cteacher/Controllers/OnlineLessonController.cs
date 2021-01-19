@@ -66,12 +66,14 @@ namespace UI.Areas.Cteacher.Controllers
             return View(updLesson);
         }
         [HttpPost]
-        public ActionResult Update(Lesson data)
+        public ActionResult Update(Lesson data, string[] students)
         {
+            Teacher currentTeacher = Session["currentTeacher"] as Teacher;
+
             Lesson updLesson = db.Lessons.Find(data.ID);
-           
+
             updLesson.Name = data.Name;
-            updLesson.TeacherID = data.TeacherID;
+            updLesson.TeacherID = currentTeacher.ID;
             updLesson.EducationID = data.EducationID;
             updLesson.StartDate = data.StartDate;
             updLesson.Logo = "yok";
@@ -81,8 +83,17 @@ namespace UI.Areas.Cteacher.Controllers
             updLesson.CategoryID = data.CategoryID;
             updLesson.Path = data.Path;
             updLesson.IsLive = true;
-
+            updLesson.Students.Clear();
             db.SaveChanges();
+            foreach (string id in students)
+            {
+                int stdId = Convert.ToInt32(id);
+                Entity.Student tmpStudent = db.Students.Where(x => x.ID == stdId).SingleOrDefault();
+                updLesson.Students.Add(tmpStudent);
+                tmpStudent.Lessons.Add(updLesson);
+            }
+            db.SaveChanges();
+
             return RedirectToAction("List");
         }
 

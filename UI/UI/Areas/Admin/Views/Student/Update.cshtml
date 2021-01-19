@@ -3,6 +3,7 @@
 @{
     ViewBag.Title = "Update";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    List<Category> categories = Query.CategoryList();
 }
 <div class="content">
     <div class="container-fluid">
@@ -15,8 +16,6 @@
                     </div>
                     <div class="card-body">
                         <form action="/Admin/Student/Update" method="post" enctype="multipart/form-data">
-
-
                             <div class="form-group">
                                 <label for="ID">Öğrenci ID</label>
                                 <input name="ID" readonly value="@Model.ID" class="form-control disabled" />
@@ -48,7 +47,19 @@
                             </div>
                             <div class="form-group">
                                 <label for="Grade">Sınıf</label>
-                                <input name="Grade" value="@Model.Grade" class="form-control" />
+                                <select name="categories" size="5" class="form-control" multiple style="height:auto;">
+                                    @foreach (Category cat in categories)
+                                    {
+                                        if (Model.Categories.Contains(cat))
+                                        {
+                                            <option style="color:red;" value="@cat.ID">@cat.Name</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="@cat.ID">@cat.Name</option>
+                                        }
+                                    }
+                                </select>
                             </div>
                             <input type="submit" value="Güncelle" class="form-control btn btn-primary" />
                         </form>

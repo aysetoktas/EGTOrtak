@@ -175,32 +175,6 @@ D:\GitHub\Freelance\xx\EGTOrtak\UI\Entity\obj\Debug\Entity.csproj.CoreCompileInp
 D:\GitHub\Freelance\xx\EGTOrtak\UI\Entity\obj\Debug\Entity.csproj.CopyComplete
 D:\GitHub\Freelance\xx\EGTOrtak\UI\Entity\obj\Debug\Entity.dll
 D:\GitHub\Freelance\xx\EGTOrtak\UI\Entity\obj\Debug\Entity.pdb
-C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\bin\Debug\Entity.dll.config
-C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\bin\Debug\Entity.dll
-C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\bin\Debug\Entity.pdb
-C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\bin\Debug\EntityFramework.dll
-C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\bin\Debug\EntityFramework.xml
-C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.csprojAssemblyReference.cache
-C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig00.resources
-C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig001.resources
-C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig01.resources
-C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig02.resources
-C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig03.resources
-C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig04.resources
-C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig06.resources
-C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig07.resources
-C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig08.resources
-C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig09.resources
-C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig10.resources
-C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.migDateTime.resources
-C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig22122020.resources
-C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.csproj.GenerateResource.cache
-C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
-C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.csproj.CopyComplete
-C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.dll
-C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.pdb
 D:\GitHub\Freelance Projects\EGTOrtak\UI\Entity\bin\Debug\Entity.dll.config
 D:\GitHub\Freelance Projects\EGTOrtak\UI\Entity\bin\Debug\Entity.dll
 D:\GitHub\Freelance Projects\EGTOrtak\UI\Entity\bin\Debug\Entity.pdb
@@ -227,3 +201,29 @@ D:\GitHub\Freelance Projects\EGTOrtak\UI\Entity\obj\Debug\Entity.csproj.CoreComp
 D:\GitHub\Freelance Projects\EGTOrtak\UI\Entity\obj\Debug\Entity.csproj.CopyComplete
 D:\GitHub\Freelance Projects\EGTOrtak\UI\Entity\obj\Debug\Entity.dll
 D:\GitHub\Freelance Projects\EGTOrtak\UI\Entity\obj\Debug\Entity.pdb
+C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\bin\Debug\Entity.dll.config
+C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\bin\Debug\Entity.dll
+C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\bin\Debug\Entity.pdb
+C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\bin\Debug\EntityFramework.dll
+C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\bin\Debug\EntityFramework.xml
+C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.csprojAssemblyReference.cache
+C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig00.resources
+C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig001.resources
+C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig01.resources
+C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig02.resources
+C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig03.resources
+C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig04.resources
+C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig06.resources
+C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig07.resources
+C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig08.resources
+C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig09.resources
+C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig10.resources
+C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.migDateTime.resources
+C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.Migrations.mig22122020.resources
+C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.csproj.GenerateResource.cache
+C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.csproj.CopyComplete
+C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.dll
+C:\Users\aysetoktas\Desktop\Yeni klasör (2)\EGTOrtak\UI\Entity\obj\Debug\Entity.pdb

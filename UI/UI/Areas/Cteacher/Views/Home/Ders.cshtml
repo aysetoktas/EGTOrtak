@@ -19,9 +19,17 @@
                     <b>@Model.StartDate - @Model.EndDate</b><hr />
                 </div>
                 <div class="card-body ">
-                    <div id="map" class="text"><b> Öğrenciler: </b><br /> @Model.Content</div> <hr />
+                    <div id="map" class="text">
+                        <b> Öğrenciler: </b><br />
+                    </div> <hr />
+                    <ul>
+                        @foreach (Student student in Model.Students)
+                        {
+                            <li>@student.FirstName  @student.LastName</li>
+                        }
+                    </ul>
                     <p><b>Öğretmen:</b> @Model.Teacher.FirstName @Model.Teacher.LastName</p> <hr />
-                    <a href="@Model.Path" target="_blank"><input type="submit" value="Derse Katıl" class="btn btn-warning" /></a>
+                    <a href="@Model.Path" target="_blank"><input type="submit" value="Dersi Başlat" class="btn btn-warning" /></a>
 
                 </div>
             </div>

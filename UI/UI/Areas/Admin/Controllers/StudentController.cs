@@ -34,7 +34,7 @@ namespace UI.Areas.Admin.Controllers
             return View(updStudent);
         }
         [HttpPost]
-        public ActionResult Update(Entity.Student data)
+        public ActionResult Update(Entity.Student data, string[] categories)
         {
             Entity.Student updStudent = db.Students.Find(data.ID);
             updStudent.FirstName = data.FirstName;
@@ -44,6 +44,15 @@ namespace UI.Areas.Admin.Controllers
             updStudent.PhoneNumber = data.PhoneNumber;
             updStudent.School = data.School;
             updStudent.Grade = data.Grade;
+            updStudent.Categories.Clear();
+            
+            db.SaveChanges();
+            foreach (string cat in categories)
+            {
+                int catId = Convert.ToInt32(cat);
+                Category category = db.Categories.Find(catId);
+                updStudent.Categories.Add(category);
+            }
             db.SaveChanges();
             return RedirectToAction("Index");
         }

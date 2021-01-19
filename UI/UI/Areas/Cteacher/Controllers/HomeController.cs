@@ -1,7 +1,9 @@
 ﻿using Entity;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web;
 using System.Web.Mvc;
+using Utility;
 
 namespace UI.Areas.Cteacher.Controllers
 {
@@ -21,10 +23,11 @@ namespace UI.Areas.Cteacher.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult UpdateProfil(Entity.Teacher teacher)
+        public ActionResult UpdateProfil(Entity.Teacher teacher, HttpPostedFileBase Image)
         {
+
             Entity.Teacher updTeacher = db.Teachers.Find(teacher.ID);
-            updTeacher.ID = teacher.ID;
+            updTeacher.Detail = ImageUploader.UploadSingleImage("/Uploads/", Image);
             updTeacher.FirstName = teacher.FirstName;
             updTeacher.LastName = teacher.LastName;
             updTeacher.Email = teacher.Email;

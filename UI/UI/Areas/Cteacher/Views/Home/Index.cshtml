@@ -1,9 +1,8 @@
 ﻿@using Entity
-@{
+@{   
+    Teacher currentTeacher = Session["currentTeacher"] as Teacher;
     ViewBag.Title = "Index";
     Layout = "~/Areas/Cteacher/Views/Shared/_TeacherLayout.cshtml";
-    Teacher currentUSers = Session["currentUSers"] as Teacher;
-
 }
 
 <div class="row">
@@ -45,7 +44,7 @@
                     </div>
                     <div class="col-7 col-md-8">
                         <div class="numbers">
-                            <p class="card-category"><a href="@Url.Action("List3","Lesson", new { area="Cteacher"})">Derslerim</a></p>
+                            <p class="card-category"><a href="@Url.Action("List","OnlineLesson", new { area="Cteacher"})">Canlı Derslerim</a></p>
                             <p class="card-title">|||||||||||
                             <p>
                         </div>
@@ -55,7 +54,7 @@
             <div class="card-footer ">
                 <hr>
                 <div class="stats">
-                    <i class="fa fa-file"></i> Tüm Dersler
+                    <i class="fa fa-file"></i> Canlı Dersler
                 </div>
             </div>
         </div>
@@ -125,7 +124,7 @@
                     </div>
                     <div class="col-7 col-md-8">
                         <div class="numbers">
-                            <p class="card-category"><a href="@Url.Action("Profil","Home", new {area="Cteacher" })">Profilim</a></p>
+                            <p class="card-category"><a href="/Cteacher/Home/UpdateProfil/@currentTeacher.ID">Profilim</a></p>
                             <p class="card-title">|||||||||||
                             <p>
                         </div>
