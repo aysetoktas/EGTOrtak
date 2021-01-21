@@ -23,18 +23,26 @@ namespace UI.Areas.Cteacher.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult UpdateProfil(Entity.Teacher teacher, HttpPostedFileBase Image)
+        public ActionResult UpdateProfil(Teacher data, HttpPostedFileBase Image)
         {
+            Entity.Teacher updTeacher = db.Teachers.Find(data.ID);
 
-            Entity.Teacher updTeacher = db.Teachers.Find(teacher.ID);
-            updTeacher.Detail = ImageUploader.UploadSingleImage("/Uploads/", Image);
-            updTeacher.FirstName = teacher.FirstName;
-            updTeacher.LastName = teacher.LastName;
-            updTeacher.Email = teacher.Email;
-            updTeacher.Password = teacher.Password;
-            updTeacher.Phone = teacher.Phone;
-            updTeacher.Address = teacher.Address;
-            updTeacher.Note = teacher.Note;
+            if (Image!=null)
+            {
+                data.Detail = ImageUploader.UploadSingleImage("/Uploads/", Image);
+            }
+            else
+            {
+                data.Detail = updTeacher.Detail;
+            }
+            updTeacher.Detail = data.Detail;
+            updTeacher.FirstName = data.FirstName;
+            updTeacher.LastName = data.LastName;
+            updTeacher.Email = data.Email;
+            updTeacher.Password = data.Password;
+            updTeacher.Phone = data.Phone;
+            updTeacher.Address = data.Address;
+            updTeacher.Note = data.Note;
             db.SaveChanges();
             return RedirectToAction("Index");
         }

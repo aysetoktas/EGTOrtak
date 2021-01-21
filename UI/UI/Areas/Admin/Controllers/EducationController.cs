@@ -53,16 +53,20 @@ namespace UI.Areas.Admin.Controllers
         [HttpPost]
         public ActionResult Update(Education data, HttpPostedFileBase Image)
         {
-            data.ImagePath = ImageUploader.UploadSingleImage("/Uploads/", Image);
-
             Education updEducation = db.Educations.Find(data.ID);
-
+            if (Image!=null)
+            {
+               data.ImagePath = ImageUploader.UploadSingleImage("/Uploads/", Image);
+            }
+            else
+            {
+                data.ImagePath = updEducation.ImagePath;
+            }
 
             updEducation.ImagePath = data.ImagePath;
-
             updEducation.Name = data.Name;
             updEducation.Note = data.Note;
-
+            updEducation.ImagePath = data.ImagePath;
             updEducation.Hour = data.Hour;
             updEducation.StartDate = data.StartDate;
             updEducation.EndDate = data.EndDate;
