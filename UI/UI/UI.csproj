@@ -7567,6 +7567,7 @@
     <Content Include="Areas\Admin\Views\Student\Add.cshtml" />
     <Content Include="Areas\Admin\Views\Student\Update.cshtml" />
     <Content Include="Areas\Admin\Views\Student\ToClassroom.cshtml" />
+    <Content Include="Content\img\Hizmet Şartları.pdf" />
     <None Include="packages.config" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
