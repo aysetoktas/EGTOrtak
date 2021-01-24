@@ -7587,6 +7587,7 @@
     <Folder Include="Areas\Student\Data\" />
     <Folder Include="Models\" />
     <Folder Include="UploadContent\" />
+    <Folder Include="Views\Chat\" />
     <Folder Include="Views\Home\" />
   </ItemGroup>
   <ItemGroup>
