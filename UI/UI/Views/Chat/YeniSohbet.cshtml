@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Yeni Sohbet";
+    Layout = "~/Views/Layout/_Layout.cshtml";
+}
+<style>
+    #mesajGonderKapsayici {
+        left: 0;
+        position: absolute;
+        top: 50px;
+    }
+
+    #mesajGonderDiv {
+        height: 70px;
+        padding: 10px;
+    }
+
+    #kullaniciText {
+        padding: 0 55px 0 10px;
+        float: left;
+        height: 50px;
+        margin-right: 10px;
+        width: 100%;
+        border-radius: 25px;
+        border: none;
+        box-shadow: #3b0a42 0 0 5px;
+    }
+
+    #kullaniciAra {
+        position: absolute;
+        background: #913f9e;
+        text-align: center;
+        height: 50px;
+        border-radius: 25px;
+        width: 50px;
+        right: 24px;
+        cursor: pointer;
+    }
+
+        #kullaniciAra i {
+            line-height: 50px;
+            color: white;
+        }
+</style>
+<div class="col-md-12" id="mesajGonderKapsayici">
+    <div id="mesajGonderDiv">
+        <input type="text" id="kullaniciText" placeholder="Kullanıcı adını giriniz." />
+        <div id="kullaniciAra">
+            <i class="material-icons">search</i>
+        </div>
+    </div>
+</div>
+
+<div class="mt-4" id="kullaniciListesi">
+
+    @Html.Raw(ViewBag.Kullanicilar)
+
+</div>

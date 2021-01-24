@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Giriş Yap</title>
+</head>
+<body>
+    <script>
+        @Html.Raw(ViewBag.msg)
+    </script>
+    <form method="post">
+        <input type="email" placeholder="Email" required name="Email" /><br />
+        <input type="password" placeholder="Şifre" required name="sifre" /><br />
+        <input type="submit" name="girisYap" value="Giriş Yap" /><br />
+        <a href="/chat/kaydolOgrenci">Hesabın yok mu? Öğrenci olarak Kaydol.</a>
+        <a href="/chat/kaydolOgretmen">Hesabın yok mu? Öğretmen olarak kaydol.</a>
+    </form>
+</body>
+</html>

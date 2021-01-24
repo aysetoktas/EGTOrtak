@@ -30,8 +30,8 @@ namespace UI.Controllers
             if (ModelState.IsValid)
             {
                 //User currentUser = db.Users.Where(x => x.UserName == data.UserName && x.Password == data.Password).FirstOrDefault();
-                Student currentStudent = db.Students.Where(x => x.FirstName == data.UserName && x.Password == data.Password).FirstOrDefault();
-                Teacher currentTeacher = db.Teachers.Where(x => x.FirstName == data.UserName && x.Password == data.Password).FirstOrDefault();
+                Student currentStudent = db.Students.Where(x => x.Email == data.UserName && x.Password == data.Password).FirstOrDefault();
+                Teacher currentTeacher = db.Teachers.Where(x => x.Email == data.UserName && x.Password == data.Password).FirstOrDefault();
                 Admin currentAdmin = db.Admins.Where(x => x.FirstName == data.UserName && x.Password == data.Password).FirstOrDefault();
 
                 if (currentStudent != null || currentTeacher != null || currentAdmin != null)

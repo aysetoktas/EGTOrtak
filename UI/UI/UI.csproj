@@ -53,6 +53,12 @@
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PusherServer, Version=4.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PusherServer.4.2.0\lib\net45\PusherServer.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -6258,6 +6264,7 @@
     <Compile Include="Areas\Student\Controllers\StreamController.cs" />
     <Compile Include="Areas\Student\StudentAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ChatController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -7571,6 +7578,13 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\RegisterTeacher.cshtml" />
+    <Content Include="Views\Chat\Chat.cshtml" />
+    <Content Include="Views\Chat\kaydolOgrenci.cshtml" />
+    <Content Include="Views\Chat\kaydolOgretmen.cshtml" />
+    <Content Include="Views\Chat\login.cshtml" />
+    <Content Include="Views\Chat\Sohbetlerim.cshtml" />
+    <Content Include="Views\Chat\YeniSohbet.cshtml" />
+    <Content Include="Views\Layout\_Layout.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -7590,7 +7604,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entity\Entity.csproj">
-      <Project>{EC628571-E5C8-4A3E-A741-31892E04A91D}</Project>
+      <Project>{ec628571-e5c8-4a3e-a741-31892e04a91d}</Project>
       <Name>Entity</Name>
     </ProjectReference>
     <ProjectReference Include="..\Utility\Utility.csproj">
