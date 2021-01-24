@@ -1,0 +1,712 @@
+﻿<!doctype html>
+<html lang="tr">
+
+<head>
+    <title>@ViewBag.Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <!-- Material Kit CSS -->
+    <link href="~/assets/css/material-dashboard.css?v=2.1.0" rel="stylesheet" />
+
+
+    <style>
+        .bildirim {
+            background: #843599;
+            position: absolute;
+            padding: 10px 20px;
+            border-radius: 15px;
+            z-index: 10000;
+            top: 20px;
+            right: 20px;
+            box-shadow: black 0px 0px 20px;
+        }
+
+            .bildirim b {
+                font-size: 20px;
+            }
+
+            .bildirim p {
+                text-align: justify;
+                margin: 10px 0 0 0;
+            }
+
+            .bildirim img {
+                margin-right: 10px;
+                width: 40px;
+                height: 40px;
+                object-fit: cover;
+                border-radius: 20px;
+            }
+    </style>
+
+    <style>
+        .sag {
+            text-align: -webkit-right;
+        }
+
+        .sol {
+            text-align: -webkit-left;
+        }
+
+        .giden {
+            text-align: right;
+            background: #843599;
+            color: white;
+            border-radius: 20px 0 20px 20px;
+        }
+
+        .gelen {
+            border-radius: 0 20px 20px 20px;
+            background: #8C929F;
+            color: white;
+        }
+
+
+        .mesajKutusu {
+            padding: 10px;
+            margin: 10px 0;
+            box-shadow: #020209 0 0 6px;
+            max-width: 60%;
+            min-width: 10%;
+            width: fit-content;
+        }
+
+            .mesajKutusu i {
+                display: block;
+                text-align: right;
+                font-size: 12px;
+            }
+
+        #mesajKapsayici {
+            position: relative;
+            height: calc(100vh - 180px);
+            overflow: auto;
+        }
+
+        #mesajGonderKapsayici {
+            left: 0;
+            position: absolute;
+            bottom: 10px;
+        }
+
+        #mesajGonderDiv {
+            height: 70px;
+            padding: 10px;
+        }
+
+        #mesajText {
+            padding: 0 55px 0 10px;
+            float: left;
+            height: 50px;
+            margin-right: 10px;
+            width: 100%;
+            border-radius: 25px;
+            border: none;
+            box-shadow: #3b0a42 0 0 5px;
+        }
+
+        #mesajGonder {
+            position: absolute;
+            background: #913f9e;
+            text-align: center;
+            height: 50px;
+            border-radius: 25px;
+            width: 50px;
+            right: 24px;
+            cursor: pointer;
+        }
+
+            #mesajGonder i {
+                line-height: 50px;
+                color: white;
+            }
+
+        .kullanici, .sohbet {
+            color: gray;
+            width: 100%;
+            border-radius: 30px;
+            height: 62px;
+            background: #212840;
+            box-shadow: #13182a 0px 0px 10px;
+            cursor: pointer;
+        }
+
+            .kullanici img, .sohbet img {
+                float: left;
+                width: 60px;
+                height: 60px;
+                object-fit: cover;
+                border-radius: 30px;
+                margin-right: 20px;
+            }
+
+            .kullanici h4, .sohbet h4 {
+                line-height: 62px;
+                float: left;
+            }
+
+            .sohbet h5 {
+                background: #913f9e;
+                line-height: 20px;
+                color: white;
+                margin: 17px 0 0 10px;
+                border-radius: 10px;
+                padding: 3px 5px;
+                float: left;
+            }
+
+            .sohbet h6 {
+                line-height: 62px;
+                margin-right: 15px;
+                font-weight: 100;
+                float: right;
+            }
+
+            .sohbet h3 {
+                font-size: 15px;
+                height: 25px;
+                padding: 0 5px;
+                line-height: 25px;
+                text-align: center;
+                margin: 18px 10px;
+                font-weight: 100;
+                float: right;
+                border-radius: 31px;
+                background: orange;
+                color: black;
+            }
+
+        .sil {
+            float: right;
+            background: #d22824;
+            line-height: 20px;
+            margin: 13px 20px 0 0;
+            padding: 5px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body class="dark-edition">
+
+    <div class="wrapper ">
+        <div class="sidebar" data-color="purple" data-background-color="black" style="opacity:unset" data-image="/assets/img/menubg.png">
+            <!--
+                Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+                Tip 2: you can also add an image using data-image tag
+            -->
+            <div class="logo">
+                <a href="/" class="simple-text logo-normal">
+                    Mesajlaşma Sistemi
+                </a>
+            </div>
+            <div class="sidebar-wrapper">
+                <ul class="nav">
+                    <li class="nav-item   ">
+                        <a class="nav-link" href="/home/index">
+                            <i class="material-icons">dashboard</i>
+                            <p>Anasayfaya Dön</p>
+                        </a>
+                    </li>
+                    <li class="nav-item  @Html.Raw(ViewBag.title == "Sohbetlerim" ? "active" : "")  ">
+                        <a class="nav-link" href="/chat/sohbetlerim">
+                            <i class="material-icons">comments</i>
+                            <p>Sohbetlerim</p>
+                        </a>
+                    </li>
+                    <li class="nav-item  @Html.Raw(ViewBag.title == "Yeni Sohbet" ? "active" : "")  ">
+                        <a class="nav-link" href="/chat/yenisohbet">
+                            <i class="material-icons">add_comment</i>
+                            <p>Yeni Sohbet</p>
+                        </a>
+                    </li>
+                    <li class="nav-item   ">
+                        <a class="nav-link" href="/kullanici/login">
+                            <i class="material-icons">exit_to_app</i>
+                            <p>Çıkış Yap</p>
+                        </a>
+                    </li>
+                    <!-- your sidebar here -->
+                </ul>
+                <div class="footer" style="height: -webkit-fill-available;">
+                    <div class="copyright float-right" style="position: absolute;bottom: 0;">
+                        &copy;
+                        <script>
+                            document.write(new Date().getFullYear())
+                        </script>, <a href="https://yavuzceliker.com.tr" target="_blank">Yavuz ÇELİKER</a> tarafından <i class="material-icons">favorite</i> ile yapıldı.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-panel">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+                <div class="container-fluid">
+                    <div class="navbar-wrapper">
+                        <a class="navbar-brand" href="javascript:void(0)">@ViewBag.Title</a>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="material-icons text-white">chat_bubble_outline</i>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end">
+                        <ul class="navbar-nav">
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+            <div class="content">
+
+                @RenderBody()
+
+            </div>
+            <footer class="footer">
+                <div class="container-fluid">
+
+
+
+                </div>
+            </footer>
+        </div>
+    </div>
+
+
+    <div id="konuModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Sohbet Konusu</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="sohbetKonusu">Sohbet Konusu</label>
+                        <input type="text" required class="form-control" id="sohbetKonusu" style="color:black;" maxlength="20" placeholder="Buraya giriniz.">
+                        <small id="emailHelp" class="form-text text-muted">Ne konuda sohbet ettiğinizi bilmeniz açısından bu önemlidir.</small>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" id="sohbetOlustur" class="btn btn-primary">Sohbet Oluştur</a>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">İptal</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="silModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Sohbeti Sil</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <h3>Sohbeti silmek istiyor musunuz?</h3>
+                        <p>Bu işlem geri alınamaz.</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" id="sohbetSil" class="btn btn-danger">Sohbeti Sil</a>
+                    <button id="iptal" type="button" class="btn btn-success" data-dismiss="modal">İptal</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+    <!--   Core JS Files   -->
+    <script src="~/assets/js/core/jquery.min.js"></script>
+    <script src="~/assets/js/core/popper.min.js"></script>
+    <script src="~/assets/js/core/bootstrap-material-design.min.js"></script>
+    <script src="https://unpkg.com/default-passive-events"></script>
+    <script src="~/assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!-- Chartist JS -->
+    <script src="~/assets/js/plugins/chartist.min.js"></script>
+    <!--  Notifications Plugin    -->
+    <script src="~/assets/js/plugins/bootstrap-notify.js"></script>
+    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="~/assets/js/material-dashboard.js?v=2.1.0"></script>
+    <!-- Material Dashboard DEMO methods, don't include it in your project! -->
+    <script src="~/assets/demo/demo.js"></script>
+    <script>
+        const demo = document.querySelector('#mesajKapsayici');
+        const ps = $('#mesajKapsayici').perfectScrollbar();
+
+        $(document).ready(function () {
+
+            // Initialize the plugin
+
+            // Handle size change
+            document.querySelector('#resize').addEventListener('click', () => {
+                demo.style.width = `${width}px`;
+
+                // Get updated values
+                width = document.querySelector('#width').value;
+                height = document.querySelector('#height').value;
+
+                // Set demo sizes
+                demo.style.height = `${height}px`;
+
+                // Update Perfect Scrollbar
+                ps.update();
+            });
+
+        });
+
+        demo.scrollTo(0, demo.scrollHeight);
+    </script>
+
+    <script>
+
+        // Enable pusher logging - don't include this in production
+        Pusher.logToConsole = true;
+
+        var pusher = new Pusher('9c428fba897224950404', {
+            cluster: 'eu'
+        });
+
+
+    function degistir(str) {
+        return str.replace("<", "< ").replace(">", " >");
+    }
+
+    var $message = $('#mesajText');
+    var $messages = $('#mesajKapsayici');
+        $message.focus();
+
+        var channel = pusher.subscribe('@ViewBag.oturumAcanEmail');
+
+
+        var guncelChatId = "@ViewBag.guncelChatId";
+        channel.bind('bildirimGonder', function (data) {
+            if (guncelChatId != data.gelenChatId) {
+                $.notify({
+                    icon: data.resim,
+                    title: data.ad,
+                    message: data.mesaj
+                }, {
+                    type: 'minimalist',
+                    delay: 5000,
+                    icon_type: 'image',
+                    template:
+                        '<div class="bildirim col-6">' +
+                        '<a href="/chat/chat/' + data.gelenChatId + '">' +
+                        '<img src="' + data.resim + '" />' +
+                        '<b>{1}</b> ' +
+                        '<p>{2}</p > ' +
+                        '</a>' +
+                        +'</div>'
+                });
+            }
+        });
+
+
+        channel.bind('mesajGeldi', function (data) {
+            mesaj = degistir(data.mesaj);
+            if (!(data.mesaj == "" || data.mesaj == null))
+                $messages.append(
+                    '<div class="col-md-12 ' + (data.yon == "gelen" ? "sol" : "sag") + '">' +
+                    '<div class="mesajKutusu ' + data.yon + '">' +
+                    data.mesaj +
+                    '<i>' + data.zaman + '</i>' +
+                    '</div>' +
+                    '</div>');
+            demo.scrollTo(0, demo.scrollHeight);
+
+
+        });
+
+        channel.bind('oturumKapali', function () {
+            window.location = "/chat/login";
+        });
+
+        channel.bind('hata', function (data) {
+            alert(data.mesaj);
+            location.reload();
+        });
+
+
+        document.addEventListener("keydown", event => {
+
+            if ((event.code.toLowerCase() == "enter" || event.code.toLowerCase() == "numpadenter") && $message.val().length > 0) {
+                mesajGonder($message.val(),@Html.Raw(ViewBag.sahipId),@Html.Raw(ViewBag.sohbetId));
+                $message.val('').focus();
+            }
+        });
+
+        $('#mesajGonder').click(function () {
+
+            if ($message.val().length > 0)
+            {
+                mesajGonder($message.val(),@Html.Raw(ViewBag.sahipId),@Html.Raw(ViewBag.sohbetId));
+                $message.val('').focus();
+            }
+        });
+
+
+        function mesajGonder(mesaj, sahipId, sohbetId) {
+            $.ajax({
+                url: '/chat/mesajgonder',
+                type: 'POST',
+                dataType: 'json',
+                data: { veri: [mesaj, sahipId, sohbetId ]},
+                success: function (gelenveri) {
+
+                },
+                error: function (hata) {
+
+                }
+            });
+        }
+
+    </script>
+
+
+    @if (ViewBag.Title == "Yeni Sohbet")
+    {
+<script>
+    var kullaniciListesi = [   @Html.Raw(ViewBag.kullaniciListesi) ];
+    $("#kullaniciText").keyup(function () {
+        var kelime = $(this).val();
+        var str = "", j = 0;
+        for (var i = 0; i < kullaniciListesi.length; i++) {
+            if (kullaniciListesi[i][0].toLowerCase().includes(kelime.toLowerCase(), 0)) {
+                if (j % 2 == 0)
+                    str += "<div class='row mr-2 ml-2'>";
+
+                str+=kullaniciListesi[i][1];
+
+                if (j % 2 != 0)
+                    str += "</div>";
+                j++;
+            }
+        }
+        $("#kullaniciListesi").html(str);
+    });
+</script>
+}
+
+    <script>
+            @Html.Raw(ViewBag.msg)
+        var sohbetKullaniciID = "";
+        var silTikliMi = false;
+        var chatID="";
+        $(".sil").click(function () {
+            chatID = $(this).attr("id");
+            $('#silModal').modal('show');
+            silTikliMi = true;
+        });
+
+        $("#iptal").click(function () {
+            silTikliMi = false;
+        });
+
+        $(".sohbet").click(function () {
+            if (!silTikliMi) {
+                chatID = $(this).attr("id");
+                window.location = "/chat/chat/" + chatID;
+            }
+        });
+
+        $(".kullanici").click(function () {
+            sohbetKullaniciID = $(this).attr("id");
+            $('#konuModal').modal('show');
+        });
+
+        $("#sohbetOlustur").click(function () {
+            var sohbetKonusu = $("#sohbetKonusu").val();
+            if (sohbetKonusu.length < 3)
+                alert("Sohbet konusu en az 3 harf olmalı.");
+            else {
+                window.location = "/chat/sohbetOlustur/" + sohbetKullaniciID + "-" + sohbetKonusu;
+            }
+        });
+
+        $("#sohbetSil").click(function () {
+            window.location = "/chat/chatsil/" + chatID;
+        });
+
+        $(document).ready(function () {
+            $().ready(function () {
+
+
+
+
+
+                $sidebar_img_container = $sidebar.find('.sidebar-background');
+
+                $full_page = $('.full-page');
+
+                HtmlsRawidebar_responsive = $('body > .navbar-collapse');
+
+                window_width = $(window).width();
+
+                $('.fixed-plugin a').click(function (event) {
+                    // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+                    if ($(this).hasClass('switch-trigger')) {
+                        if (event.stopPropagation) {
+                            event.stopPropagation();
+                        } else if (window.event) {
+                            window.event.cancelBubble = true;
+                        }
+                    }
+                });
+
+                $('.fixed-plugin .active-color span').click(function () {
+                    $full_page_background = $('.full-page-background');
+
+                    $(this).siblings().removeClass('active');
+                    $(this).addClass('active');
+
+                    var new_color = $(this).data('color');
+
+                    if ($sidebar.length != 0) {
+                        $sidebar.attr('data-color', new_color);
+                    }
+
+                    if ($full_page.length != 0) {
+                        $full_page.attr('filter-color', new_color);
+                    }
+
+                    if ($sidebar_responsive.length != 0) {
+                        $sidebar_responsive.attr('data-color', new_color);
+                    }
+                });
+
+                $('.fixed-plugin .background-color .badge').click(function () {
+                    $(this).siblings().removeClass('active');
+                    $(this).addClass('active');
+
+                    var new_color = $(this).data('background-color');
+
+                    if ($sidebar.length != 0) {
+                        $sidebar.attr('data-background-color', new_color);
+                    }
+                });
+
+                $('.fixed-plugin .img-holder').click(function () {
+                    $full_page_background = $('.full-page-background');
+
+                    $(this).parent('li').siblings().removeClass('active');
+                    $(this).parent('li').addClass('active');
+
+
+                    var new_image = $(this).find("img").attr('src');
+
+                    if ($sidebar_img_container.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+                        $sidebar_img_container.fadeOut('fast', function () {
+                            $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+                            $sidebar_img_container.fadeIn('fast');
+                        });
+                    }
+
+                    if ($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+                        var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+                        $full_page_background.fadeOut('fast', function () {
+                            $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+                            $full_page_background.fadeIn('fast');
+                        });
+                    }
+
+                    if ($('.switch-sidebar-image input:checked').length == 0) {
+                        var new_image = $('.fixed-plugin li.active .img-holder').find("img").attr('src');
+                        var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+                        $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+                        $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+                    }
+
+                    if ($sidebar_responsive.length != 0) {
+                        $sidebar_responsive.css('background-image', 'url("' + new_image + '")');
+                    }
+                });
+
+                $('.switch-sidebar-image input').change(function () {
+                    $full_page_background = $('.full-page-background');
+
+                    $input = $(this);
+
+                    if ($input.is(':checked')) {
+                        if ($sidebar_img_container.length != 0) {
+                            $sidebar_img_container.fadeIn('fast');
+                            $sidebar.attr('data-image', '#');
+                        }
+
+                        if ($full_page_background.length != 0) {
+                            $full_page_background.fadeIn('fast');
+                            $full_page.attr('data-image', '#');
+                        }
+
+                        background_image = true;
+                    } else {
+                        if ($sidebar_img_container.length != 0) {
+                            $sidebar.removeAttr('data-image');
+                            $sidebar_img_container.fadeOut('fast');
+                        }
+
+                        if ($full_page_background.length != 0) {
+                            $full_page.removeAttr('data-image', '#');
+                            $full_page_background.fadeOut('fast');
+                        }
+
+                        background_image = false;
+                    }
+                });
+
+                $('.switch-sidebar-mini input').change(function () {
+                    $body = $('body');
+
+                    $input = $(this);
+
+                    if (md.misc.sidebar_mini_active == true) {
+                        $('body').removeClass('sidebar-mini');
+                        md.misc.sidebar_mini_active = false;
+
+                        $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
+
+                    } else {
+
+                        $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar('destroy');
+
+                        setTimeout(function () {
+                            $('body').addClass('sidebar-mini');
+
+                            md.misc.sidebar_mini_active = true;
+                        }, 300);
+                    }
+
+                    // we simulate the window Resize so the charts will get updated in realtime.
+                    var simulateWindowResize = setInterval(function () {
+                        window.dispatchEvent(new Event('resize'));
+                    }, 180);
+
+                    // we stop the simulation of Window Resize after the animations are completed
+                    setTimeout(function () {
+                        clearInterval(simulateWindowResize);
+                    }, 1000);
+
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

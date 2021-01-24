@@ -40,6 +40,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -55,6 +58,8 @@
     <Compile Include="BaseEntity.cs" />
     <Compile Include="Branch.cs" />
     <Compile Include="Category.cs" />
+    <Compile Include="Chat.cs" />
+    <Compile Include="ChatContext.cs" />
     <Compile Include="Contract.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="Document.cs" />
@@ -62,58 +67,7 @@
     <Compile Include="EduContext.cs" />
     <Compile Include="Lesson.cs" />
     <Compile Include="LoginVM.cs" />
-    <Compile Include="Migrations\202011121821217_mig00.cs" />
-    <Compile Include="Migrations\202011121821217_mig00.designer.cs">
-      <DependentUpon>202011121821217_mig00.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011121822517_mig001.cs" />
-    <Compile Include="Migrations\202011121822517_mig001.designer.cs">
-      <DependentUpon>202011121822517_mig001.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011121826548_mig01.cs" />
-    <Compile Include="Migrations\202011121826548_mig01.designer.cs">
-      <DependentUpon>202011121826548_mig01.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011171716033_mig02.cs" />
-    <Compile Include="Migrations\202011171716033_mig02.designer.cs">
-      <DependentUpon>202011171716033_mig02.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011171723266_mig03.cs" />
-    <Compile Include="Migrations\202011171723266_mig03.designer.cs">
-      <DependentUpon>202011171723266_mig03.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011171729056_mig04.cs" />
-    <Compile Include="Migrations\202011171729056_mig04.designer.cs">
-      <DependentUpon>202011171729056_mig04.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202011171747033_mig06.cs" />
-    <Compile Include="Migrations\202011171747033_mig06.designer.cs">
-      <DependentUpon>202011171747033_mig06.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012041934207_mig07.cs" />
-    <Compile Include="Migrations\202012041934207_mig07.designer.cs">
-      <DependentUpon>202012041934207_mig07.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012041953286_mig08.cs" />
-    <Compile Include="Migrations\202012041953286_mig08.designer.cs">
-      <DependentUpon>202012041953286_mig08.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012041956082_mig09.cs" />
-    <Compile Include="Migrations\202012041956082_mig09.designer.cs">
-      <DependentUpon>202012041956082_mig09.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012051407451_mig10.cs" />
-    <Compile Include="Migrations\202012051407451_mig10.designer.cs">
-      <DependentUpon>202012051407451_mig10.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012072110283_migDateTime.cs" />
-    <Compile Include="Migrations\202012072110283_migDateTime.designer.cs">
-      <DependentUpon>202012072110283_migDateTime.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202012221949197_mig22122020.cs" />
-    <Compile Include="Migrations\202012221949197_mig22122020.designer.cs">
-      <DependentUpon>202012221949197_mig22122020.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Message.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Payment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -126,47 +80,6 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202011121821217_mig00.resx">
-      <DependentUpon>202011121821217_mig00.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011121822517_mig001.resx">
-      <DependentUpon>202011121822517_mig001.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011121826548_mig01.resx">
-      <DependentUpon>202011121826548_mig01.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011171716033_mig02.resx">
-      <DependentUpon>202011171716033_mig02.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011171723266_mig03.resx">
-      <DependentUpon>202011171723266_mig03.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011171729056_mig04.resx">
-      <DependentUpon>202011171729056_mig04.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202011171747033_mig06.resx">
-      <DependentUpon>202011171747033_mig06.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012041934207_mig07.resx">
-      <DependentUpon>202012041934207_mig07.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012041953286_mig08.resx">
-      <DependentUpon>202012041953286_mig08.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012041956082_mig09.resx">
-      <DependentUpon>202012041956082_mig09.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012051407451_mig10.resx">
-      <DependentUpon>202012051407451_mig10.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012072110283_migDateTime.resx">
-      <DependentUpon>202012072110283_migDateTime.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202012221949197_mig22122020.resx">
-      <DependentUpon>202012221949197_mig22122020.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

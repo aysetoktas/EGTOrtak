@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Kaydol</title>
+</head>
+<body>
+    <script>
+        @Html.Raw(ViewBag.msg)
+    </script>
+    <form method="post" enctype="multipart/form-data">
+        <input type="text" placeholder="İsminiz" required name="FirstName" /><br />
+        <input type="text" placeholder="Soyadınız" required name="LastName" /><br />
+        <input type="email" placeholder="Email" required name="Email" /><br />
+        <input type="password" placeholder="Şifre" required name="Password" /><br />
+        <input type="submit" name="kaydol" value="Kaydol" /><br />
+        <a href="/chat/girisYap">Hesabın var mı? Giriş yap.</a>
+    </form>
+</body>
+</html>

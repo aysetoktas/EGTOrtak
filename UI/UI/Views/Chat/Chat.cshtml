@@ -1,0 +1,17 @@
+﻿
+@{
+    Layout = "~/Views/Layout/_Layout.cshtml";
+    ViewBag.chat = true;
+}
+<div class="col-md-12" id="mesajKapsayici">
+    @Html.Raw(ViewBag.mesajlar)
+</div>
+<div class="col-md-12" id="mesajGonderKapsayici">
+    <div id="mesajGonderDiv">
+        <input type="text" placeholder="Mesajınızı giriniz." id="mesajText" />
+        <div id="mesajGonder">
+            <i class="material-icons">send</i>
+        </div>
+    </div>
+</div>
+
