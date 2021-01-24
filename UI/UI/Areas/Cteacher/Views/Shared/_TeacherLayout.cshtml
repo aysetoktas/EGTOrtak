@@ -55,12 +55,12 @@
                 <p><b>TÜM EĞİTİMLERİM</b></p>
             </a>
         </li>*@
-                    <li>
+                    @*<li>
                         <a href="/Cteacher/Lesson/List3">
                             <i class="fa fa-circle-thin"></i>
                             <p><b>TÜM DERSLERİM</b></p>
                         </a>
-                    </li>
+                    </li>*@
                     <li>
                         <a href="/Cteacher/OnlineLesson/List">
                             <i class="fa fa-circle-thin"></i>
@@ -86,7 +86,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="@Url.Action("UpdateProfil","Home",new {area="Cteacher" })">
+                        <a href="/Cteacher/Home/UpdateProfil/@currentTeacher.ID">
                             <i class="fa fa-circle-thin"></i>
                             <p><b>PROFİLİM</b></p>
                         </a>

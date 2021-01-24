@@ -50,9 +50,16 @@ namespace UI.Areas.Admin.Controllers
         [HttpPost]
         public ActionResult Update(Teacher data, HttpPostedFileBase Image)
         {
-            data.Detail = ImageUploader.UploadSingleImage("/Uploads/", Image);
-
             Teacher updTeacher = db.Teachers.Find(data.ID);
+            if (Image!=null)
+            {
+                data.Detail = ImageUploader.UploadSingleImage("/Uploads/", Image);
+            }
+            else
+            {
+                data.Detail = updTeacher.Detail;
+            }
+
             updTeacher.Detail = data.Detail;
             updTeacher.FirstName = data.FirstName;
             updTeacher.LastName = data.LastName;

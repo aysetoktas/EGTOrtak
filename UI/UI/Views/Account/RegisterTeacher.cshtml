@@ -10,11 +10,55 @@
     <title>Öğretmen Kayıt Ol</title>
 
     <!-- Font Icon -->
-    @*<link rel="stylesheet" href="~/Content/register/css/material-design-iconic-font.min.css">*@
+
     <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
 
     <!-- Main css -->
     <link rel="stylesheet" href="~/Content/register/css/style.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 40px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+            .close:hover,
+            .close:focus {
+                color: #000;
+                text-decoration: none;
+                cursor: pointer;
+            }
+    </style>
 </head>
 <body>
     <div class="main">
@@ -25,7 +69,6 @@
                     <div class="signup-form">
                         <h2 class="form-title">Öğretmen Kayıt Ol</h2>
                         <form action="@Url.Action("RegisterTeacher","Account",new {area="" })" method="POST" class="register-form" id="register-form" enctype="multipart/form-data">
-
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="FirstName" id="name" placeholder="Adınız" required="" />
@@ -36,14 +79,12 @@
                             </div>
                             <div class="form-group">
                                 <label for="email"><i class="zmdi zmdi-email"></i></label>
-                                <input type="email" name="Email" id="email" placeholder="E-mail" required=""/>
+                                <input type="email" name="Email" id="email" placeholder="E-mail" required="" />
                             </div>
                             <div class="form-group">
                                 <label for="pass"><i class="zmdi zmdi-lock"></i></label>
                                 <input type="password" name="Password" id="pass" placeholder="Şifre" required="" />
                             </div>
-
-
                             <div class="form-group">
                                 <label for="name"><i class="zmdi zmdi-phone"></i></label>
                                 <input type="text" name="Phone" id="phonenumber" placeholder="Telefon Numaranız" required="" />
@@ -56,25 +97,27 @@
                                 <label for="name"><i class="zmdi zmdi-layers"></i></label>
                                 <input type="text" name="Note" id="note" placeholder="Branş" required="" />
                             </div>
-                            <div class="form-group">
-                                <label for="name"><i class="zmdi zmdi-layers"></i></label>
-                                <input type="date" name="BirthDate" id="birthdate" placeholder="Doğum Tarihi" required="" />
-                            </div>
-
                             <h3>Profil Fotoğrafı Seçiniz</h3>
                             <div class="">
                                 <input type="file" name="Image" required="">
                             </div>
-
                             <div class="form-group">
-                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
-                                <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" required="" />
+                                <label for="agree-term" class="label-agree-term"><span><span></span></span>  <a id="myBtn" class="term-service"><u>Hizmet şartlarını</u> </a> kabul ediyorum.</label>
+                                <!-- The Modal -->
                             </div>
-
+                            <div id="myModal" class="modal">
+                                <!-- Modal content -->
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <!-- Hizmet Şartları:Begin-->
+                                    <iframe src="~/Content/img/Hizmet Şartları.pdf" style="width:100%;height:500px;"></iframe>
+                                    <!-- Hizmet Şartları: End-->
+                                </div>
+                            </div>
                             <div class="form-group form-button">
                                 <input type="submit" name="signup" id="signup" class="form-submit" value="Kayıt Ol" />
                             </div>
-
                         </form>
                     </div>
                     <div class="signup-image">
@@ -84,52 +127,31 @@
                 </div>
             </div>
         </section>
-
-        <!-- Sing in  Form -->
-        @*<section class="sign-in">
-                <div class="container">
-                    <div class="signin-content">
-                        <div class="signin-image">
-                            <figure><img src="images/signin-image.jpg" alt="sing up image"></figure>
-                            <a href="#" class="signup-image-link">Create an account</a>
-                        </div>
-
-                        <div class="signin-form">
-                            <h2 class="form-title">Sign up</h2>
-                            <form method="POST" class="register-form" id="login-form">
-                                <div class="form-group">
-                                    <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                    <input type="text" name="your_name" id="your_name" placeholder="Your Name" />
-                                </div>
-                                <div class="form-group">
-                                    <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-                                    <input type="password" name="your_pass" id="your_pass" placeholder="Password" />
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
-                                    <label for="remember-me" class="label-agree-term"><span><span></span></span>Remember me</label>
-                                </div>
-                                <div class="form-group form-button">
-                                    <input type="submit" name="signin" id="signin" class="form-submit" value="Log in" />
-                                </div>
-                            </form>
-                            <div class="social-login">
-                                <span class="social-label">Or login with</span>
-                                <ul class="socials">
-                                    <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
-                                    <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
-                                    <li><a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>*@
-
     </div>
-
     <!-- JS -->
     <script src="~/Content/register/vendor/js/jquery.min.js"></script>
     <script src="~/Content/register/vendor/js/main.js"></script>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        // When the user clicks the button, open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
 </html>

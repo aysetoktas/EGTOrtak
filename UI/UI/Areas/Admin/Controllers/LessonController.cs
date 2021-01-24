@@ -65,14 +65,26 @@ namespace UI.Areas.Admin.Controllers
         [HttpPost]
         public ActionResult Update(Lesson data, HttpPostedFileBase Image, HttpPostedFileBase Pdf)
         {
-            data.Logo = ImageUploader.UploadSingleImage("/Uploads/", Image);
-            data.Content = PdfUploader.UploadPdf("/UploadContent/", Pdf);
-
             Lesson updLesson = db.Lessons.Find(data.ID);
-            //if (data.Logo != "0" || data.Logo != "1" || data.Logo != "2")
-            //{
-            //    updLesson.Logo = data.Logo;
-            //}
+
+            if (Pdf != null)
+            {
+                data.Content = PdfUploader.UploadPdf("/UploadContent/", Pdf);
+
+            }
+            else
+            {
+                data.Content = updLesson.Content;
+            }
+
+            if (Image != null)
+            {
+                data.Logo = ImageUploader.UploadSingleImage("/Uploads/", Image);
+            }
+            else
+            {
+                data.Logo = updLesson.Logo;
+            }
 
             updLesson.Name = data.Name;
             updLesson.TeacherID = data.TeacherID;
@@ -84,6 +96,7 @@ namespace UI.Areas.Admin.Controllers
             updLesson.Logo = data.Logo;
             updLesson.CategoryID = data.CategoryID;
             updLesson.UnitID = data.UnitID;
+
             updLesson.ExamLink = data.ExamLink;          
 
             db.SaveChanges();

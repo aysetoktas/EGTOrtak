@@ -46,34 +46,9 @@
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="@Url.Action("Add","Category", new { area = "Admin" })">
-                            <i class="material-icons">library_books</i>
-                            <p>Sınıf Ekle</p>
-                        </a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="@Url.Action("Index","Unit", new { area = "Admin" })">
-                            <i class="material-icons">content_paste</i>
-                            <p>Üniteler</p>
-                        </a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="@Url.Action("Add","Unit", new { area = "Admin" })">
-                            <i class="material-icons">library_books</i>
-                            <p>Ünite Ekle</p>
-                        </a>
-                    </li>
-
-                    <li class="nav-item ">
                         <a class="nav-link" href="@Url.Action("Index","Education", new { area = "Admin" })">
                             <i class="material-icons">content_paste</i>
                             <p>Eğitimler</p>
-                        </a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="@Url.Action("Add","Education", new { area = "Admin" })">
-                            <i class="material-icons">library_books</i>
-                            <p>Eğitim Ekle</p>
                         </a>
                     </li>
                     <li class="nav-item ">
@@ -83,9 +58,9 @@
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="@Url.Action("Add","Lesson", new { area = "Admin" })">
-                            <i class="material-icons">library_books</i>
-                            <p>Ders Ekle</p>
+                        <a class="nav-link" href="@Url.Action("Index","Unit", new { area = "Admin" })">
+                            <i class="material-icons">content_paste</i>
+                            <p>Üniteler</p>
                         </a>
                     </li>
                     <li class="nav-item ">
@@ -95,9 +70,15 @@
                         </a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="@Url.Action("Add","Teacher", new { area = "Admin" })">
-                            <i class="material-icons">library_books</i>
-                            <p>Öğretmen Ekle</p>
+                        <a class="nav-link" href="@Url.Action("Index","Student", new { area = "Admin" })">
+                            <i class="material-icons">content_paste</i>
+                            <p>Öğrenciler</p>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="@Url.Action("AdminList","Home", new { area = "Admin" })">
+                            <i class="material-icons">content_paste</i>
+                            <p>Adminler</p>
                         </a>
                     </li>
 
@@ -114,7 +95,7 @@
                         <span class="navbar-toggler-icon icon-bar"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-md-start">
-                        <span class="title">Hoşgeldiniz Sn. @currentAdmin.FirstName.ToUpper() @currentAdmin.LastName.ToUpper()</span>
+                        <span class="title"><b>Hoşgeldiniz Sn. @currentAdmin.FirstName.ToUpper() @currentAdmin.LastName.ToUpper()</b></span>
                     </div>
                     <div class="collapse navbar-collapse justify-content-end">
                         <ul class="navbar-nav">
@@ -195,9 +176,9 @@
             $('#categoryTable').DataTable();
             $('#unitTable').DataTable();
             $('#adminTable').DataTable();
-           
 
-            
+
+
         });
     </script>
 </body>
